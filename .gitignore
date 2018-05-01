@@ -62,7 +62,6 @@ atlassian*
 
 /var/*
 !/var/.htaccess
-/vendor/*
 !/vendor/.htaccess
 /generated/*
 !/generated/.htaccess
@@ -70,3 +69,8 @@ atlassian*
 
 var/*
 pub/static/*
+.htaccess
+.htaccess.sample
+.php_cs.dist
+.travis.yml
+.user.ini
