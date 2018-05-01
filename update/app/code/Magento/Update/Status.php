@@ -84,7 +84,7 @@ class Status
      */
     public function get()
     {
-        if (file_exists($this->statusFilePath)) {
+            if (file_exists($this->statusFilePath)) {
             return $this->hideSensitiveData(file_get_contents($this->statusFilePath));
         }
         return '';
