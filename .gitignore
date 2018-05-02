@@ -75,4 +75,4 @@ pub/static/*
 .php_cs.dist
 .travis.yml
 .user.ini
-
+app/etc/config.php
