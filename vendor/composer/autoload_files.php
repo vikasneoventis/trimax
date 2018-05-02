@@ -149,5 +149,6 @@ return array(
     '153a7817726e1caca4e6c3b7bc76f329' => $vendorDir . '/temando/module-shipping-m2/registration.php',
     '93c4c99a884771971b865b2740fbb829' => $vendorDir . '/mageworx/module-searchsuiteautocomplete/registration.php',
     '62008ed0ff26c9aa9e7ca9697420b61d' => $vendorDir . '/mailchimp/mc-magento2/registration.php',
+    '7bf8e427ce36adb50d4a1cbfe640583d' => $vendorDir . '/magecomp/module-hideprice/registration.php',
     'b4cf39431a4b949eea8aa69ebb3d39da' => $baseDir . '/app/etc/NonComposerComponentRegistration.php',
 );

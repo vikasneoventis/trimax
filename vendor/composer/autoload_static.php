@@ -150,6 +150,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         '153a7817726e1caca4e6c3b7bc76f329' => __DIR__ . '/..' . '/temando/module-shipping-m2/registration.php',
         '93c4c99a884771971b865b2740fbb829' => __DIR__ . '/..' . '/mageworx/module-searchsuiteautocomplete/registration.php',
         '62008ed0ff26c9aa9e7ca9697420b61d' => __DIR__ . '/..' . '/mailchimp/mc-magento2/registration.php',
+        '7bf8e427ce36adb50d4a1cbfe640583d' => __DIR__ . '/..' . '/magecomp/module-hideprice/registration.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -370,6 +371,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
             'Magento\\AdvancedPricingImportExport\\' => 36,
             'Magento\\AdminNotification\\' => 26,
             'Magento\\' => 8,
+            'Magecomp\\Hideprice\\' => 19,
             'MageWorx\\SearchSuiteAutocomplete\\' => 33,
         ),
         'L' => 
@@ -1171,6 +1173,10 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         'Magento\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/code/Magento',
+        ),
+        'Magecomp\\Hideprice\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/magecomp/module-hideprice',
         ),
         'MageWorx\\SearchSuiteAutocomplete\\' => 
         array (

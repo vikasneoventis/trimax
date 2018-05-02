@@ -12,7 +12,8 @@
         "composer/composer": "@alpha",
         "mageworx/module-searchsuiteautocomplete": "^2.1",
         "mageworx/module-searchsuiteautocompletemeta": "2.1.3",
-        "mailchimp/mc-magento2": "1.0.28"
+        "mailchimp/mc-magento2": "1.0.28",
+        "magecomp/module-hideprice": "1.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.2.0",

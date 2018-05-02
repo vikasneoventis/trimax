@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0152ab30fc1bb1baca762410324ee68f",
+    "content-hash": "51f5f7cb92467510d6b993a5b3f9d7e0",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -719,6 +719,32 @@
                 "terminal"
             ],
             "time": "2015-01-18T14:31:58+00:00"
+        },
+        {
+            "name": "magecomp/module-hideprice",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magecomp/module-hideprice/magecomp-module-hideprice-1.0.0.0.zip",
+                "reference": null,
+                "shasum": "3e4aa9b4bb814b1f0a6c40a7841a1feef11c9e35"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "psr-4": {
+                    "Magecomp\\Hideprice\\": ""
+                },
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Magento Hide Price"
         },
         {
             "name": "magento/composer",
