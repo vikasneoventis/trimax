@@ -80,3 +80,4 @@ pub/error_log
 app/etc/config.php
 pub/.htaccess
 composer.lock
+pub/static/.htaccess
