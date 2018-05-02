@@ -81,3 +81,16 @@ app/etc/config.php
 pub/.htaccess
 composer.lock
 pub/static/.htaccess
+modified:   bin/magento
+pub/media/.htaccess
+pub/media/customer/.htaccess
+pub/media/downloadable/.htaccess
+pub/media/import/.htaccess
+pub/media/theme_customization/.htaccess
+vendor/composer/ClassLoader.php
+vendor/composer/LICENSE
+vendor/composer/autoload_files.php
+vendor/composer/autoload_psr4.php
+vendor/composer/autoload_real.php
+vendor/composer/autoload_static.php
+vendor/composer/installed.json
