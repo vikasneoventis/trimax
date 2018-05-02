@@ -77,3 +77,6 @@ pub/static/*
 error_log
 setup/error_log
 pub/error_log
+app/etc/config.php
+pub/.htaccess
+composer.lock
