@@ -1,0 +1,44 @@
+<script type="text/javascript">
+//<![CDATA[
+
+var peLabelsFieldSet;
+
+var initProductExplodedLabels = function(){
+
+  require([
+      "jquery",
+      "jquery/ui",       
+  ],function($) {
+
+    peLabelsFieldSet = $('#pe_labels_init');
+
+    var loadoptions = function(){
+    
+      if (peLabelsFieldSet.find('div').length > 0)
+        return;
+
+      var jqxhr = $.ajax({
+              type: 'POST',
+              url: '<?php echo $this->getUrl('productexploded/pe_product_labels', array('_current' => true)); ?>',
+              async: true,
+              data: {isAjax:true, form_key: FORM_KEY},
+              dataType: 'html',
+              showLoader: true              
+          }).success(function (result) {
+              if (!result.error){      
+                peLabelsFieldSet.html(result);              
+              }        
+          });
+          
+    }
+    
+    loadoptions();
+    
+    peLabelsFieldSet.closest('.admin__fieldset-wrapper-content').prev('.fieldset-wrapper-title').click(loadoptions);    
+    
+  });
+
+};
+
+//]]> 
+</script>

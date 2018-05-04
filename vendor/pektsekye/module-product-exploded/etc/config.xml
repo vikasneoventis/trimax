@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>  
+    <default>
+      <productexploded>
+        <settings>
+          <attributecode>manufacturer_number</attributecode>			
+        </settings>
+      </productexploded>      	  
+    </default>	     
+</config>

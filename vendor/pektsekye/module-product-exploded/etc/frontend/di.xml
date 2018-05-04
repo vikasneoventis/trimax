@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd"> 
+    <type name="Magento\GroupedProduct\Model\Product\Type\Grouped">
+        <plugin name="productexploded_grouped" type="Pektsekye\ProductExploded\Plugin\GroupedProduct\Model\Product\Type\Grouped"/>
+    </type> 
+    <type name="Magento\Catalog\Model\Product\Link">
+        <plugin name="isInStockFilter" disabled="true"/>
+    </type>                        
+</config>
