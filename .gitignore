@@ -68,7 +68,7 @@ atlassian*
 .DS_Store
 
 var/*
-pub/static/*
+pub/*
 .htaccess
 .htaccess.sample
 .php_cs.dist
