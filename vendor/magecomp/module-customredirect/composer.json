@@ -1,0 +1,20 @@
+{
+    "name": "magecomp/module-customredirect",
+    "description": "Magento 2 Custom Redirect",
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "Proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magecomp\\Customredirect\\": ""
+        }
+    }
+}

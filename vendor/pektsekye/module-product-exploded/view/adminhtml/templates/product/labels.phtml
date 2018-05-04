@@ -1,0 +1,73 @@
+<div id="productexploded_section">
+  <div id="productexploded_image_container" class="pe-image-container" style="width:<?php echo $this->getImageUrl() == '' ? 500 : $this->getImageWidth(); ?>px;height:<?php echo $this->getImageUrl() == '' ? 200 : $this->getImageHeight(); ?>px;background: url('<?php echo $this->getImageUrl(); ?>') no-repeat;">
+    <?php if ($this->getImageUrl() == ''): ?>
+      <div> <?php echo __('Please upload main product image and set it as base image.'); ?></div>
+    <?php endif; ?>
+    <?php $i = 0; ?> 
+    <?php foreach($this->getLabels() as $labelId => $label): ?> 
+      <span id="pe_label_<?php echo $labelId;?>" style="left:<?php echo (int)$label['x'];?>px;top:<?php echo (int)$label['y'];?>px;<?php echo empty($label['title']) ? 'width:'.$label['width'].'px;height:'.$label['height'].'px;' : ''; ?>" class="pe-label <?php echo empty($label['title']) ? 'pe-label-area' : 'pe-label-text'; ?>" title="<?php echo $label['link_to_number'];?>">
+        <span class="pe-label-hint"><?php echo $i; ?></span>
+        <span class="pe-text"><?php echo $label['title'];?></span>
+      </span>
+      <?php $i++; ?>     
+    <?php endforeach; ?>     
+  </div>
+
+  <table id="pe_labels_table">
+    <tr>
+      <th class="pe-hint-id"></th>      
+      <th class="pe-clickable-area-column"><?php echo __('Clickable Area'); ?></th>
+      <th class="pe-text-column"><?php echo __('Text'); ?> <span class="pe-note">(optional)</span>
+        <div class="admin__field-tooltip">
+            <span class="admin__field-tooltip-action action-help" tabindex="1"></span>
+            <div data-bind="text: tooltip.description" class="admin__field-tooltip-content"><?php echo __('Use this field when you need a text link instead of a clickable area.'); ?></div>
+        </div>            
+      </th>         
+      <th class="pe-link-to-number-column"><?php echo __('Link Number'); ?> 
+        <div class="admin__field-tooltip">
+            <span class="admin__field-tooltip-action action-help" tabindex="1"></span>
+            <div data-bind="text: tooltip.description" class="admin__field-tooltip-content"><?php echo __('Specify the same number for each linked product in the "Number on Image" field in the Grouped Products section on this page.'); ?></div>
+        </div>     
+      </th>        
+      <td class="pe-delete-column">&nbsp;</td>
+    </tr>  
+  <?php $i = 0; ?>         
+  <?php foreach($this->getLabels() as $labelId => $label): ?>
+    <tr id="pe_label_row_<?php echo $labelId;?>">
+      <td class="pe-hint-id"><?php echo $i;?></td>      
+      <td class="pe-area-size">
+          <input data-form-part="product_form" type="text" id="pe_label_field_<?php echo $labelId;?>_width" name="product[pe_label][update][<?php echo $labelId;?>][width]" value="<?php echo $label['width'];?>" />
+           X 
+          <input data-form-part="product_form" type="text" id="pe_label_field_<?php echo $labelId;?>_height" name="product[pe_label][update][<?php echo $labelId;?>][height]" value="<?php echo $label['height'];?>" />
+      </td>
+      <td><input data-form-part="product_form" class="pe-label-field-title" type="text" id="pe_label_field_<?php echo $labelId;?>_title" name="product[pe_label][update][<?php echo $labelId;?>][title]" value="<?php echo $label['title'];?>"/></td>      
+      <td>
+          <input data-form-part="product_form" class="pe-label-field-link-to-number" type="text" id="pe_label_field_<?php echo $labelId;?>_link_to_number" name="product[pe_label][update][<?php echo $labelId;?>][link_to_number]" value="<?php echo $label['link_to_number'];?>"/>
+          <input data-form-part="product_form" type="hidden" id="pe_label_field_<?php echo $labelId;?>_x" name="product[pe_label][update][<?php echo $labelId;?>][x]" value="<?php echo $label['x'];?>" />
+          <input data-form-part="product_form" type="hidden" id="pe_label_field_<?php echo $labelId;?>_y" name="product[pe_label][update][<?php echo $labelId;?>][y]" value="<?php echo $label['y'];?>" />
+      </td>      
+      <td><button class="action-secondary pe-delete-label" title="<?php echo __('Delete Label'); ?>" type="button"><span data-bind="text: title">X</span></button></td>
+    </tr>
+    <?php $i++; ?>      
+  <?php endforeach; ?>
+  <tr>
+    <td colspan="4"><button id="pe_add_label_button" class="action-secondary" type="button"><span data-bind="text: title"><?php echo __('Add Label'); ?></span></button></td>
+  </tr>
+  </table>
+</div> 
+
+<script type="text/javascript">
+  require([
+      "jquery",
+      "jquery/ui"              
+  ], function ($){
+      $('#productexploded_section').productExploded({ 
+        deleteButtonText : "<?php echo __('Delete Label'); ?>",
+        lastLabelId : <?php echo (int) $this->getLastLabelId(); ?>,
+        imageWidth  : <?php echo (int) $this->getImageWidth(); ?>,
+        imageHeight : <?php echo (int) $this->getImageHeight(); ?>,
+        lastHintId  : <?php echo (int) count($this->getLabels()); ?>                             
+      });
+  });   
+</script>
+

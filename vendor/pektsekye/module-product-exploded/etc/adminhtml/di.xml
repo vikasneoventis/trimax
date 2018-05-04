@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd"> 
+    <type name="Magento\GroupedProduct\Ui\DataProvider\Product\Form\Modifier\Grouped">
+        <plugin name="productexploded_grouped" type="Pektsekye\ProductExploded\Plugin\GroupedProduct\Ui\DataProvider\Product\Form\Modifier\Grouped"/>
+    </type>           
+    <virtualType name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="pe-labels" xsi:type="array">
+                    <item name="class" xsi:type="string">Pektsekye\ProductExploded\Ui\DataProvider\Product\Form\Modifier\Labels</item>
+                    <item name="sortOrder" xsi:type="number">105</item>
+                </item>                            
+            </argument>
+        </arguments>
+    </virtualType>               
+</config>

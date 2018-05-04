@@ -1,0 +1,27 @@
+{
+    "name": "itoris/module-cms-display-rules",
+    "description": "The extension allow to manage CMS page and static block visibility for customer groups",
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+    },
+    "type": "magento2-module",
+    "version": "1.1.2",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "ITORIS INC",
+            "email": "sales@itoris.com",
+            "homepage": "https://www.itoris.com/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Itoris\\CmsDisplayRules\\": ""
+        }
+    }
+}

@@ -1,0 +1,39 @@
+<?php
+/**
+ * ITORIS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the ITORIS's Magento Extensions License Agreement
+ * which is available through the world-wide-web at this URL:
+ * http://www.itoris.com/magento-extensions-license.html
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to sales@itoris.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extensions to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to the license agreement or contact sales@itoris.com for more information.
+ *
+ * @category   ITORIS
+ * @package    ITORIS_M2_CMS_DISPLAY_RULES
+ * @copyright  Copyright (c) 2016 ITORIS INC. (http://www.itoris.com)
+ * @license    http://www.itoris.com/magento-extensions-license.html  Commercial License
+ */
+?>
+<?php /** @var $block Itoris\CmsDisplayRules\Block\Adminhtml\Form\BlockForm\FormJs */ ?>
+<div class="div-itoris-messages"  style="display: none"><div class="itoris-note-cms-block" style="color: red; padding-bottom: 20px;"><?php echo __('Note: The Static Block redirect may work by chain if rule doesn\'t match the criteria, i.e. Block1 ->
+Block2 -> Block3 etc. If the last block\'s rule in the chain fails nothing will be shown.')  ?></div></div>
+<script>
+    require(['jquery'],function($){
+        function notify(){
+            var messagess = $('.div-itoris-messages').html();
+            $('.div-itoris-messages').remove();
+            $('div[data-index = "itoris-settings-ruules"] .admin__collapsible-content').append(messagess);
+        }
+        setTimeout(notify,1000)
+
+    });
+</script>

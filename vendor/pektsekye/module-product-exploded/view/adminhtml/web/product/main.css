@@ -1,0 +1,25 @@
+
+
+.pe-image-container {position:relative;border-style:solid;border-width:2px;}
+.pe-image-container span {position:absolute;white-space:nowrap;cursor:move;}
+.pe-image-container span.pe-label-area {display:block; border-style:solid; border-width:2px; border-color:yellow; box-sizing: border-box;}
+.pe-image-container span.pe-label-text {display:inline; width:auto; color: #007bdb; line-height: 1.36; font-weight: 400;}
+.pe-image-container span.pe-label-text:hover {text-decoration: underline;}
+.pe-image-container span .pe-label-hint {position:relative;left: -5px;top: -5px;font-size:12px;color:red;background-color:white;}
+
+#pe_labels_table {margin-top:20px;}
+#pe_labels_table th {text-align:left; padding-left:5px;}
+#pe_labels_table th .admin__field-tooltip {margin:0; vertical-align:top;}
+#pe_labels_table th .admin__field-tooltip:hover {z-index: 800;}
+#pe_labels_table th .admin__field-tooltip .admin__field-tooltip-action {margin-left:0.2rem;}
+#pe_labels_table th .admin__field-tooltip .admin__field-tooltip-action::before {font-size:1.5rem; line-height: 1.1;}
+#pe_labels_table th span.pe-note {color:gray;font-weight:normal;}
+#pe_labels_table .pe-hint-id {width:1px; white-space: nowrap;}
+#pe_labels_table .pe-clickable-area-column {width:120px;}
+#pe_labels_table .pe-text-column,
+#pe_labels_table .pe-link-to-number-column {width:172px;}
+#pe_labels_table .pe-delete-column {width:35px;}
+#pe_labels_table td {padding:2px;}
+#pe_labels_table td.pe-area-size input {width:50px}
+#pe_labels_table tr:last-child td {padding-top:10px;}
+button.pe-delete-label {padding:0; height: 28px; width: 28px;}
