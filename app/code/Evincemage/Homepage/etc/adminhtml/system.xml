@@ -15,14 +15,6 @@
             <resource>Evincemage_Homepage::homepage_configuration</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
-                <field id="banner_image" translate="label" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Upload Banner Image</label>
-                    <!-- Backend model which saves uploaded files on a defined directory path -->
-                    <backend_model>Evincemage\Homepage\Model\Config\Backend\Image</backend_model>
-                    <base_url type="media" scope_info="1">homepage</base_url>
-                    <!-- Comment about allowed extensions of uploaded files which are defined in the backend model -->
-                    <comment><![CDATA[Allowed file types: jpg, jpeg, gif, png, svg]]></comment>
-                </field>
                 <field id="banner_caption" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Banner Caption Text</label>
                 </field>

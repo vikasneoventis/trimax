@@ -1,0 +1,275 @@
+/**
+ * @author Evince Team
+ * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
+ */
+
+ @media only screen and (min-width : 1200px) and (max-width : 1400px){
+ /*Home-page-Start*/
+.cms-index-index .home-first-block{padding: 50px 50px 100px 50px;}
+.cms-index-index .home-first-block .block.block-search .field.search #search{width: 75%;}
+.cms-index-index .block.block-search .actions{width: 16%;}
+.cms-index-index .home-first-block .col-1.first{padding: 0px 20px;}
+.cms-index-index .home-first-block .col-1.first h1{font-size: 24px;width: 80%;margin-top: 55px;}
+.cms-index-index .our-parts .col-main p{width: 70%;padding-left: 190px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service{padding-top: 80px;height: 100px;font-size: 14px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li{width: 14.8%;vertical-align: top;}
+.cms-index-index .our-parts .col-main h2{font-size: 24px;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header h2{font-size: 24px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li .login_cta .login-text{font-size: 14px;width: 70%;}
+.cms-index-index .social-feed-header h2{font-size: 24px;}
+.cms-index-index .social-feed-header p{font-size: 16px;}
+.cms-index-index .merchandise .col-1.first h2{font-size: 24px;}
+/*Home-page-End*/
+ }
+
+
+@media only screen and (min-width : 992px) and (max-width : 1199px){
+/*Home-page-Start*/
+.cms-index-index .home-first-block{padding: 50px 50px 100px 50px;}
+.cms-index-index .home-first-block .col-1.first{padding: 20px 0px;}
+.cms-index-index .home-first-block .col-1.first h1{font-size: 20px;width: 85%;}
+.cms-index-index .home-first-block .block.block-search .field.search #search{width: 65%;padding-left: 15px;font-size: 12px;}
+.cms-index-index .block.block-search .actions{width: 20%;padding: 8px 7px 8px 15px;}
+.cms-index-index .block.block-customer-login{width: 280px;padding: 50px 50px 60px;margin: 10px;}
+.cms-index-index .our-parts .col-main h2{font-size: 20px;}
+.cms-index-index .our-parts .col-main p{width: 100%;padding-left: 0;}
+.cms-index-index .our-parts{padding-left: 270px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li{margin-bottom: 30px;width: 30%;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li:first-child{margin-left: 10px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li:last-child{margin-right: 10px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service{padding-top: 100px;height: 120px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li .login_cta .login-text{font-size: 16px;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header h2{font-size: 20px;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header p{font-size: 16px;}
+.cms-index-index .social-feed-header h2{font-size: 20px;margin-bottom: 15px;}
+.cms-index-index .social-feed-header{padding: 30px 15px;}
+.cms-index-index .social-feed-header p{font-size: 16px;}
+.cms-index-index .merchandise{padding: 15px;}
+.cms-index-index .merchandise .col-1.first { width: 40%;margin: 30px 0px 30px 70px;}
+.cms-index-index .merchandise .col-1.first h2{font-size: 20px;}
+/*Home-page-End*/
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px){
+/*header-Start*/
+.cms-index-index .account-mini-wrapper{float: right;width: 60%;}
+.cms-index-index .account-mini-wrapper p{font-size: 15px;}
+.cms-index-index .header.content{padding: 50px 30px 25px;}
+/*header-End*/
+
+/*Home-page-Start*/
+.navigation .level0{margin: 0;}
+.navigation .level0 > .level-top{font-size: 14px;}
+.navigation{padding: 0px 30px;}
+.page-main{padding: 0px 30px;}
+.cms-index-index .home-first-block{padding: 50px 50px 100px 50px;}
+.cms-index-index .home-first-block .col-1.first{padding: 20px 0px 40px;width: 100%;}
+.cms-index-index .home-first-block .col-1.first h1{font-size: 22px;}
+.cms-index-index .home-first-block .col-1.first h1{width: 65%;}
+.cms-index-index .home-first-block .block.block-search p.seacrh-label{font-size: 16px;}
+.cms-index-index .home-first-block .block.block-search .field.search #search{width: 70%;}
+.cms-index-index .block.block-search .actions{width: 15%;text-align: center;}
+.cms-index-index .home-first-block{padding: 25px 50px 70px 50px;}
+.cms-index-index .block.block-customer-login{float: none;margin: 30px auto 0px;clear: both;width: 400px;box-sizing: border-box;}
+.cms-index-index .our-parts .col-main h2{font-size: 22px;}
+.cms-index-index .our-parts .col-main p{width: 100%;font-size: 15px;padding-left: 0;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header h2{font-size: 22px;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header p{font-size: 15px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li{width: 29.3%;vertical-align: top;margin-bottom: 30px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service{padding-top: 70px;height: 85px;font-size: 13px;}
+.cms-index-index .my-trimax.col1-layout{padding: 30px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items { margin: 30px 0px 10px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li .login_cta .login-text{font-size: 12px;}
+.cms-index-index .social-feed-header{padding: 30px;}
+.cms-index-index .social-feed-header h2{font-size: 20px;margin-bottom: 15px;}
+.cms-index-index .social-feed-header p{font-size: 15px;}
+.cms-index-index .merchandise{padding: 30px;}
+.cms-index-index .merchandise .col-1.first{width: 65%;margin:0;margin-left: 20px;}
+.cms-index-index .merchandise .col-1.first h2{font-size: 22px;}
+.cms-index-index .merchandise .col-1.first a.button{font-size: 12px;padding: 10px 20px;}
+.cms-index-index .our-parts:before {content: "";position: absolute;top: 0;height: 100%;width: 100%;background-color: #000;opacity: 0.5;left: 0;}
+.cms-index-index .our-parts .col-main{position: relative;}
+.cms-index-index .our-parts {position: relative;}
+
+/*Home-page-End*/
+
+/*footer-Start*/
+.page-footer{padding: 30px;}
+.footer.content .links{padding-left: 0;}
+.footer.content ul{margin-bottom: 20px;}
+/*footer-End*/
+}
+
+@media only screen and (max-width : 767px){
+/*header-Start*/
+.header.content{padding: 20px 15px;}
+.nav-toggle{top: 15px;}
+.logo{margin-left: 40px;max-width: 50%;}
+.minicart-wrapper{position: absolute;top: 22px;right: 15px;margin-top: 0;}
+.account-mini-wrapper{margin-top: 20px;text-align: center;float: left;width: 100%;}
+.account-mini-wrapper p{font-size: 14px;}
+.account-cart-wrapper {float: left;width: 100%;}
+.account-cart-wrapper a.button{font-size: 12px;padding: 10px 25px;margin-left: 0;}
+/*header-End*/
+
+/*Home-page-Start*/
+.page-main{padding: 0px 15px;}
+.columns{display: block;}
+.cms-index-index .home-first-block{padding: 30px 20px 50px;}
+.cms-index-index .home-first-block .col-1.first{width: 100%;padding: 0;margin-bottom: 20px;float: left;text-align: center;}
+.cms-index-index .home-first-block .col-1.first h1{font-size: 15px;line-height: 25px;margin-top: 15px;}
+.cms-index-index .home-first-block .block.block-search{padding-left: 0;}
+.cms-index-index .home-first-block .block.block-search p.seacrh-label{font-size: 14px;}
+.block-search .control{border: none;width: 100%;position: relative;}
+.cms-index-index .home-first-block .block.block-search .field.search #search{width: 89%;padding-left:11px;font-size: 10px;}
+.block-search input{left: 15px;margin: 0;}
+.cms-index-index .block.block-search .actions{font-size: 12px;padding: 0;position: absolute;right: 15px;background: transparent;}
+.cms-index-index .block.block-search .actions:hover{background: transparent;}
+.cms-index-index .block.block-search .actions button{background: #d21f2c;border: none;font-size: 12px;height: 36px;box-shadow: none;border-radius: 14px;transition: all .5s ease-in-out;padding: 6px;}
+.cms-index-index .block-search .action.search > span{font-size: 12px;}
+.block-search .action.search{display: block;}
+.cms-index-index button:not(.primary){box-shadow: none;}
+.cms-index-index .block.block-search .actions button:hover{background:#474747;cursor: pointer;}
+.cms-index-index .block.block-customer-login{margin:50px 0px 0px;width: 100%;padding: 20px 20px 30px;float:left;}
+.cms-index-index .block.block-customer-login #block-customer-login-heading span{font-size: 16px;}
+.cms-index-index .block.block-customer-login .block-title .field.note{font-size: 13px;}
+.cms-index-index .block.block-customer-login .actions-toolbar{text-align: center;}
+.cms-index-index .home-first-block .col-1.first h1{width: 100%;margin-bottom: 10px;}
+.cms-index-index .block.block-search .actions{float: none;width: auto;}
+.cms-index-index .my-trimax.col1-layout{padding: 30px 15px;}
+.cms-index-index .block.block-customer-login {
+    margin: 10px 0px 0px;
+    width: 100%;
+    padding: 20px 20px 30px;
+    float: left;
+    max-width: 100%;
+    box-sizing: border-box;
+    max-width: 400px;
+    margin: 10px auto;
+    float: none;
+    clear: both;
+}
+
+.cms-index-index .our-parts .col-main{position: relative;}
+
+.cms-index-index .our-parts {
+    background-image: url(../images/PARTS-BACKRGOUND.jpg);
+    padding: 30px 15px;
+    overflow: hidden;
+    margin: 20px 0px 25px;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    /* background-position: center; */
+}
+
+.cms-index-index .our-parts:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    left: 0;
+}
+
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li {
+    display: inline-block;
+    background-color: #4a4a4a;
+    border-radius: 5px;
+    margin: 0 0 15px;
+    width: 100%;
+    position: relative;
+}
+
+
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service{
+    position: relative;
+    padding: 80px 0 80px 0; height:auto;
+    
+    
+
+}
+
+.cms-index-index .social-feed-header h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    line-height: 22px;
+}
+
+.cms-index-index .social-feed-header p {
+    margin-top: 0;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.cms-index-index .merchandise .col-1.first {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cms-index-index .merchandise .col-1.first h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+
+.cms-index-index .merchandise .col-1.first p {font-size: 15px;margin-bottom: 15px;}
+.cms-index-index .social-feed-header{padding: 30px 15px;}
+.cms-index-index .merchandise{padding: 30px 15px;}
+.cms-index-index .our-parts .col-main p{width: 100%;padding-left: 0;font-size: 13px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li .login_cta .login-text{font-size: 16px;}
+
+
+/*footer-Start*/
+.page-footer{padding: 30px 15px;}
+.footer.content ul{margin-bottom: 20px;}
+.footer.content ul.links li{margin-bottom: 5px;background:transparent;border: none;}
+.footer.content{border: none;}
+.footer.content .links > li{padding: 0;}
+/*footer-End*/
+
+
+.cms-index-index .block-search .action.search::before{display: block;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header{padding: 20px;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header h2{font-size: 22px;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header p{font-size: 13px;}
+.columns .column.main{padding-bottom: 0;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li:first-child{margin-left: 0px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li:last-child{margin-right: 0px;}
+.searchsuite-autocomplete{width: 100%;left: 0;}
+.searchsuite-autocomplete .title{text-align: left;}
+.qs-option-addtocart .action.primary{font-size: 12px;}
+.searchsuite-autocomplete ul li a{font-size: 12px;}
+#product .qs-option-title a{font-size: 14px;}
+
+}
+
+@media only screen and (min-width : 479px) and (max-width : 767px){
+.cms-index-index .block.block-search .actions button{padding: 7px 12px;}
+.cms-index-index .block.block-search .actions {float: right;width: 17%;}
+.cms-index-index .home-first-block .block.block-search .field.search #search{position: static;width: 80%;}
+.logo{max-width: 30%;}
+.block-search .control{width: 70%;margin: 0 auto;}
+.cms-index-index .block.block-customer-login .actions-toolbar{text-align: left;}
+.cms-index-index .block.block-customer-login .actions-toolbar .primary{float: left; margin-right: 10px;}
+.cms-index-index .home-first-block .col-1.first{margin-bottom: 30px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li{margin: 0 9px 15px;width: 45%;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li:first-child{margin-left: 9px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li:last-child{margin-right: 9px;}
+
+}

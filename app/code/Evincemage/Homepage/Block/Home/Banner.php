@@ -33,15 +33,8 @@ class Banner extends Template {
         return parent::_prepareLayout();
     }
 
-    public function getBannerImage() {
-        return $this->_dataHelper->getBannerImage();
-    }
-
     public function getBannerCaption() {
         return $this->_dataHelper->getBannerCaption();
     }
-
-    public function getBannerDirUrl() {
-        return $this->_storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA).'homepage';
-    }
+    
 }

@@ -7,12 +7,14 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="top.search" remove="true"/>
+
         <referenceContainer name="content">
             <container name="home-first-block" htmlTag="div" htmlClass="home-first-block" before="-">
-                <block class="Evincemage\Homepage\Block\Home\Banner" name="banner_top" template="Evincemage_Homepage::home/banner.phtml" />
-                <block class="Magento\Framework\View\Element\Template" name="search.custom" template="Evincemage_Homepage::home/form.mini.phtml" />
-                <block class="Magento\Customer\Block\Form\Login" name="login_custom" template="Evincemage_Homepage::form/login.phtml" />
+                <container name="search-col" htmlTag="div" htmlClass="col-1 first" before="-">
+                    <block class="Evincemage\Homepage\Block\Home\Banner" name="banner_top" template="Evincemage_Homepage::home/banner.phtml" />
+                    <block class="Magento\Framework\View\Element\Template" name="top.search" after="banner_top" template="Evincemage_Homepage::home/form.mini.phtml" />
+                </container>
+                <block class="Evincemage\Homepage\Block\Customer\Form" name="login_custom" template="Evincemage_Homepage::form/login.phtml" />
             </container>
         </referenceContainer>
     </body>

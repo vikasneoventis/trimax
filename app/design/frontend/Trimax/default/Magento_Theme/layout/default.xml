@@ -7,27 +7,44 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="header.panel.wrapper" remove="true"/>
-        <referenceContainer name="header-wrapper">
-            <block class="Evincemage\Homepage\Block\Customer\Account" name="customer.login" as="customerLinks" after="minicart" template="Evincemage_Homepage::customer/login-signup.phtml" />
-            <block class="Magento\Customer\Block\Account\Customer" name="customer" template="Magento_Customer::account/customer.phtml" before="minicart"/>-->
-        </referenceContainer>
         <referenceBlock name="form.subscribe" remove="true" />
         <referenceBlock name="search-term-popular-link" remove="true" />
         <referenceBlock name="catalog-search-advanced-link" remove="true" />
         <referenceBlock name="footer_links">
-            <block class="Magento\Framework\View\Element\Html\Link\Current" name="about-us">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="about-us" before="-">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">About Us</argument>
                     <argument name="path" xsi:type="string">about-us</argument>
                 </arguments>
             </block>
-            <block class="Magento\Framework\View\Element\Html\Link\Current" name="privacy-policy-link">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="contact/contact/enabled" name="contact-us-link" after="about-us">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact Us</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-services" after="contact-us-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Customer Services</argument>
+                    <argument name="path" xsi:type="string">customer-services</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="privacy-policy-link" after="contact-us-link">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Privacy Policy</argument>
                     <argument name="path" xsi:type="string">privacy-policy-cookie-restriction-mode</argument>
                 </arguments>
             </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="catalog-search-advanced-link" after="privacy-policy-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Advanced Search</argument>
+                    <argument name="path" xsi:type="string">catalogsearch/advanced</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="data-action" xsi:type="string">advanced-search</item>
+                    </argument>
+                </arguments>
+            </block>
         </referenceBlock>
+        <move element="copyright" destination="footer" after="footer_links"/>
     </body>
 </page>

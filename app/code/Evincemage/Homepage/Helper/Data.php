@@ -16,7 +16,6 @@ class Data extends AbstractHelper {
      */
     protected $_storeManager;
 
-    const XML_PATH_BANNER_IMAGE = 'homepage/general/banner_image';
     const XML_PATH_BANNER_CAPTION = 'homepage/general/banner_caption';
     
     
@@ -34,11 +33,6 @@ class Data extends AbstractHelper {
     /**
      * @return module status
      */
-    public function getBannerImage() {
-        return $this->scopeConfig->getValue(
-                        self::XML_PATH_BANNER_IMAGE, ScopeInterface::SCOPE_STORE
-        );
-    }
 
     public function getBannerCaption() {
         return $this->scopeConfig->getValue(

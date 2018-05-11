@@ -7,10 +7,21 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-       <!-- <referenceContainer name="header.panel.wrapper" remove="true"/>
-
+        <referenceContainer name="header.panel.wrapper" remove="true"/>
         <referenceContainer name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" />
-        </referenceContainer>-->
+            <container name="header.right" htmlTag="div" htmlClass="account-mini-wrapper" after="logo">
+                <block class="Evincemage\Homepage\Block\Customer\Account" name="custom.text" as="customertext" before="customer" template="Evincemage_Homepage::customer/account.phtml" />
+                <block class="Evincemage\Homepage\Block\Customer\Account" name="customer.login" as="customerLinks" after="minicart" template="Evincemage_Homepage::customer/login-signup.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer-logo" before="footer_links">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-logo</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <move element="minicart" destination="header.right" />
+        <move element="customer" destination="header.right" after="minicart"/>
     </body>
 </page>

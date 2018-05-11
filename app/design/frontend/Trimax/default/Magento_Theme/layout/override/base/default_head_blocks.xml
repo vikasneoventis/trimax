@@ -7,8 +7,9 @@
  -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="css/styles.css" media="all"/>
-        <css src="css/responsive.css" media="all"/>
-        <css src="//assets.juicer.io/embed.css" src_type="url" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <css src="mage/calendar.css"/>
+        <script src="//assets.juicer.io/embed.js" src_type="url"/>
+        <script src="requirejs/require.js"/>
     </head>
 </page>
