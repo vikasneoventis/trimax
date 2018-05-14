@@ -1,0 +1,37 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2018 Amasty (https://www.amasty.com)
+ * @package Amasty_Xsearch
+ */
+?>
+<?php
+/** @var \Amasty\Xsearch\Block\Search\AbstractSearch $block */
+$collection = $block->getLoadedSearchCollection();
+?>
+<?php if ($collection->getSize()) : ?>
+    <li class="amasty-xsearch-block-header">
+        <?= $block->escapeHtml($block->getTitle());?>
+    </li>
+
+    <?php foreach ($collection as $item) : ?>
+        <li class="amsearch-item"
+            data-search-block-type="<?= /* @escapeNotVerified */ $block->getBlockType();?>"
+            data-click-url="<?= /* @escapeNotVerified */ $block->getSearchUrl($item) ?>">
+            <strong>
+                <a href="<?= /* @escapeNotVerified */ $block->getSearchUrl($item) ?>"
+                   title="<?= /* @escapeNotVerified */ $block->stripTags($block->getName($item)); ?>"
+                   class="item-name" >
+                    <?= /* @escapeNotVerified */ $block->getName($item); ?>
+                </a>
+                <span class="amasty-xsearch-num-results"><?= $item->getNumResults() ?></span>
+            </strong>
+
+            <?php if ($block->showDescription($item)) :?>
+                <div class="item-description">
+                    <?= /* @escapeNotVerified */ $block->getDescription($item)?>
+                </div>
+            <?php endif; ?>
+        </li>
+    <?php endforeach;?>
+<?php endif; ?>

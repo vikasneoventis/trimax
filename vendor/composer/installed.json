@@ -1423,69 +1423,6 @@
         ]
     },
     {
-        "name": "composer/spdx-licenses",
-        "version": "1.3.0",
-        "version_normalized": "1.3.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/composer/spdx-licenses.git",
-            "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7e111c50db92fa2ced140f5ba23b4e261bc77a30",
-            "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.3.2 || ^7.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
-            "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
-        },
-        "time": "2018-01-31T13:17:27+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Composer\\Spdx\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Nils Adermann",
-                "email": "naderman@naderman.de",
-                "homepage": "http://www.naderman.de"
-            },
-            {
-                "name": "Jordi Boggiano",
-                "email": "j.boggiano@seld.be",
-                "homepage": "http://seld.be"
-            },
-            {
-                "name": "Rob Bast",
-                "email": "rob.bast@gmail.com",
-                "homepage": "http://robbast.nl"
-            }
-        ],
-        "description": "SPDX licenses list and validation library.",
-        "keywords": [
-            "license",
-            "spdx",
-            "validator"
-        ]
-    },
-    {
         "name": "composer/semver",
         "version": "1.4.2",
         "version_normalized": "1.4.2.0",
@@ -8024,52 +7961,6 @@
         "type": "metapackage"
     },
     {
-        "name": "ebizmarts/mailchimp-lib",
-        "version": "3.0.18",
-        "version_normalized": "3.0.18.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ebizmarts/mailchimp-lib.git",
-            "reference": "5dc08be6010d1e8c0a2eb3dd3b416c023fb993e3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ebizmarts/mailchimp-lib/zipball/5dc08be6010d1e8c0a2eb3dd3b416c023fb993e3",
-            "reference": "5dc08be6010d1e8c0a2eb3dd3b416c023fb993e3",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.2.0"
-        },
-        "time": "2018-03-14T14:37:37+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Mailchimp": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Ebizmarts Corp.",
-                "email": "info@ebizmarts.com",
-                "homepage": "http://ebizmarts.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "API client library for the MailChimp",
-        "homepage": "https://github.com/ebizmarts/mailchimp-lib",
-        "keywords": [
-            "api",
-            "email",
-            "mailchimp"
-        ]
-    },
-    {
         "name": "mailchimp/mc-magento2",
         "version": "1.0.28",
         "version_normalized": "1.0.28.0",
@@ -13115,5 +13006,246 @@
             }
         ],
         "description": "Magento Shipping Multiple Table Rates - MatrixRate"
+    },
+    {
+        "name": "composer/spdx-licenses",
+        "version": "1.4.0",
+        "version_normalized": "1.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer/spdx-licenses.git",
+            "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/cb17687e9f936acd7e7245ad3890f953770dec1b",
+            "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.3.2 || ^7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
+            "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
+        },
+        "time": "2018-04-30T10:33:04+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Composer\\Spdx\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nils Adermann",
+                "email": "naderman@naderman.de",
+                "homepage": "http://www.naderman.de"
+            },
+            {
+                "name": "Jordi Boggiano",
+                "email": "j.boggiano@seld.be",
+                "homepage": "http://seld.be"
+            },
+            {
+                "name": "Rob Bast",
+                "email": "rob.bast@gmail.com",
+                "homepage": "http://robbast.nl"
+            }
+        ],
+        "description": "SPDX licenses list and validation library.",
+        "keywords": [
+            "license",
+            "spdx",
+            "validator"
+        ]
+    },
+    {
+        "name": "ebizmarts/mailchimp-lib",
+        "version": "3.0.20",
+        "version_normalized": "3.0.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ebizmarts/mailchimp-lib.git",
+            "reference": "a9ff4c9820a0c42f4e4eae6a6adf3d67fa947bcb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ebizmarts/mailchimp-lib/zipball/a9ff4c9820a0c42f4e4eae6a6adf3d67fa947bcb",
+            "reference": "a9ff4c9820a0c42f4e4eae6a6adf3d67fa947bcb",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "time": "2018-05-11T16:17:43+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Mailchimp": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ebizmarts Corp.",
+                "email": "info@ebizmarts.com",
+                "homepage": "http://ebizmarts.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "API client library for the MailChimp",
+        "homepage": "https://github.com/ebizmarts/mailchimp-lib",
+        "keywords": [
+            "api",
+            "email",
+            "mailchimp"
+        ]
+    },
+    {
+        "name": "amasty/base",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://repo.magento.com/archives/amasty/base/amasty-base-1.3.0.0.zip",
+            "reference": null,
+            "shasum": "54e1c2f63254d67dd000fcbef4fe7b547d42020a"
+        },
+        "require": {
+            "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
+        },
+        "type": "magento2-module",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "registration.php"
+            ],
+            "psr-4": {
+                "Amasty\\Base\\": ""
+            }
+        },
+        "license": [
+            "Commercial"
+        ],
+        "description": "Amasty Base"
+    },
+    {
+        "name": "amasty/xsearch",
+        "version": "1.3.2",
+        "version_normalized": "1.3.2.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://repo.magento.com/archives/amasty/xsearch/amasty-xsearch-1.3.2.0.zip",
+            "reference": null,
+            "shasum": "47801b023c03eedbd826ee642c5eb693d30c011f"
+        },
+        "require": {
+            "amasty/base": "*",
+            "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
+        },
+        "type": "magento2-module",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "registration.php"
+            ],
+            "psr-4": {
+                "Amasty\\Xsearch\\": ""
+            }
+        },
+        "license": [
+            "Commercial"
+        ],
+        "description": "Search Autocomplete by Amasty"
+    },
+    {
+        "name": "bsscommerce/customer-approval",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://repo.magento.com/archives/bsscommerce/customer-approval/bsscommerce-customer-approval-1.0.0.0.zip",
+            "reference": null,
+            "shasum": "536d14627e239400ba5bb02f515179d69f2afbd1"
+        },
+        "require": {
+            "php": "~5.5.0|~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0"
+        },
+        "type": "magento2-module",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "registration.php"
+            ],
+            "psr-4": {
+                "Bss\\CustomerApproval\\": ""
+            }
+        },
+        "license": [
+            "OSL-3.0",
+            "AFL-3.0"
+        ],
+        "description": "Bss Customer Approval Module"
+    },
+    {
+        "name": "mageworx/module-downloads",
+        "version": "2.5.1",
+        "version_normalized": "2.5.1.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://repo.magento.com/archives/mageworx/module-downloads/mageworx-module-downloads-2.5.1.0.zip",
+            "reference": null,
+            "shasum": "4a9b3c9142d72c7ef9ad3f334334ba6d52f502ae"
+        },
+        "require": {
+            "magento/framework": ">=100.0.0 <102",
+            "magento/module-catalog": ">=100.0.0 <103",
+            "magento/module-ui": ">=100.0.0 <102"
+        },
+        "type": "magento2-module",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "registration.php"
+            ],
+            "psr-4": {
+                "MageWorx\\Downloads\\": ""
+            }
+        },
+        "license": [
+            "OSL-3.0",
+            "AFL-3.0"
+        ],
+        "description": "MageWorx Downloads extension"
+    },
+    {
+        "name": "mageworx/module-downloadsmeta",
+        "version": "2.5.1",
+        "version_normalized": "2.5.1.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://repo.magento.com/archives/mageworx/module-downloadsmeta/mageworx-module-downloadsmeta-2.5.1.0.zip",
+            "reference": null,
+            "shasum": "0a3ea8f99fef99df226991182abe5ad856af2920"
+        },
+        "require": {
+            "mageworx/module-downloads": "2.5.1"
+        },
+        "type": "metapackage"
     }
 ]

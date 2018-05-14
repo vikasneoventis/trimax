@@ -2,8 +2,20 @@
  * @author Evince Team
  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
  */
+ @media only screen and (min-width : 1400px) and (max-width : 1600px){
+ .cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service{height: 120px;padding-top: 100px;}
+ }
 
- @media only screen and (min-width : 1200px) and (max-width : 1400px){
+ 
+
+
+ @media only screen and (min-width : 1200px) and (max-width : 1600px){
+ .cms-index-index .block.block-search .actions{width: 15%;}
+ .cms-index-index .home-first-block .block.block-search .field.search #search{width: 75%;}
+ }
+
+
+ @media only screen and (min-width : 1200px) and (max-width : 1399px){
  /*Home-page-Start*/
 .cms-index-index .home-first-block{padding: 50px 50px 100px 50px;}
 .cms-index-index .home-first-block .block.block-search .field.search #search{width: 75%;}
@@ -12,13 +24,18 @@
 .cms-index-index .home-first-block .col-1.first h1{font-size: 24px;width: 80%;margin-top: 55px;}
 .cms-index-index .our-parts .col-main p{width: 70%;padding-left: 190px;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service{padding-top: 80px;height: 100px;font-size: 14px;}
-.cms-index-index .my-trimax.col1-layout .trimax-items ul li{width: 14.8%;vertical-align: top;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li{width: 14.7%;vertical-align: top;}
 .cms-index-index .our-parts .col-main h2{font-size: 24px;}
 .cms-index-index .my-trimax.col1-layout .my-trimax-header h2{font-size: 24px;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li .login_cta .login-text{font-size: 14px;width: 70%;}
 .cms-index-index .social-feed-header h2{font-size: 24px;}
 .cms-index-index .social-feed-header p{font-size: 16px;}
 .cms-index-index .merchandise .col-1.first h2{font-size: 24px;}
+.cms-index-index .block.block-customer-login{margin: 50px 10px 60px;}
+.navigation .level0 > .level-top{font-size: 14px;}
+.navigation .level0{margin-top: 0;}
+.block-search .block-content{width: 400px;}
+.searchsuite-autocomplete{width: 375px;}
 /*Home-page-End*/
  }
 
@@ -30,7 +47,7 @@
 .cms-index-index .home-first-block .col-1.first h1{font-size: 20px;width: 85%;}
 .cms-index-index .home-first-block .block.block-search .field.search #search{width: 65%;padding-left: 15px;font-size: 12px;}
 .cms-index-index .block.block-search .actions{width: 20%;padding: 8px 7px 8px 15px;}
-.cms-index-index .block.block-customer-login{width: 280px;padding: 50px 50px 60px;margin: 10px;}
+.cms-index-index .block.block-customer-login{width: 275px;padding: 50px 50px 60px;margin: 10px;}
 .cms-index-index .our-parts .col-main h2{font-size: 20px;}
 .cms-index-index .our-parts .col-main p{width: 100%;padding-left: 0;}
 .cms-index-index .our-parts{padding-left: 270px;}
@@ -47,6 +64,10 @@
 .cms-index-index .merchandise{padding: 15px;}
 .cms-index-index .merchandise .col-1.first { width: 40%;margin: 30px 0px 30px 70px;}
 .cms-index-index .merchandise .col-1.first h2{font-size: 20px;}
+.searchsuite-autocomplete{left: 10px;width: 330px;}
+.block-search .block-content{width: 350px;}
+.navigation .level0 > .level-top{font-size: 12px;padding: 0px 8px;}
+.navigation .level0{margin: 0;}
 /*Home-page-End*/
 }
 
@@ -54,7 +75,11 @@
 /*header-Start*/
 .cms-index-index .account-mini-wrapper{float: right;width: 60%;}
 .cms-index-index .account-mini-wrapper p{font-size: 15px;}
-.cms-index-index .header.content{padding: 50px 30px 25px;}
+.cms-index-index .header.content{padding: 50px 30px 0px;}
+.account-mini-wrapper{width: 380px;}
+.block-search .block-content{width: 380px;}
+.nav-sections{margin-top: 0;}
+.searchsuite-autocomplete{width: 350px;}
 /*header-End*/
 
 /*Home-page-Start*/
@@ -68,7 +93,7 @@
 .cms-index-index .home-first-block .col-1.first h1{width: 65%;}
 .cms-index-index .home-first-block .block.block-search p.seacrh-label{font-size: 16px;}
 .cms-index-index .home-first-block .block.block-search .field.search #search{width: 70%;}
-.cms-index-index .block.block-search .actions{width: 15%;text-align: center;}
+.cms-index-index .block.block-search .actions{width: 11%;text-align: center;padding: 7px 12px 8px 15px;}
 .cms-index-index .home-first-block{padding: 25px 50px 70px 50px;}
 .cms-index-index .block.block-customer-login{float: none;margin: 30px auto 0px;clear: both;width: 400px;box-sizing: border-box;}
 .cms-index-index .our-parts .col-main h2{font-size: 22px;}
@@ -110,6 +135,12 @@
 .account-mini-wrapper p{font-size: 14px;}
 .account-cart-wrapper {float: left;width: 100%;}
 .account-cart-wrapper a.button{font-size: 12px;padding: 10px 25px;margin-left: 0;}
+.block-search .block-content{width: 100%;float: left;}
+.block-search .label::before{position: absolute;right: 15px;z-index: 1;margin-top: 5px;}
+.block-search{margin-top: 0;}
+.minisearch .actions{display: none;}
+.block-search .control{width: 100%;}
+.searchsuite-autocomplete {width: 85%;left: 15px;margin: 0 auto;top: 43px;}
 /*header-End*/
 
 /*Home-page-Start*/
@@ -251,7 +282,7 @@
 .columns .column.main{padding-bottom: 0;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li:first-child{margin-left: 0px;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li:last-child{margin-right: 0px;}
-.searchsuite-autocomplete{width: 100%;left: 0;}
+.cms-index-index .searchsuite-autocomplete{width: 100%;left: 0;}
 .searchsuite-autocomplete .title{text-align: left;}
 .qs-option-addtocart .action.primary{font-size: 12px;}
 .searchsuite-autocomplete ul li a{font-size: 12px;}
@@ -264,12 +295,13 @@
 .cms-index-index .block.block-search .actions {float: right;width: 17%;}
 .cms-index-index .home-first-block .block.block-search .field.search #search{position: static;width: 80%;}
 .logo{max-width: 30%;}
-.block-search .control{width: 70%;margin: 0 auto;}
+.cms-index-index .block-search .control{width: 70%;}
 .cms-index-index .block.block-customer-login .actions-toolbar{text-align: left;}
 .cms-index-index .block.block-customer-login .actions-toolbar .primary{float: left; margin-right: 10px;}
 .cms-index-index .home-first-block .col-1.first{margin-bottom: 30px;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li{margin: 0 9px 15px;width: 45%;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li:first-child{margin-left: 9px;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li:last-child{margin-right: 9px;}
+.block-search .control{width: 100%;margin: 0 auto;padding: 0;}
 
 }

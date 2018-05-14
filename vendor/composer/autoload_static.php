@@ -160,12 +160,16 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         '4137e072aca869574ccb2dd0da693e02' => __DIR__ . '/..' . '/magento/module-advanced-pricing-import-export/registration.php',
         '1158fd4355efa1508f87cf82bdcd70ac' => __DIR__ . '/..' . '/magento/module-admin-notification/registration.php',
         'ecb8e9b41f51c277a87468608b694cd4' => __DIR__ . '/..' . '/magento/module-marketplace/registration.php',
+        'd80eeac38b1531dc0a5e7b858d9df0a8' => __DIR__ . '/..' . '/amasty/base/registration.php',
+        '7c02e6b3063c2cc6cd79a1d9b9b5094c' => __DIR__ . '/..' . '/mageworx/module-downloads/registration.php',
         '62008ed0ff26c9aa9e7ca9697420b61d' => __DIR__ . '/..' . '/mailchimp/mc-magento2/registration.php',
         '7bf8e427ce36adb50d4a1cbfe640583d' => __DIR__ . '/..' . '/magecomp/module-hideprice/registration.php',
         'f8af8a668e1953ab7f84521e8bcd2f42' => __DIR__ . '/..' . '/magecomp/module-customredirect/registration.php',
         '3f34f6fa540f1f944e5fac387304528e' => __DIR__ . '/..' . '/pektsekye/module-product-exploded/registration.php',
         'c2f5ab20de85a2745aa4fca360949f3a' => __DIR__ . '/..' . '/itoris/module-cms-display-rules/registration.php',
         '5b29f2c69f54a19d37a4958cb6a83038' => __DIR__ . '/..' . '/webshopapps/module-matrixrate/src/registration.php',
+        'eaa5b06da4db22197ac8dd6a9e41aa82' => __DIR__ . '/..' . '/amasty/xsearch/registration.php',
+        'c23f150e1349ab68620cabafe10bcd13' => __DIR__ . '/..' . '/bsscommerce/customer-approval/registration.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -395,6 +399,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
             'Magecomp\\Hideprice\\' => 19,
             'Magecomp\\Customredirect\\' => 24,
             'MageWorx\\SearchSuiteAutocomplete\\' => 33,
+            'MageWorx\\Downloads\\' => 19,
         ),
         'L' => 
         array (
@@ -441,6 +446,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         ),
         'B' => 
         array (
+            'Bss\\CustomerApproval\\' => 21,
             'Braintree\\' => 10,
         ),
         'A' => 
@@ -449,6 +455,8 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
             'Amazon\\Login\\' => 13,
             'Amazon\\Core\\' => 12,
             'AmazonPay\\' => 10,
+            'Amasty\\Xsearch\\' => 15,
+            'Amasty\\Base\\' => 12,
         ),
     );
 
@@ -1240,6 +1248,10 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         array (
             0 => __DIR__ . '/..' . '/mageworx/module-searchsuiteautocomplete',
         ),
+        'MageWorx\\Downloads\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mageworx/module-downloads',
+        ),
         'League\\CLImate\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/climate/src',
@@ -1316,6 +1328,10 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         array (
             0 => __DIR__ . '/..' . '/composer/composer/src/Composer',
         ),
+        'Bss\\CustomerApproval\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bsscommerce/customer-approval',
+        ),
         'Braintree\\' => 
         array (
             0 => __DIR__ . '/..' . '/braintree/braintree_php/lib/Braintree',
@@ -1335,6 +1351,14 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         'AmazonPay\\' => 
         array (
             0 => __DIR__ . '/..' . '/amzn/amazon-pay-sdk-php/AmazonPay',
+        ),
+        'Amasty\\Xsearch\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/amasty/xsearch',
+        ),
+        'Amasty\\Base\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/amasty/base',
         ),
     );
 
