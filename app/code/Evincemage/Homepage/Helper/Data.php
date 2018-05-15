@@ -17,8 +17,6 @@ class Data extends AbstractHelper {
     protected $_storeManager;
 
     const XML_PATH_BANNER_CAPTION = 'homepage/general/banner_caption';
-    
-    
 
     /**
      * Data constructor.
@@ -39,4 +37,5 @@ class Data extends AbstractHelper {
                         self::XML_PATH_BANNER_CAPTION, ScopeInterface::SCOPE_STORE
         );
     }
+
 }

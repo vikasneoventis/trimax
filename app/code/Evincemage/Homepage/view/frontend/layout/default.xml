@@ -10,7 +10,7 @@
         <referenceContainer name="header.panel.wrapper" remove="true"/>
         <referenceContainer name="header-wrapper">
             <container name="header.right" htmlTag="div" htmlClass="account-mini-wrapper" after="logo">
-                <block class="Evincemage\Homepage\Block\Customer\Account" name="custom.text" as="customertext" before="customer" template="Evincemage_Homepage::customer/account.phtml" />
+            <container name="header.panel.note" label="Page Header Note Container" htmlTag="div" htmlClass="container header note"></container>
                 <block class="Evincemage\Homepage\Block\Customer\Account" name="customer.login" as="customerLinks" after="minicart" template="Evincemage_Homepage::customer/login-signup.phtml" />
             </container>
         </referenceContainer>

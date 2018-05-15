@@ -11,10 +11,9 @@
         <referenceContainer name="content">
             <container name="home-first-block" htmlTag="div" htmlClass="home-first-block" before="-">
                 <container name="search-col" htmlTag="div" htmlClass="col-1 first" before="-">
-                    <block class="Evincemage\Homepage\Block\Home\Banner" name="banner_top" template="Evincemage_Homepage::home/banner.phtml" />
-                    <block class="Magento\Framework\View\Element\Template" name="top.search" after="banner_top" template="Evincemage_Homepage::home/form.mini.phtml" />
+                    <block class="Evincemage\Homepage\Block\Home\Banner" name="banner_text" template="Evincemage_Homepage::home/bannertext.phtml" />
                 </container>
-                <block class="Evincemage\Homepage\Block\Customer\Form" name="login_custom" template="Evincemage_Homepage::form/login.phtml" />
+                <block class="Evincemage\Homepage\Block\Customer\Form" name="login_custom" template="Evincemage_Homepage::home/login.phtml" />
             </container>
         </referenceContainer>
     </body>

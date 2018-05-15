@@ -14,6 +14,7 @@ class Account extends \Magento\Framework\View\Element\Html\Link
 
     protected $_customerUrl;
 
+
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \Magento\Framework\App\Http\Context $httpContext,
