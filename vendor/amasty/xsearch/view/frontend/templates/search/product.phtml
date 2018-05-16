@@ -7,10 +7,11 @@
 ?>
 <?php
 /** @var \Amasty\Xsearch\Block\Search\Product $block */
-    $productCollection = $block->getLoadedProductCollection();
-    $helper = $this->helper('Magento\Catalog\Helper\Output');
-    $compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');
-    $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+$productCollection = $block->getLoadedProductCollection();
+$helper = $this->helper('Magento\Catalog\Helper\Output');
+$compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');
+$templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+$_callhelper = $this->helper('Magecomp\Hideprice\Helper\Data');
 ?>
 
 <?php if ($productCollection->getSize()) : ?>
@@ -61,7 +62,7 @@
                                                    value="<?= /* @escapeNotVerified */ $post['data']['product']; ?>">
                                             <?php if ($block->isRedirectToCartEnabled()) : ?>
                                                 <input type="hidden" name="return_url"
-                                                   value="<?= /* @escapeNotVerified */ $post['data']['return_url']; ?>">
+                                                       value="<?= /* @escapeNotVerified */ $post['data']['return_url']; ?>">
                                             <?php endif; ?>
                                             <input type="hidden"
                                                    name="<?= $block->getUlrEncodedParam(); ?>"
@@ -69,11 +70,22 @@
                                             <input name="form_key"
                                                    type="hidden"
                                                    value="<?= /* @escapeNotVerified */ $block->getFormKey() ?>"/>
-                                            <button type="submit"
-                                                    title="<?= $block->escapeHtml(__('Add to Cart')); ?>"
-                                                    class="action tocart primary">
-                                                <span><?= /* @escapeNotVerified */ __('Add to Cart') ?></span>
-                                            </button>
+                                            <?php
+                                            $_calldata = $_callhelper->getHideprice($product->getId());
+                                            if(sizeof($_calldata)): ?>
+                                                <a href="<?php echo $this->getUrl($_callhelper->getCmspagelink()); ?>">
+                                                    <button type="button" title="<?php echo $_calldata['button_text']; ?>" class="action tocart primary" >
+                                                        <span><?php /* @escapeNotVerified */ echo $_calldata['button_text'] ?></span>
+                                                    </button>
+                                                </a>
+                                            <?php
+                                            else: ?>
+                                                <button type="submit"
+                                                        title="<?= $block->escapeHtml(__('Add to Cart')); ?>"
+                                                        class="action tocart primary">
+                                                    <span><?= /* @escapeNotVerified */ __('Add to Cart') ?></span>
+                                                </button>
+                                            <?php endif;?>
                                         </form>
                                     <?php else : ?>
                                         <?php if ($product->getIsSalable()) : ?>

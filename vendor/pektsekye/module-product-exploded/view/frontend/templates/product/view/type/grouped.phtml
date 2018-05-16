@@ -3,121 +3,173 @@
 <?php $_associatedProducts = $block->getAssociatedProducts(); ?>
 <?php $_hasAssociatedProducts = count($_associatedProducts) > 0; ?>
 <?php $peLinks = $this->getLinks(); ?>
-<div id="productexploded_section">        
-  <div class="product-name pe-product-title">
-    <h1><?php echo $_product->getName(); ?></h1>
-  </div>
-  <div class="pe-product-image">
-    <div id="productexploded_image_container" class="pe-image-container" style="max-width:<?php echo $this->getImageWidth(); ?>px;">
-      <?php foreach($this->getLabels() as $labelId => $label): ?> 
-        <span id="pe_label_<?php echo $labelId;?>" style="left:<?php echo $label['xp'];?>%;top:<?php echo $label['yp'];?>%;<?php echo empty($label['title']) ? 'width:'.$label['width_p'].'%;height:'.$label['height_p'].'%;' : ''; ?>" class="<?php echo empty($label['title']) ? 'pe-label-area' : 'pe-label-text'; ?>" data-number="<?php echo $this->getNumberCode($label['link_to_number']);?>" title="<?php echo __('Highlight products') ?>" ><?php echo $label['title'];?></span>    
-      <?php endforeach; ?>    
-      <img src="<?php echo $this->getImageUrl(); ?>">     
-    </div>
-  </div>  
-  <div class="table-wrapper grouped">
-      <table class="table data grouped pe-product-table" id="super-product-table">
-          <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('Grouped product items') ?></caption>
-          <thead>
-          <tr>
-              <th class="pe-number-column"><span><?php echo __('No.') ?></span></th> 
-              <?php if ($this->getExtraAttributeTitle()): ?>             
-                <th class="pe-extra-attribute-column pe-hide-on-mobile"><?php echo $this->getExtraAttributeTitle(); ?></th>
-              <?php endif; ?>                        
-              <th class="pe-sku-column pe-hide-on-mobile"><?php echo __('Item No.') ?></th>         
-              <th class="pe-title-column" scope="col"><?php /* @escapeNotVerified */ echo __('Product Name') ?></th>
-              <?php if ($_product->isSaleable()): ?>
-                  <th class="pe-price-column"><?php echo __('Price') ?></th>            
-                  <th class="pe-qty-column" scope="col"><?php /* @escapeNotVerified */ echo __('Qty') ?></th>
-                  <th class="pe-add-column"></th>                
-              <?php endif; ?>
-          </tr>
-          </thead>
+<?php $peLabels = $this->getLabels(); ?>
+<?php $linkNoData = array(); ?>
+<?php $_callhelper = $this->helper('Magecomp\Hideprice\Helper\Data'); ?>
 
-          <?php if ($_hasAssociatedProducts): ?>
-          <tbody>        
-          <?php foreach ($_associatedProducts as $_item): ?>
-              <tr class="pe-product-<?php echo isset($peLinks[$_item->getId()]) ? $this->getNumberCode($peLinks[$_item->getId()]) : ''; ?>">
-                  <td class="pe-number-column"><?php echo isset($peLinks[$_item->getId()]) && !empty($peLinks[$_item->getId()]) ? $peLinks[$_item->getId()] : ''; ?></td> 
-                  <?php if ($this->getExtraAttributeTitle()): ?>                 
-                    <td class="pe-extra-attribute-column pe-hide-on-mobile"><?php echo $_item->getData($this->getExtraAttributeCode()); ?></td>
-                  <?php endif; ?>                
-                  <td class="pe-sku-column pe-hide-on-mobile"><?php echo $_item->getSku(); ?></td>               
-                  <td data-th="<?php echo $block->escapeHtml(__('Product Name')); ?>" class="pe-title-column">
-                      <strong class="product-item-name"><?php echo $block->escapeHtml($_item->getName()) ?></strong>                       
-                      <?php if ($_item->isSaleable() && $_item->getVisibility() > 1) : ?>                       
-                       <div><a href="<?php echo $_item->getProductUrl(); ?>" target="_blank"><?php echo __('More Info') ?> &gt;</a></div>
-                      <?php endif; ?>                                         
-                  </td>
-                  <?php if ($_product->isSaleable()): ?>
-                  <td data-th="<?php echo $block->escapeHtml(__('Price')); ?>" class="pe-price-column">
-                    <?php if ($block->getCanShowProductPrice($_product)): ?>
-                      <span class="pe-narrow-price">
+<div id="productexploded_section">
+    <div class="product-name pe-product-title">
+        <h1><?php echo $_product->getName(); ?></h1>
+    </div>
+    <div class="pe-product-image">
+        <div id="productexploded_image_container" class="pe-image-container" style="max-width:<?php echo $this->getImageWidth(); ?>px;">
+            <?php foreach($peLabels as $labelId => $label): ?>
+                <?php
+                $linkNumberCode =  $this->getNumberCode($label['link_to_number']);
+                $linkNoData[$linkNumberCode] = $label;
+                ?>
+                <span id="pe_label_<?php echo $labelId;?>"
+                      style="left:<?php echo $label['xp'];?>%;top:<?php echo $label['yp'];?>%;<?php echo empty($label['title']) ? 'width:'.$label['width_p'].'%;height:'.$label['height_p'].'%;' : ''; ?>"
+                      class="<?php echo empty($label['title']) ? 'pe-label-area' : 'pe-label-text'; ?>"
+                      data-number="<?php echo $linkNumberCode;?>"
+                       ><?php echo $label['title'];?>
+        </span>
+            <?php endforeach; ?>
+            <?php if ($_hasAssociatedProducts): ?>
+                <?php foreach ($_associatedProducts as $_item): ?>
+                    <?php if($peLinks[$_item->getId()]): ?>
+                        <?php
+                        $linkId = $this->getNumberCode($peLinks[$_item->getId()]);
+                        $productImage = $block->getImage($_item, 'product_thumbnail_image');
+                        $_calldata = $_callhelper->getHideprice($_product->getId());
+                        ?>
+                        <div id="short_des_<?php echo $linkId ?>"
+                             style="left:<?php echo $linkNoData[$linkId]['xp'] - 9;?>%;top:<?php echo $linkNoData[$linkId]['yp'] + $label['height_p'] ;?>%;display: none;position: absolute; "
+                             class="pe-product-details">
+                            <div class="product-image"> <img src="<?= $productImage->getImageUrl(); ?>" /></div>
+                            <div class="product-name"><span><?php echo __('Name: ') ?></span><?php echo $_item->getName() ?></div>
+                            <div class="product-sku"><span><?php echo __('SKU#: ') ?></span><?php echo $_item->getSku() ?></div>
+                            <?php if(sizeof($_calldata) == 0): ?>
+                                <div class="product-price">
+                                    <?php if ($_product->isSaleable()): ?>
+                                        <span><?php echo __('Price: ') ?></span>
+                                        <?php if ($block->getCanShowProductPrice($_product)): ?>
+                                            <?php if ($block->getCanShowProductPrice($_item)): ?>
+                                                <?php echo $block->getProductPrice($_item) ?>
+                                            <?php endif; ?>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if($_item->getDescription()): ?>
+                                <div class="product-description">
+                                    <span><?php echo __('Description: ') ?></span>
+                                    <?php echo $this->helper('Magento\Catalog\Helper\Output')->productAttribute($_item, $_item->getDescription(), 'description')?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+            <img src="<?php echo $this->getImageUrl(); ?>">
+        </div>
+    </div>
+    <div class="table-wrapper grouped">
+        <table class="table data grouped pe-product-table" id="super-product-table">
+            <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('Grouped product items') ?></caption>
+            <thead>
+            <tr>
+                <th class="pe-number-column"><span><?php echo __('No.') ?></span></th>
+                <th class="pe-number-column"><span><?php echo __('Image') ?></span></th>
+                <?php if ($this->getExtraAttributeTitle()): ?>
+                    <th class="pe-extra-attribute-column pe-hide-on-mobile"><?php echo $this->getExtraAttributeTitle(); ?></th>
+                <?php endif; ?>
+                <th class="pe-sku-column pe-hide-on-mobile"><?php echo __('Item No.') ?></th>
+                <th class="pe-title-column" scope="col"><?php /* @escapeNotVerified */ echo __('Product Name') ?></th>
+                <?php if ($_product->isSaleable()): ?>
+                    <th class="pe-price-column"><?php echo __('Price') ?></th>
+                    <th class="pe-qty-column" scope="col"><?php /* @escapeNotVerified */ echo __('Qty') ?></th>
+                    <th class="pe-add-column"></th>
+                <?php endif; ?>
+            </tr>
+            </thead>
+
+            <?php if ($_hasAssociatedProducts): ?>
+                <tbody>
+                <?php foreach ($_associatedProducts as $_item): ?>
+                    <?php $productImage = $block->getImage($_item, 'product_thumbnail_image'); ?>
+                    <tr class="pe-product-<?php echo isset($peLinks[$_item->getId()]) ? $this->getNumberCode($peLinks[$_item->getId()]) : ''; ?>">
+                        <td class="pe-number-column"><?php echo isset($peLinks[$_item->getId()]) && !empty($peLinks[$_item->getId()]) ? $peLinks[$_item->getId()] : ''; ?></td>
+                        <td class="pe-image-column"><?php echo $productImage->toHtml() ?></td>
+                        <?php if ($this->getExtraAttributeTitle()): ?>
+                            <td class="pe-extra-attribute-column pe-hide-on-mobile"><?php echo $_item->getData($this->getExtraAttributeCode()); ?></td>
+                        <?php endif; ?>
+                        <td class="pe-sku-column pe-hide-on-mobile"><?php echo $_item->getSku(); ?></td>
+                        <td data-th="<?php echo $block->escapeHtml(__('Product Name')); ?>" class="pe-title-column">
+                            <strong class="product-item-name"><?php echo $block->escapeHtml($_item->getName()) ?></strong>
+                            <?php if ($_item->isSaleable() && $_item->getVisibility() > 1) : ?>
+                                <div><a href="<?php echo $_item->getProductUrl(); ?>" target="_blank"><?php echo __('More Info') ?> &gt;</a></div>
+                            <?php endif; ?>
+                        </td>
+                        <?php if ($_product->isSaleable()): ?>
+                            <td data-th="<?php echo $block->escapeHtml(__('Price')); ?>" class="pe-price-column">
+                                <?php if ($block->getCanShowProductPrice($_product)): ?>
+                                    <span class="pe-narrow-price">
                         <?php if ($block->getCanShowProductPrice($_item)): ?>
-                          <?php echo $block->getProductPrice($_item) ?>
-                        <?php endif; ?>                           
+                            <?php echo $block->getProductPrice($_item) ?>
+                        <?php endif; ?>
                       </span>
-                    <?php endif; ?>                 
-                  </td>                               
-                  <td data-th="<?php echo $block->escapeHtml(__('Qty')); ?>" class="pe-qty-column">
-                  <?php if ($_item->isSaleable()) : ?>
-                      <div class="pe-qty-cell">
-                          <span class="pe-qty-icon"><img src="<?php echo $this->getViewFileUrl('Pektsekye_ProductExploded::images/minus.png') ?>" title="<?php echo __('Less') ?>"/></span>                    
-                          <input type="number" id="qty_field_<?php echo $_item->getId() ?>" name="super_group[<?php /* @escapeNotVerified */ echo $_item->getId() ?>]"
-                                 data-selector="super_group[<?php /* @escapeNotVerified */ echo $_item->getId() ?>]"
-                                 maxlength="12"
-                                 value="<?php /* @escapeNotVerified */ echo $_item->getQty() * 1 ?>"
-                                 title="<?php /* @escapeNotVerified */ echo __('Qty') ?>"
-                                 class="input-text qty"
-                                 data-validate="{'validate-grouped-qty':'#super-product-table'}"
-                                 data-errors-message-box="#validation-message-box"/>
-                          <span class="pe-qty-icon"><img src="<?php echo $this->getViewFileUrl('Pektsekye_ProductExploded::images/plus.png') ?>" title="<?php echo __('More') ?>"/></span>                                                            
-                      </div>
-                  <?php else: ?>
-                      <div class="stock unavailable" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
-                          <span><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span>
-                      </div>
-                  <?php endif; ?>
-                  </td>
-                  <td class="pe-add-column">
-                    <?php if ($_item->isSaleable()) : ?>                
-                      <button type="button" title="<?php echo __('Add to Cart') ?>" class="action primary">
-                        <span><?php echo __('Add to Cart') ?></span>
-                      </button> 
-                    <?php endif; ?>                                 
-                  </td>                 
-                  <?php endif; ?>
-              </tr>
-              <?php if ($block->getCanShowProductPrice($_product)
-                  && $block->getCanShowProductPrice($_item)
-                  && trim($block->getProductPriceHtml(
-                      $_item,
-                      \Magento\Catalog\Pricing\Price\TierPrice::PRICE_CODE
-                  ))): ?>
-                  <tr class="row-tier-price">
-                      <td colspan="2">
-                          <?php echo $block->getProductPriceHtml(
-                              $_item,
-                              \Magento\Catalog\Pricing\Price\TierPrice::PRICE_CODE
-                          ) ?>
-                      </td>
-                  </tr>
-              <?php endif; ?>
-          <?php endforeach; ?>
-          </tbody>        
-          <?php else: ?>
-          <tbody>
-              <tr>
-                  <td class="unavailable"
-                      colspan="<?php if ($_product->isSaleable()): ?>4<?php else : ?>3<?php endif; ?>">
-                      <?php /* @escapeNotVerified */ echo __('No options of this product are available.') ?>
-                  </td>
-              </tr>
-          </tbody>
-          <?php endif; ?>
-      </table>
-  </div>
-  <div id="validation-message-box"></div>
+                                <?php endif; ?>
+                            </td>
+                            <td data-th="<?php echo $block->escapeHtml(__('Qty')); ?>" class="pe-qty-column">
+                                <?php if ($_item->isSaleable()) : ?>
+                                    <div class="pe-qty-cell">
+                                        <span class="pe-qty-icon"><img src="<?php echo $this->getViewFileUrl('Pektsekye_ProductExploded::images/minus.png') ?>" title="<?php echo __('Less') ?>"/></span>
+                                        <input type="number" id="qty_field_<?php echo $_item->getId() ?>" name="super_group[<?php /* @escapeNotVerified */ echo $_item->getId() ?>]"
+                                               data-selector="super_group[<?php /* @escapeNotVerified */ echo $_item->getId() ?>]"
+                                               maxlength="12"
+                                               value="<?php /* @escapeNotVerified */ echo $_item->getQty() * 1 ?>"
+                                               title="<?php /* @escapeNotVerified */ echo __('Qty') ?>"
+                                               class="input-text qty"
+                                               data-validate="{'validate-grouped-qty':'#super-product-table'}"
+                                               data-errors-message-box="#validation-message-box"/>
+                                        <span class="pe-qty-icon"><img src="<?php echo $this->getViewFileUrl('Pektsekye_ProductExploded::images/plus.png') ?>" title="<?php echo __('More') ?>"/></span>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="stock unavailable" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+                                        <span><?php /* @escapeNotVerified */ echo __('Out of stock') ?></span>
+                                    </div>
+                                <?php endif; ?>
+                            </td>
+                            <td class="pe-add-column">
+                                <?php if ($_item->isSaleable()) : ?>
+                                    <button type="button" title="<?php echo __('Add to Cart') ?>" class="action primary">
+                                        <span><?php echo __('Add to Cart') ?></span>
+                                    </button>
+                                <?php endif; ?>
+                            </td>
+                        <?php endif; ?>
+                    </tr>
+                    <?php if ($block->getCanShowProductPrice($_product)
+                        && $block->getCanShowProductPrice($_item)
+                        && trim($block->getProductPriceHtml(
+                            $_item,
+                            \Magento\Catalog\Pricing\Price\TierPrice::PRICE_CODE
+                        ))): ?>
+                        <tr class="row-tier-price">
+                            <td colspan="2">
+                                <?php echo $block->getProductPriceHtml(
+                                    $_item,
+                                    \Magento\Catalog\Pricing\Price\TierPrice::PRICE_CODE
+                                ) ?>
+                            </td>
+                        </tr>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </tbody>
+            <?php else: ?>
+                <tbody>
+                <tr>
+                    <td class="unavailable"
+                        colspan="<?php if ($_product->isSaleable()): ?>4<?php else : ?>3<?php endif; ?>">
+                        <?php /* @escapeNotVerified */ echo __('No options of this product are available.') ?>
+                    </td>
+                </tr>
+                </tbody>
+            <?php endif; ?>
+        </table>
+    </div>
+    <div id="validation-message-box"></div>
 </div>
 <script type="text/x-magento-init">
     {
