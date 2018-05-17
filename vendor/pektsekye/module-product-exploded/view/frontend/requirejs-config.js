@@ -3,5 +3,5 @@ var config = {
         '*': {
             productExploded: 'Pektsekye_ProductExploded/js/widget'
         }
-    }     
+    }
 };

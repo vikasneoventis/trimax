@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Pektsekye_ProductExploded::main.css"/>           
+        <css src="Pektsekye_ProductExploded::main.css"/>
     </head>
     <body>
 
         <referenceContainer name="product.info.form.content">
-            <block class="Pektsekye\ProductExploded\Block\Product\View\Type\Grouped" name="product.info.grouped"  before="product.info.addtocart" template="product/view/type/grouped.phtml"/>
+            <block class="Pektsekye\ProductExploded\Block\Product\View\Type\Grouped" name="product.info.grouped"  before="product.info.addtocart" template="product/view/type/grouped.phtml" />
         </referenceContainer>        
 
         <referenceBlock name="page.main.title" remove="true"/>   
