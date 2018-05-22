@@ -1,0 +1,16 @@
+.admin__scope-old .nested .field.store_store {
+    padding-left: 20px;
+}
+
+.admin__scope-old .nested .field.store_storeview {
+    padding-left: 40px;
+}
+
+#role_info_tabs_aitoc_advanced_permissions_content .mage-suggest:after {
+    content: '';
+}
+.admin__scope-old .form-inline div:not([class*='fields-group']) > .field > .label span, .admin__scope-old .form-inline .fieldset > .field > .label span
+{
+    -ms-word-break: break-word;
+    word-break: break-word;
+}

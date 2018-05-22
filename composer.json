@@ -65,10 +65,6 @@
         "0": {
             "type": "composer",
             "url": "https://repo.magento.com/"
-        },
-        "magento2-warehouses": {
-            "type": "git",
-            "url": "git@github.com:EaDesgin/magento2-warehouses"
         }
     },
     "extra": {
