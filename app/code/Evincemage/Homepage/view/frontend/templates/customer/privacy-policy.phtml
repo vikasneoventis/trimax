@@ -1,0 +1,10 @@
+<?php
+/**
+ * @author Evince Team
+ * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
+ */
+?>
+<div class="field choice privacy-policy">
+    <input type="checkbox" data-validate="{required:true}" name="privacy-policy" title="<?php /* @escapeNotVerified */ echo __('Privacy Policy') ?>" id="register-privacy-policy" class="checkbox">
+    <label for="custom-terms" class="label"><span><?php /* @escapeNotVerified */ echo __('I agree to ') ?><a href="<?php echo $this->getUrl('privacy-policy-cookie-restriction-mode');?>"><?= __('Privacy Policy')?></a></span></label>
+</div>
