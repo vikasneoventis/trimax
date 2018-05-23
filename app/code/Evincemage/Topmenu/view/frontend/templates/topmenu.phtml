@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
  */
 ?>
-
+<?php if($block->isLoggedIn()): ?>
 <li class="level0 nav-8 last level-top last level-top ui-menu-item  " role="presentation">
     <a href="#" class="level-top ui-corner-all" id="ui-id-8" tabindex="-1" role="menuitem">
         <span><?= __('My Trimax') ?></span>
@@ -42,3 +42,4 @@
         </li>
     </ul>
 </li>
+<?php endif; ?>
