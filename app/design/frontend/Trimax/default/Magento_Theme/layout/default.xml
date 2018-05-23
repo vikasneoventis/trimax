@@ -46,5 +46,8 @@
             </block>
         </referenceBlock>
         <move element="copyright" destination="footer" after="footer_links"/>
+        <referenceBlock name="reviews.tab" remove="true" />
+        <referenceBlock name="product.review.form" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
     </body>
 </page>

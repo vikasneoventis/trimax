@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+ /**
+  * @author Evince Team
+  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
+  */
+ -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mageworx_downloads" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="main" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="section_topmenu" translate="label comment" type="select" sortOrder="91" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label><![CDATA[Display Section to top menu]]></label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
