@@ -6,23 +6,23 @@
 
 namespace Evincemage\Topmenu\Block;
 
-use Magento\Customer\Model\Context;
-
 class Downloadcategory extends \Magento\Framework\View\Element\Template
 {
-    protected $httpContext;
+
+    protected $sessionFactory;
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Magento\Framework\App\Http\Context $httpContext,
+        \Magento\Customer\Model\SessionFactory $sessionFactory,
         array $data = []
     ) {
         parent::__construct($context,$data);
-        $this->httpContext = $httpContext;
+        $this->sessionFactory = $sessionFactory;
     }
 
     public function isLoggedIn()
     {
-        return $this->httpContext->getValue(Context::CONTEXT_AUTH);
+        return $this->sessionFactory->create()->isLoggedIn();
     }
+
 }
