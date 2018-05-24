@@ -33,12 +33,14 @@ define([
             );
 
             $('.pe-image-container span').on({
-                mouseover: function() {
-                    var detailId = '#short_des_'+$(this).attr('data-number');
-                    $(detailId).show();
+                mouseover: function(e) {
+                    if(e.type != "touchstart") {
+                        var detailId = '#short_des_' + $(this).attr('data-number');
+                        $(detailId).show();
+                    }
                 },
 
-                mouseout: function() {
+                mouseout: function(e) {
                     var detailId = '#short_des_'+$(this).attr('data-number');
                     $(detailId).hide();
                 }
