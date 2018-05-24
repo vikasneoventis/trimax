@@ -34,7 +34,7 @@ define([
 
             $('.pe-image-container span').on({
                 mouseover: function(e) {
-                    if(e.type != "touchstart") {
+                    if(!this.isTouch) {
                         var detailId = '#short_des_' + $(this).attr('data-number');
                         $(detailId).show();
                     }
