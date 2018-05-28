@@ -46,6 +46,18 @@ define([
                 }
             });
 
+            $('.pe-product-details').on({
+                mouseover: function(e) {
+                    if(!this.isTouch) {
+                        $(this).show();
+                    }
+                },
+
+                mouseout: function(e) {
+                    $(this).hide();
+                }
+            });
+
             $('span.pe-qty-icon').on(
                 'mousedown touchstart',
                 $.proxy(this.onQtyIconMousedown, this)
