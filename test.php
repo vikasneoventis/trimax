@@ -14,8 +14,41 @@ $bootstrap = Bootstrap::create(BP, $_SERVER);
 $objectManager = $bootstrap->getObjectManager();
 $instance = \Magento\Framework\App\ObjectManager::getInstance();
 $state = $objectManager->get('\Magento\Framework\App\State');
-$state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML);
+$state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND);
 
+$text = '101-206-063';
+$resourceFulltext = $instance ->get('\Magento\CatalogSearch\Model\ResourceModel\Fulltext');
+$queryFactory = $instance ->get('\Magento\Search\Model\QueryFactory');
+
+$resourceFulltext->resetSearchResults();
+$query = $queryFactory->get();
+$query->unsetData();
+$query->setQueryText($text);
+$query->saveIncrementalPopularity();
+$products = [];
+$collection = $instance->create(
+    'Magento\CatalogSearch\Model\ResourceModel\Fulltext\Collection',
+    [
+        'searchRequestName' => 'quick_search_container'
+    ]
+);
+$collection->addSearchFilter($text);
+$collection->addAttributeToSelect('sku');
+
+$collection->setPageSize(50)->setCurPage(1);
+
+$collection->getSelect()
+    ->reset('order')
+    ->order('search_result.score DESC');
+
+
+foreach ($collection as $product) {
+    $products[] = $product->getData();
+}
+
+
+echo '<pre>'; print_r($products);die;
+exit;
 $connection = $objectManager->get('\Magento\Framework\App\ResourceConnection')->getConnection();
 $storeTable = $connection->getTableName('store');
 $query = "SELECT `store_id`,`code` FROM $storeTable";
