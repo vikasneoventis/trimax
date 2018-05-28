@@ -16,12 +16,12 @@
             <li class="item product product-item">
                 <div class="product-item-info">
                     <?php if ($category['thumbnail']): ?>
-                        <a href="<?php echo $category->getUrl() ?>"
+                        <a class="product-info-image" href="<?php echo $category->getUrl() ?>"
                            title="<?php echo $category->getName() ?>">
                             <img src="<?php echo $block->getCategoryThumbImage($category['thumbnail']); ?>" />
                         </a>
                     <?php else: ?>
-                        <a href="<?php echo $category->getUrl() ?>"
+                        <a class="product-info-image" href="<?php echo $category->getUrl() ?>"
                            title="<?php echo $category->getName() ?>">
                             <img src="<?php echo $block->getViewFileUrl($block->getPlaceholderImage()); ?>"/>
                         </a>
@@ -43,3 +43,13 @@
         <?php endforeach; ?>
     </ol>
 </div>
+<style type="text/css">
+.page-layout-1column.page-with-filter .column.main{padding-top: 0;}
+.page-main .block{margin-bottom: 0;}
+.columns .column.main{padding-bottom: 0;padding: 0;}
+
+
+@media only screen and (max-width : 767px){
+    
+}
+</style>
