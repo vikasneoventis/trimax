@@ -35,31 +35,33 @@ $_calldata = $_callhelper->getHideprice($_product->getId());
                         $linkId = $this->getNumberCode($peLinks[$_item->getId()]);
                         $productImage = $block->getImage($_item, 'product_thumbnail_image');
                         ?>
-                        <div id="short_des_<?php echo $linkId ?>"
-                             style="left:<?php echo $linkNoData[$linkId]['xp'] - 9;?>%;top:<?php echo $linkNoData[$linkId]['yp'] + $linkNoData[$linkId]['height_p'] ;?>%;display: none;position: absolute; "
-                             class="pe-product-details">
-                            <div class="product-image"> <img src="<?= $productImage->getImageUrl(); ?>" /></div>
-                            <!--<div class="product-name"><span><?php /*echo __('Name: ') */?></span><?php /*echo $_item->getName() */?></div>-->
-                            <div class="product-sku"><span><?php echo __('SKU#: ') ?></span><?php echo $_item->getSku() ?></div>
-                            <?php if(sizeof($_calldata) == 0): ?>
-                                <div class="product-price">
-                                    <?php if ($_product->isSaleable()): ?>
-                                        <span><?php echo __('Price: ') ?></span>
-                                        <?php if ($block->getCanShowProductPrice($_product)): ?>
-                                            <?php if ($block->getCanShowProductPrice($_item)): ?>
-                                                <?php echo $block->getProductPrice($_item) ?>
+                        <?php if(isset($linkNoData[$linkId])): ?>
+                            <div id="short_des_<?php echo $linkId ?>"
+                                 style="left:<?php echo $linkNoData[$linkId]['xp'] - 9;?>%;top:<?php echo $linkNoData[$linkId]['yp'] + $linkNoData[$linkId]['height_p'] ;?>%;display: none;position: absolute; "
+                                 class="pe-product-details">
+                                <div class="product-image"> <img src="<?= $productImage->getImageUrl(); ?>" /></div>
+                                <!--<div class="product-name"><span><?php /*echo __('Name: ') */?></span><?php /*echo $_item->getName() */?></div>-->
+                                <div class="product-sku"><span><?php echo __('SKU#: ') ?></span><?php echo $_item->getSku() ?></div>
+                                <?php if(sizeof($_calldata) == 0): ?>
+                                    <div class="product-price">
+                                        <?php if ($_product->isSaleable()): ?>
+                                            <span><?php echo __('Price: ') ?></span>
+                                            <?php if ($block->getCanShowProductPrice($_product)): ?>
+                                                <?php if ($block->getCanShowProductPrice($_item)): ?>
+                                                    <?php echo $block->getProductPrice($_item) ?>
+                                                <?php endif; ?>
                                             <?php endif; ?>
                                         <?php endif; ?>
-                                    <?php endif; ?>
-                                </div>
-                            <?php endif; ?>
-                            <?php if($_item->getDescription()): ?>
-                                <div class="product-description">
-                                    <span><?php echo __('Description: ') ?></span>
-                                    <?php echo $this->helper('Magento\Catalog\Helper\Output')->productAttribute($_item, $_item->getDescription(), 'description')?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if($_item->getDescription()): ?>
+                                    <div class="product-description">
+                                        <span><?php echo __('Description: ') ?></span>
+                                        <?php echo $this->helper('Magento\Catalog\Helper\Output')->productAttribute($_item, $_item->getDescription(), 'description')?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
                     <?php endif; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
