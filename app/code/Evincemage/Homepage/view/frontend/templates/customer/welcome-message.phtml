@@ -1,0 +1,16 @@
+<?php
+/**
+ * @author Evince Team
+ * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
+ */
+?>
+
+<?php if ($block->isLoggedIn()): ?>
+    <p>
+        <strong>
+            <?= __('Hi') ?>
+            <?= $block->getCustomerName(); ?>
+            <?= __(', welcome to the Trimax parts shop.') ?>
+        </strong>
+    </p>
+<?php endif; ?>
