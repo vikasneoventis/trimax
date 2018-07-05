@@ -27,6 +27,7 @@ use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Framework\App\ResourceConnection;
 use Eadesigndev\Warehouses\Model\ZoneFactory;
+use Magento\CatalogInventory\Model\ResourceModel\Stock\Status;
 
 class StockItemRepository implements StockItemRepositoryInterface
 {
@@ -108,6 +109,11 @@ class StockItemRepository implements StockItemRepositoryInterface
     protected $zoneFactory;
 
     /**
+     * @var Status
+     */
+    protected $status;
+
+    /**
      * Constructor
      *
      * @param StockConfigurationInterface $stockConfiguration
@@ -138,7 +144,8 @@ class StockItemRepository implements StockItemRepositoryInterface
         DateTime $dateTime,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory = null,
         ResourceConnection $resourceConnection,
-        ZoneFactory $zoneFactory
+        ZoneFactory $zoneFactory,
+        Status $status
     ) {
         $this->stockConfiguration = $stockConfiguration;
         $this->stockStateProvider = $stockStateProvider;
@@ -155,6 +162,7 @@ class StockItemRepository implements StockItemRepositoryInterface
             ->get(CollectionFactory::class);
         $this->resourceConnection = $resourceConnection;
         $this->zoneFactory = $zoneFactory;
+        $this->status = $status;
     }
 
     /**
@@ -188,6 +196,13 @@ class StockItemRepository implements StockItemRepositoryInterface
                 }
             } else {
                 $stockItem->setQty(0);
+                $this->status->saveProductStatus(
+                    $product->getId(),
+                    $stockItem->getIsInStock(),
+                    0,
+                    $stockItem->getWebsiteId(),
+                    $stockItem->getStockId()
+                );
             }
 
             $stockItem->setWebsiteId($stockItem->getWebsiteId());
