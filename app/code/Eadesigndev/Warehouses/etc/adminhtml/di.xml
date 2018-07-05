@@ -25,6 +25,9 @@
     <preference type="Eadesigndev\Warehouses\Model\Adminhtml\Stock\Item"
                 for="Magento\CatalogInventory\Model\Adminhtml\Stock\Item"/>
 
+    <preference type="Eadesigndev\Warehouses\Model\Stock\StockItemRepository"
+                for="Magento\CatalogInventory\Model\Stock\StockItemRepository"/>
+
     <!--<preference for="Eadesigndev\Warehouses\Api\Data\ZoneInterface"-->
                 <!--type="Eadesigndev\Warehouses\Model\Stock" />-->
 
