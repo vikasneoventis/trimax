@@ -16,7 +16,7 @@ $instance = \Magento\Framework\App\ObjectManager::getInstance();
 $state = $objectManager->get('\Magento\Framework\App\State');
 $state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND);
 
-$text = '101-206-063';
+$text = '411-160-842';
 $resourceFulltext = $instance ->get('\Magento\CatalogSearch\Model\ResourceModel\Fulltext');
 $queryFactory = $instance ->get('\Magento\Search\Model\QueryFactory');
 
