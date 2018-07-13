@@ -28,6 +28,9 @@
     <preference type="Eadesigndev\Warehouses\Model\Stock\StockItemRepository"
                 for="Magento\CatalogInventory\Model\Stock\StockItemRepository"/>
 
+    <preference type="Eadesigndev\Warehouses\Ui\DataProvider\Product\AddQuantityFieldToCollection"
+                for="Magento\CatalogInventory\Ui\DataProvider\Product\AddQuantityFieldToCollection"/>
+
     <!--<preference for="Eadesigndev\Warehouses\Api\Data\ZoneInterface"-->
                 <!--type="Eadesigndev\Warehouses\Model\Stock" />-->
 

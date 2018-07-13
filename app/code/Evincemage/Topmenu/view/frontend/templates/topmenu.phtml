@@ -4,8 +4,9 @@
  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
  */
 ?>
-<?php if($block->isLoggedIn()): ?>
-<li class="level0 nav-8 last level-top last level-top ui-menu-item  " role="presentation">
+<?php ?>
+<?php //if($block->isLoggedIn()): ?>
+<li class="level0 nav-8 last level-top last level-top ui-menu-item  " id="trimax-menu" role="presentation" style="display:none;">
     <a href="javascript:void(0);" class="level-top ui-corner-all" id="ui-id-8" tabindex="-1" role="menuitem">
         <span><?= __('My Trimax') ?></span>
     </a>
@@ -42,4 +43,20 @@
         </li>
     </ul>
 </li>
-<?php endif; ?>
+<?php //endif; ?>
+
+<script>
+    require([
+        "jquery"
+    ], function($){
+        $(document).ready(function () {
+            if($(".customer-welcome").length)
+            {
+                $('#trimax-menu').show();
+            }else {
+                $('#trimax-menu').hide();
+            }
+        })
+    });
+
+</script>
