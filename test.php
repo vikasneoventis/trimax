@@ -5,8 +5,35 @@
  */
 
 error_reporting(1);
+/*
+
+$cn= mysqli_connect("localhost", "root", "root","trimax_m1") or die('Could not connect');
+//$db= mysqli_select_db("trimax_m1", $cn) or die('Could not select database');
 
 
+$query="SELECT * FROM `warehouseinventory_stock_item`";
+
+$result = mysqli_query($cn,$query);
+
+//echo '<pre>'; print_r($result); die;
+
+while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
+
+{
+    $query1="SELECT * FROM `warehouseinventory_stock_item` WHERE `product_id` = '".$row[1]."' AND `stock_id` = 1 " ;
+
+    $result1 = mysqli_query($cn,$query1);
+    $count = mysqli_num_rows($result1) - 1;
+
+    mysqli_query($cn, "DELETE FROM `warehouseinventory_stock_item` WHERE `product_id` ='".$row[1]."' AND `stock_id` = 1 LIMIT $count");
+    echo "deleted $row[1] <br>";
+
+}
+//echo mysqli_error($cn);
+mysqli_close($cn);*/
+?>
+<?php
+die;
 use \Magento\Framework\App\Bootstrap;
 
 require __DIR__ . '/app/bootstrap.php';
@@ -16,7 +43,7 @@ $instance = \Magento\Framework\App\ObjectManager::getInstance();
 $state = $objectManager->get('\Magento\Framework\App\State');
 $state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND);
 
-$text = '101-206-063';
+$text = '411-160-842';
 $resourceFulltext = $instance ->get('\Magento\CatalogSearch\Model\ResourceModel\Fulltext');
 $queryFactory = $instance ->get('\Magento\Search\Model\QueryFactory');
 

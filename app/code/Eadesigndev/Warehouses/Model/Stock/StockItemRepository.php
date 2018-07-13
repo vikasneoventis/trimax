@@ -225,6 +225,16 @@ class StockItemRepository implements StockItemRepositoryInterface
                     $cloneStockItem = clone $stockItem;
                     $cloneStockItem->setData('stock_id',$id['stock_id']);
                     $this->resource->save($cloneStockItem);
+
+                    if(!$isQty){
+                        $this->status->saveProductStatus(
+                            $product->getId(),
+                            $stockItem->getIsInStock(),
+                            0,
+                            $stockItem->getWebsiteId(),
+                            $id['stock_id']
+                        );
+                    }
                 }
             }else {
                 $stockItem->setStockId($stockItem->getStockId());
