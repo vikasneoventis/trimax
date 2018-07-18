@@ -25,7 +25,8 @@
 .cms-index-index .home-first-block .col-1.first h1{font-size: 24px;width: 80%;margin-top: 55px;}
 .cms-index-index .our-parts .col-main p{width: 65%;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service{padding-top: 80px;height: 100px;font-size: 14px;}
-.cms-index-index .my-trimax.col1-layout .trimax-items ul li{width: 14.6%;vertical-align: top;}
+/*.cms-index-index .my-trimax.col1-layout .trimax-items ul li{width: 14.6%;vertical-align: top;}*/
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li{width: 31.7%;vertical-align: top;}
 .cms-index-index .our-parts .col-main h2{font-size: 24px;}
 .cms-index-index .my-trimax.col1-layout .my-trimax-header h2{font-size: 24px;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li .login_cta .login-text{font-size: 14px;width: 70%;}
@@ -110,6 +111,7 @@
 }
 
 @media only screen and (min-width : 768px) and (max-width : 991px){
+body{overflow-x: hidden;}
 /*header-Start*/
 .cms-index-index .account-mini-wrapper{float: right;width: 60%;}
 .cms-index-index .account-mini-wrapper p{font-size: 15px;}
@@ -469,7 +471,21 @@ li.customer-welcome.active .customer-menu {
 .widget.block .subcategories-listing .product-item-info{text-align: center;}
 /*sub-category-page-End*/
 
-
+/*mobile-menu-css*/
+.nav-sections{background: #f0f0f0;width: 80%;position: fixed;}
+.nav-sections .navigation{padding: 0px 20px;}
+.nav-sections .navigation .parent .level-top::after{top: 10px;}
+.nav-sections .navigation .level0 > .level-top{padding: 10px 10px 10px 15px;font-size: 14px;}
+.nav-sections .navigation .level0{font-size: 14px;}
+.nav-sections .navigation li > a{padding-top: 3px;}
+.nav-sections .ui-menu-item.all-category{padding-top: 10px;}
+.nav-sections .level1.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all.expanded{margin-bottom: 10px;}
+.nav-sections-item-switch{color: #d31f2c;font-size: 15px;}
+.nav-sections-item-title.active{background: #e3e3e3;border:1px  solid #d7d7d7;}
+.nav-sections-item-title{height: 60px;font-weight: 600;padding-top: 18px;}
+.nav-sections-item-title .nav-sections-item-switch:hover{color: #d31f2c;}
+.navigation .level0.active > a:not(.ui-state-active), .navigation .level0.has-active > a:not(.ui-state-active){border-width: 0 0 0 4px;}
+/*mobile-menu-css*/
 }
 
 @media only screen and (min-width : 479px) and (max-width : 767px){

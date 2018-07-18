@@ -33,3 +33,13 @@
 
 =======
 >>>>>>> 120448d3f8e03fd5712cbb630f81e1e6d61f82f5
+2018-07-16T09:50:29+00:00 INFO (6): Array
+(
+    [import_product_stocks_GB.csv] => import_product_stocks_GB.csv : Stock updated successfully.
+)
+
+2018-07-17T21:55:23+00:00 INFO (6): Array
+(
+    [import_product_stocks_GB.csv] => import_product_stocks_GB.csv : Stock updated successfully.
+)
+

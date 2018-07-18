@@ -124,6 +124,49 @@ class Status extends \Magento\CatalogInventory\Model\ResourceModel\Stock\Status
         return $this;
     }
 
+    public function saveProductStatusData(
+        $productId,
+        $status,
+        $qty,
+        $websiteId,
+        $stockId = Stock::DEFAULT_STOCK_ID
+    )
+    {
+
+        //$stockId = $this->stockId();
+
+        //todo add the stock status if needed. Check for the status in the system. Stock::DEFAULT_STOCK_ID
+
+        $connection = $this->getConnection();
+        $select = $connection->select()->from($this->getMainTable())
+            ->where('product_id = :product_id')
+            ->where('website_id = :website_id')
+            ->where('stock_id = :stock_id');
+        $bind = [':product_id' => $productId, ':website_id' => $websiteId, ':stock_id' => $stockId];
+        $row = $connection->fetchRow($select, $bind);
+
+        if ($row) {
+            $bind = ['qty' => $qty, 'stock_status' => $status];
+            $where = [
+                $connection->quoteInto('product_id=?', (int)$row['product_id']),
+                $connection->quoteInto('website_id=?', (int)$row['website_id']),
+                $connection->quoteInto('stock_id=?', (int)$stockId),
+            ];
+            $connection->update($this->getMainTable(), $bind, $where);
+        } else {
+            $bind = [
+                'product_id' => $productId,
+                'website_id' => $websiteId,
+                'stock_id' => $stockId,
+                'qty' => $qty,
+                'stock_status' => $status,
+            ];
+            $connection->insert($this->getMainTable(), $bind);
+        }
+
+        return $this;
+    }
+
     /**
      * Retrieve product status
      * Return array as key product id, value - stock status

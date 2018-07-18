@@ -27,11 +27,8 @@ foreach ($store as $_store){
 }
 
 $errors = array();
-<<<<<<< HEAD
-$uploadedFiles = array_diff(scandir('stock'), array('.', '..'));
-=======
+
 $uploadedFiles = array_diff(scandir(BP.'/stock'), array('.', '..'));
->>>>>>> 120448d3f8e03fd5712cbb630f81e1e6d61f82f5
 
 foreach ($uploadedFiles as $file) {
 
@@ -66,11 +63,9 @@ foreach ($uploadedFiles as $file) {
     }
 
     $stockData = array();
-<<<<<<< HEAD
-    $fileName = 'stock/'.$file;
-=======
+
     $fileName = BP . '/stock/'.$file;
->>>>>>> 120448d3f8e03fd5712cbb630f81e1e6d61f82f5
+
     $file_handle = fopen($fileName, 'r');
     while (!feof($file_handle)) {
         $stockData[] = fgetcsv($file_handle, 1024);
@@ -118,11 +113,21 @@ foreach ($uploadedFiles as $file) {
 
             $itemModel = $objectManager->get('\Eadesigndev\Warehouses\Model\StockItemsRepository');
             $items = $objectManager->get('\Eadesigndev\Warehouses\Model\StockItemsRepository')->getById($itemData['item_id']);
+            $status = $objectManager->get('\Magento\CatalogInventory\Model\ResourceModel\Stock\Status');
 
             try {
 
                 $items->setData(array_merge($items->getData(), array('qty' => $qty,'is_in_stock'=>$isInStock)));
                 $itemModel->save($items);
+
+                $status->saveProductStatusData(
+                    $items->getProductId(),
+                    $items->getIsInStock(),
+                    $items->getQty(),
+                    $items->getWebsiteId(),
+                    $items->getStockId()
+                );
+
                 $respone[$file] = "$file : Stock updated successfully.";
             } catch (\Exception $e) {
                 $errors[] = $e->getMessage();

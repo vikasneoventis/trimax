@@ -41,3 +41,25 @@
 >>>>>>> 120448d3f8e03fd5712cbb630f81e1e6d61f82f5
 )
 
+2018-07-16T09:50:29+00:00 INFO (6): Array
+(
+    [0] => 410-000-016 : SKU not found
+    [1] => 418-000-219 : SKU not found
+    [2] => 418-000-220 : SKU not found
+    [3] => 418-844-040 : SKU not found
+    [4] => 424-100-970 : SKU not found
+    [5] => 450-900-036 : SKU not found
+    [6] => 504-000-091 : SKU not found
+)
+
+2018-07-17T21:55:23+00:00 INFO (6): Array
+(
+    [0] => 410-000-016 : SKU not found
+    [1] => 418-000-219 : SKU not found
+    [2] => 418-000-220 : SKU not found
+    [3] => 418-844-040 : SKU not found
+    [4] => 424-100-970 : SKU not found
+    [5] => 450-900-036 : SKU not found
+    [6] => 504-000-091 : SKU not found
+)
+

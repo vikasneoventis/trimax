@@ -23,6 +23,7 @@ namespace Eadesigndev\Warehouses\Controller\Adminhtml\StockItems;
 
 use Magento\Framework\Controller\Result\JsonFactory;
 use Eadesigndev\Warehouses\Api\StockItemsRepositoryInterface;
+use Magento\CatalogInventory\Model\ResourceModel\Stock\Status;
 
 class InlineEdit extends \Eadesigndev\Warehouses\Controller\Adminhtml\StockItems
 {
@@ -31,6 +32,11 @@ class InlineEdit extends \Eadesigndev\Warehouses\Controller\Adminhtml\StockItems
      * @var JsonFactory
      */
     protected $jsonFactory;
+
+    /**
+     * @var Status
+     */
+    protected $status;
 
     /**
      * InlineEdit constructor.
@@ -43,10 +49,12 @@ class InlineEdit extends \Eadesigndev\Warehouses\Controller\Adminhtml\StockItems
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
         \Eadesigndev\Warehouses\Model\StockItemsRepository $itemModel,
-        JsonFactory $jsonFactory
+        JsonFactory $jsonFactory,
+        Status $status
     )
     {
         $this->jsonFactory = $jsonFactory;
+        $this->status = $status;
         parent::__construct($context, $resultPageFactory, $itemModel);
     }
 
@@ -73,7 +81,17 @@ class InlineEdit extends \Eadesigndev\Warehouses\Controller\Adminhtml\StockItems
 
                     try {
                         $items->setData(array_merge($items->getData(), $postItems[$itemsId]));
+
                         $this->itemModel->save($items);
+
+                        $this->status->saveProductStatusData(
+                            $items->getProductId(),
+                            $items->getIsInStock(),
+                            $items->getQty(),
+                            $items->getWebsiteId(),
+                            $items->getStockId()
+                        );
+
                     } catch (\Exception $e) {
                         $messages[] = $this->getErrorWithItemId(
                             $items,

@@ -196,7 +196,7 @@ class StockItemRepository implements StockItemRepositoryInterface
                 }
             } else {
                 $stockItem->setQty(0);
-                $this->status->saveProductStatus(
+                $this->status->saveProductStatusData(
                     $product->getId(),
                     $stockItem->getIsInStock(),
                     0,
@@ -216,18 +216,18 @@ class StockItemRepository implements StockItemRepositoryInterface
 
             $all = $connection->fetchAll($select);
 
-            if(!count($all)) {
+            if (!count($all)) {
                 $tablename = $connection->getTableName('warehouseinventory_stock');
                 $query = "Select `stock_id` FROM $tablename";
                 $stockIds = $connection->query($query)->fetchAll();
 
                 foreach ($stockIds as $id) {
                     $cloneStockItem = clone $stockItem;
-                    $cloneStockItem->setData('stock_id',$id['stock_id']);
+                    $cloneStockItem->setData('stock_id', $id['stock_id']);
                     $this->resource->save($cloneStockItem);
 
-                    if(!$isQty){
-                        $this->status->saveProductStatus(
+                    if (!$isQty) {
+                        $this->status->saveProductStatusData(
                             $product->getId(),
                             $stockItem->getIsInStock(),
                             0,
@@ -236,10 +236,49 @@ class StockItemRepository implements StockItemRepositoryInterface
                         );
                     }
                 }
-            }else {
+            } else {
                 $stockItem->setStockId($stockItem->getStockId());
                 $this->resource->save($stockItem);
             }
+
+
+            if ($isQty) {
+                $selectStatus = $connection->select()->from(
+                    $connection->getTableName('warehouseinventory_stock_status')
+                );
+                $selectStatus->where('product_id=?', $product->getId());
+
+                $allStatus = $connection->fetchAll($selectStatus);
+
+                $qty = $stockItem->getQty();
+                if(!$stockItem->getQty()){
+                    $qty = 0;
+                }
+                if (!count($allStatus)) {
+                    $tableName = $connection->getTableName('warehouseinventory_stock');
+                    $query = "Select `stock_id` FROM $tableName";
+                    $stockIds = $connection->query($query)->fetchAll();
+
+                    foreach ($stockIds as $id) {
+                        $this->status->saveProductStatusData(
+                            $product->getId(),
+                            $stockItem->getIsInStock(),
+                            $qty,
+                            $stockItem->getWebsiteId(),
+                            $id['stock_id']
+                        );
+                    }
+                } else {
+                    $this->status->saveProductStatusData(
+                        $product->getId(),
+                        $stockItem->getIsInStock(),
+                        $qty,
+                        $stockItem->getWebsiteId(),
+                        $stockItem->getStockId()
+                    );
+                }
+            }
+
         } catch (\Exception $exception) {
             throw new CouldNotSaveException(__('Unable to save Stock Item'), $exception);
         }
