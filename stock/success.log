@@ -43,3 +43,8 @@
     [import_product_stocks_GB.csv] => import_product_stocks_GB.csv : Stock updated successfully.
 )
 
+2018-07-20T06:59:00+00:00 INFO (6): Array
+(
+    [import_product_stocks_MAIN.csv] => import_product_stocks_MAIN.csv : Stock updated successfully.
+)
+

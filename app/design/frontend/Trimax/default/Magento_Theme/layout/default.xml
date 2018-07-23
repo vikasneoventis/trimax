@@ -10,6 +10,7 @@
         <referenceBlock name="form.subscribe" remove="true" />
         <referenceBlock name="catalog.compare.link" remove="true" />
         <referenceBlock name="search-term-popular-link" remove="true" />
+        <referenceBlock name="store.links" remove="true" />
         <referenceBlock name="footer_links">
             <block class="Magento\Framework\View\Element\Html\Link\Current" name="about-us" before="-">
                 <arguments>
