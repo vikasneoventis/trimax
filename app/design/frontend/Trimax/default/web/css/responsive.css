@@ -161,7 +161,7 @@ body{overflow-x: hidden;}
 .cms-index-index .our-parts:before {content: "";position: absolute;top: 0;height: 100%;width: 100%;background-color: #000;opacity: 0.5;left: 0;}
 .cms-index-index .our-parts .col-main{position: relative;}
 .cms-index-index .our-parts {position: relative;background-position: right top;}
-
+.navigation .level2.ui-menu-item > a{font-size: 12px;}
 /*Home-page-End*/
 
 /*footer-Start*/
@@ -174,6 +174,8 @@ body{overflow-x: hidden;}
 .widget.block .subcategories-listing .product.product-item{width: 41.5%;}
 .widget.block .subcategories-listing .product-item-details .product.name a{font-size: 17px;}
 .widget.block .subcategories-listing .category-description p{font-size: 14px;}
+.navigation .level0 .submenu{min-width: 150px;left: -40%!important;}
+.navigation ul > li > a{font-size: 12px;}
 /*sub-category-page-End*/
 }
 
@@ -190,7 +192,9 @@ body{overflow-x: hidden;}
 .block-search .actions button{background: transparent;border: 0;padding: 0;position: absolute;top: 0;box-shadow: none;}
 .block-search .action.search::before {webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;font-size: 16px;line-height: 32px;color: #757575;content: '\e615'; font-family: 'luma-icons'; margin: 0;vertical-align: top;display: inline-block;font-weight: normal;overflow: hidden;speak: none;text-align: center;}
 .block-search .action.search{right: 15px;}
-.actions span{display: none;}
+.customer-welcome .actions span{display: none;}
+.action.search span{display: none;}
+.minicart-wrapper button.action.switch{display: none;}
 .block.block-search{width: 90%;margin: 0 auto;top: 184px;left: 0;right: 0;}
 .block-search .block-content{width: 100%;float: none;}
 .block-search .label{display: none;}
@@ -215,8 +219,8 @@ form{position: relative;}
     width: 7%;
     height: 30px;
     float: right;
-    top: 27px;
-    right: 60px;
+    top: 24px;
+    right: 67px;
 }
 .customer-welcome ul{list-style: none;padding: 0px 0px;
 margin: 0;}
@@ -305,11 +309,15 @@ li.customer-welcome.active .customer-menu {
 
 }
 .container.header.welcome-msg{width: 100%;}
+.navigation .level1.parent.ui-menu-item:before,.navigation .level2.parent.ui-menu-item:before,.navigation .level3.parent.ui-menu-item:before{display: none;}
+.navigation .level1.parent.ui-menu-item:hover:before,.navigation .level2.parent.ui-menu-item:hover:before,.navigation .level3.parent.ui-menu-item:hover:before{display: none;}
 .cms-index-index button:not(.primary){display: none;}
+.customer-welcome button:not(.primary){text-indent: -9999px;background-color: transparent;border:none;box-shadow: none;display: none; }
 .customer-welcome .customer-name{background-position: 0px -48px;}
 .customer-welcome .customer-name:hover{background-position: -50px -48px;}
 .cms-index-index .minicart-wrapper .action.showcart::before {font-size: 26px;line-height: 34px;}
 .minicart-wrapper .action.showcart .counter.qty{right: -3px;font-size: 12px;top: -3px;height: 20px;line-height: 20px;min-width: 15px;}
+.navigation .level0 .submenu .submenu{left: auto!important;}
 /*header-End*/
 
 /*Home-page-Start*/
@@ -477,12 +485,12 @@ li.customer-welcome.active .customer-menu {
 .nav-sections .navigation .parent .level-top::after{top: 10px;}
 .nav-sections .navigation .level0 > .level-top{padding: 10px 10px 10px 15px;font-size: 14px;}
 .nav-sections .navigation .level0{font-size: 14px;}
-.nav-sections .navigation li > a{padding-top: 3px;}
+.nav-sections .navigation li > a{padding-top: 7px;}
 .nav-sections .ui-menu-item.all-category{padding-top: 10px;}
 .nav-sections .level1.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all.expanded{margin-bottom: 10px;}
 .nav-sections-item-switch{color: #d31f2c;font-size: 15px;}
 .nav-sections-item-title.active{background: #e3e3e3;border:1px  solid #d7d7d7;}
-.nav-sections-item-title{height: 60px;font-weight: 600;padding-top: 18px;}
+.nav-sections-item-title{height: 60px;font-weight: 600;padding-top: 22px;}
 .nav-sections-item-title .nav-sections-item-switch:hover{color: #d31f2c;}
 .navigation .level0.active > a:not(.ui-state-active), .navigation .level0.has-active > a:not(.ui-state-active){border-width: 0 0 0 4px;}
 /*mobile-menu-css*/
