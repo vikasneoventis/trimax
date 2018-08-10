@@ -69,6 +69,7 @@ atlassian*
 
 var/*
 pub/*
+stock/*
 .htaccess
 .htaccess.sample
 .php_cs.dist

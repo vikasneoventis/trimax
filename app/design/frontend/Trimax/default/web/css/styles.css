@@ -244,3 +244,9 @@ input:not([disabled]):focus{box-shadow: none;}
 .widget.block .subcategories-listing .category-description p{color: #474747;font-size: 15px;font-weight: 500;}
 
 /*sub-category-page-End*/
+
+span.billing-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
