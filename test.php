@@ -5,9 +5,9 @@
  */
 
 error_reporting(1);
-/*
 
-$cn= mysqli_connect("localhost", "root", "root","trimax_m1") or die('Could not connect');
+
+/*$cn= mysqli_connect("localhost", "staging_trimax", "wUFbJgsZNQqi","staging_trimax") or die('Could not connect');
 //$db= mysqli_select_db("trimax_m1", $cn) or die('Could not select database');
 
 

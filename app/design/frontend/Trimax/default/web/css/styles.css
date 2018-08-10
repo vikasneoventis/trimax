@@ -164,7 +164,7 @@ input:not([disabled]):focus{box-shadow: none;}
 .cms-index-index .my-trimax.col1-layout .my-trimax-header p a:hover{color: #fff;}
 .cms-index-index .my-trimax.col1-layout .arrow-down {width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;color: #ec414d;margin: auto;border-top: 10px solid #d21f2c;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul {margin: 0;padding: 0;width: 100%;list-style: none;text-align: center;}
-.cms-index-index .my-trimax.col1-layout .trimax-items ul li {display: inline-block;background-color: #4a4a4a;border-radius: 5px;margin: 0px 10px;width: 15%;position: relative;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li {display: inline-block;background-color: #4a4a4a;border-radius: 5px;margin: 0px 10px;width: 31.7%;position: relative;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li:first-child{margin-left: 0;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li:last-child{margin-right: 0;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service-bulletin.white {background-image: url('../images/service-bulletin.jpg');}

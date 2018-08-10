@@ -3,7 +3,7 @@
  * @author Evince Team
  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
  */
-
+/*
 error_reporting(1);
 
 use \Magento\Framework\App\Bootstrap;
@@ -158,4 +158,4 @@ foreach ($uploadedFiles as $file) {
         $logger->info(print_r($errors, true));
     }
 }
-
+*/
