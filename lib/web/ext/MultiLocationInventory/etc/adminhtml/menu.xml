@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Aitoc. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Aitoc_MultiLocationInventory::multilocationinventory"
+             title="Multi-Location Inventory by Aitoc"
+             translate="title"
+             module="Aitoc_MultiLocationInventory"
+             sortOrder="70"
+             parent="Magento_Backend::system"
+             dependsOnModule="Magento_Backend"
+             resource="Aitoc_MultiLocationInventory::multilocationinventory"/>
+        <add id="Aitoc_MultiLocationInventory::catalog_inventory_warehouse"
+             title="Warehouses"
+             module="Aitoc_MultiLocationInventory"
+             sortOrder="100"
+             parent="Aitoc_MultiLocationInventory::multilocationinventory"
+             action="multilocationinventory/warehouse"
+             resource="Aitoc_MultiLocationInventory::warehouse"/>
+        <add id="Aitoc_MultiLocationInventory::catalog_inventory_supplier"
+             title="Suppliers"
+             module="Aitoc_MultiLocationInventory"
+             sortOrder="110"
+             parent="Aitoc_MultiLocationInventory::multilocationinventory"
+             action="multilocationinventory/supplier"
+             resource="Aitoc_MultiLocationInventory::supplier"/>
+        <add id="Aitoc_MultiLocationInventory::catalog_inventory_par_level"
+             title="Par Level"
+             module="Aitoc_MultiLocationInventory"
+             sortOrder="110"
+             parent="Aitoc_MultiLocationInventory::multilocationinventory"
+             action="multilocationinventory/parlevel"
+             resource="Aitoc_MultiLocationInventory::par_level"/>
+    </menu>
+</config>

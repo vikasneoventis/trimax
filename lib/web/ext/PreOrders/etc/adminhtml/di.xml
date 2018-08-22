@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Block\Adminhtml\Product\Edit\Tab\Inventory" type="Aitoc\PreOrders\Block\Adminhtml\Product\Edit\Tab\Inventory" />
+    <type name="Magento\Sales\Model\Order\Item">
+        <plugin name="changeStatusItem" type="Aitoc\PreOrders\Plugin\Model\Order\Item" sortOrder="1"/>
+    </type>
+     <type name="Magento\Sales\Model\Order\Shipment">
+        <plugin name="addItemItemShipment" type="Aitoc\PreOrders\Plugin\Model\Order\Shipment" sortOrder="2"/>
+    </type>
+</config>

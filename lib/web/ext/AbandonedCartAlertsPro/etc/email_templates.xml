@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Email/etc/email_templates.xsd">
+    <template id="aitoc_abandoned_cart_alerts_pro_quote_alert_email_template" label="Abandoned Quote Alert" file="quote_alert.html" type="html" module="Aitoc_AbandonedCartAlertsPro" area="frontend"/>
+</config>

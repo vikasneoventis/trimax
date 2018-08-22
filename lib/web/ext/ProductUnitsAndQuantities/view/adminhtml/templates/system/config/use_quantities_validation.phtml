@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    require([
+        'jquery',
+        'jquery/ui',
+        'jquery/validate',
+        'mage/translate'
+    ], function ($) {
+        $.validator.addMethod(
+            'validate-use-quantities', function (value) {
+                return validateUseQuantities(value);
+            }, $.mage.__('Enter Valid Value'));
+    });
+
+    function validateUseQuantities(value) {
+        var valideteResult = true;
+        var values = value.split(',');
+        values.forEach(function (value) {
+            if (!(value.trim() == parseFloat(value))) {
+                valideteResult = false;
+                return false;
+            }
+        });
+
+        return valideteResult;
+    }
+</script>

@@ -1,0 +1,58 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: alexey_yakimovich
+ * Date: 10/5/16
+ * Time: 6:47 PM
+ */
+?>
+<?php $_item = $block->getItem() ?>
+<tr>
+    <td class="col-product"><?php echo $block->getColumnHtml($_item, 'name') ?></td>
+    <td class="col-ordered-qty"><?php echo $block->getColumnHtml($_item, 'qty') ?></td>
+    <td class="col-qty <?php if ($block->isShipmentRegular()): ?>last<?php endif; ?>">
+        <?php if ($block->canShipPartiallyItem()): ?>
+            <?php
+            $text = '';
+            $addText = '<span style="font-weight:bold">' . __('This product is Pre-Order and cannot be shipped') . '</span>';
+            if ($_item->getProductId()) {
+                $itemData = $_item->getData('product_options');
+                if (($_item->getData('product_type') == \Aitoc\PreOrders\Model\Product\Type::TYPE_BUNDLE) && ($itemData['product_calculations'] && $itemData['shipment_type'])) {
+                    $text = $addText;
+                }
+                if (isset($itemData['simple_sku'])) {
+                    $product = $this->helper('Aitoc\PreOrders\Helper\Data')->initProduct($_item, $itemData['simple_sku']);
+                    if ($product->getListPreorder()) {
+                        $text = $addText;
+                    }
+                } else {
+                    $product = $this->helper('Aitoc\PreOrders\Helper\Data')->initProduct($_item, $_item->getData('sku'));
+                    if ($product->getListPreorder()) {
+                        $text = $addText;
+                    }
+                }
+                if ($text) {
+                    echo $text;
+                } else {
+                    ?>
+                    <input type="text"
+                           class="input-text admin__control-text qty-item"
+                           name="shipment[items][<?php /* @escapeNotVerified */ echo $_item->getOrderItemId() ?>]"
+                           value="<?php /* @escapeNotVerified */ echo $_item->getQty()*1 ?>" />
+                    <?php
+                }
+
+            }
+            ?>
+
+        <?php else: ?>
+            <?php /* @escapeNotVerified */ echo $_item->getQty()*1 ?>
+        <?php endif; ?>
+    </td>
+    <?php if (!$block->canShipPartiallyItem()): ?>
+        <td class="col-ship last">
+            <input type="hidden" name="shipment[items][<?php /* @escapeNotVerified */ echo $_item->getOrderItemId() ?>]" value="0" />
+            <input type="checkbox" name="shipment[items][<?php /* @escapeNotVerified */ echo $_item->getOrderItemId() ?>]" value="<?php /* @escapeNotVerified */ echo $_item->getQty()*1 ?>" checked />
+        </td>
+    <?php endif; ?>
+</tr>

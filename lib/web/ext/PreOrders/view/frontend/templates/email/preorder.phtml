@@ -1,0 +1,39 @@
+<?php
+/**
+ * Copyright © 2015 Aitoc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+?>
+<?php if ($_products = $block->getProducts()): ?>
+<table>
+<?php foreach ($_products as $_product): ?>
+    <tr>
+        <td class="col photo">
+            <a href="<?= /* @escapeNotVerified */  $_product->getProductUrl() ?>" title="<?= $block->escapeHtml($_product->getName()) ?>" class="product photo">
+                <?php echo $block->getImage($_product, 'product_thumbnail_image', ['class' => 'photo image'])->toHtml(); ?>
+            </a>
+        </td>
+        <td class="col item">
+            <p>
+                <strong class="product name">
+                    <a href="<?= /* @escapeNotVerified */  $_product->getProductUrl() ?>"><?= $block->escapeHtml($_product->getName()) ?></a>
+                </strong>
+            </p>
+            <?php if ($shortDescription = $block->getFilteredContent($_product->getShortDescription())): ?>
+                <p><small><?= /* @escapeNotVerified */  $shortDescription ?></small></p>
+            <?php endif; ?>
+            <?= $block->getProductPriceHtml(
+                    $_product,
+                    \Magento\Catalog\Pricing\Price\FinalPrice::PRICE_CODE,
+                    \Magento\Framework\Pricing\Render::ZONE_EMAIL,
+                    [
+                        'display_label' => __('Price:')
+                    ]
+                );
+                ?>
+        </td>
+    </tr>
+<?php endforeach; ?>
+</table>
+<?php endif; ?>

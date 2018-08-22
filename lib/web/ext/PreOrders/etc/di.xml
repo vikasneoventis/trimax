@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Model\Product" type="Aitoc\PreOrders\Model\Product" />
+    <preference for="Magento\CatalogInventory\Model\Source\Backorders" type="Aitoc\PreOrders\Model\SourceBackorders" />
+    <preference for="Magento\CatalogInventory\Model\Stock\Item" type="Aitoc\PreOrders\Model\Stock\Item" />
+    <preference for="Magento\ConfigurableProduct\Model\ConfigurableAttributeData" type="Aitoc\PreOrders\Model\ConfigurableAttributeData" />
+    <type name="Magento\ConfigurableProduct\Model\Product\Type\Configurable">
+        <plugin name="configurableSalable" type="Aitoc\PreOrders\Plugin\Model\Product\Configurable" sortOrder="1"/>
+    </type>
+    <type name="Magento\Swatches\Controller\Ajax\Media">
+        <plugin name="afterMedia" type="Aitoc\PreOrders\Plugin\Controller\Ajax\Media" sortOrder="1"/>
+    </type>
+    <preference for="Magento\Framework\Controller\Result\Json" type="Aitoc\PreOrders\Model\Json" />
+    <type name="Magento\Bundle\Block\Catalog\Product\View\Type\Bundle\Option">
+        <plugin name="changeOption" type="Aitoc\PreOrders\Plugin\Block\Product\View\Type\Bundle\Option" sortOrder="2"/>
+    </type>
+    <type name="Magento\Bundle\Block\Catalog\Product\View\Type\Bundle">
+        <plugin name="changeJson" type="Aitoc\PreOrders\Plugin\Block\Product\View\Type\Bundle" sortOrder="3"/>
+    </type>
+    <preference for="Magento\Catalog\Block\Product\ListProduct" type="Aitoc\PreOrders\Block\Product\ListProduct" />
+    <preference for="Magento\Catalog\Block\Product\View" type="Aitoc\PreOrders\Block\Product\View" />
+    <preference for="Magento\Bundle\Helper\Catalog\Product\Configuration" type="Aitoc\PreOrders\Helper\Bundle\Configuration" />
+    <preference for="Magento\CatalogInventory\Model\Quote\Item\QuantityValidator" type="Aitoc\PreOrders\Model\Quote\Item\QuantityValidator" />
+    <preference for="Magento\CatalogInventory\Model\StockStateProvider" type="Aitoc\PreOrders\Model\StockStateProvider" />
+    <preference for="Magento\Sales\Model\Order" type="Aitoc\PreOrders\Model\Order" />
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+        <arguments>
+            <argument name="mainTableName" xsi:type="string">sales_order</argument>
+            <argument name="gridTableName" xsi:type="string">sales_order_grid</argument>
+            <argument name="orderIdField" xsi:type="string">sales_order.entity_id</argument>
+            <argument name="joins" xsi:type="array">
+                <item name="sales_shipping_address" xsi:type="array">
+                    <item name="table" xsi:type="string">sales_order_address</item>
+                    <item name="origin_column" xsi:type="string">shipping_address_id</item>
+                    <item name="target_column" xsi:type="string">entity_id</item>
+                </item>
+                <item name="sales_billing_address" xsi:type="array">
+                    <item name="table" xsi:type="string">sales_order_address</item>
+                    <item name="origin_column" xsi:type="string">billing_address_id</item>
+                    <item name="target_column" xsi:type="string">entity_id</item>
+                </item>
+                <item name="sales_order_payment" xsi:type="array">
+                    <item name="table" xsi:type="string">sales_order_payment</item>
+                    <item name="origin_column" xsi:type="string">entity_id</item>
+                    <item name="target_column" xsi:type="string">parent_id</item>
+                </item>
+            </argument>
+            <argument name="columns" xsi:type="array">
+                <item name="entity_id" xsi:type="string">sales_order.entity_id</item>
+                <item name="status" xsi:type="string">sales_order.status</item>
+                <item name="status_preorder" xsi:type="string">sales_order.status_preorder</item>
+                <item name="store_id" xsi:type="string">sales_order.store_id</item>
+                <item name="store_name" xsi:type="string">sales_order.store_name</item>
+                <item name="customer_id" xsi:type="string">sales_order.customer_id</item>
+                <item name="base_grand_total" xsi:type="string">sales_order.base_grand_total</item>
+                <item name="base_total_paid" xsi:type="string">sales_order.base_total_paid</item>
+                <item name="grand_total" xsi:type="string">sales_order.grand_total</item>
+                <item name="total_paid" xsi:type="string">sales_order.total_paid</item>
+                <item name="increment_id" xsi:type="string">sales_order.increment_id</item>
+                <item name="base_currency_code" xsi:type="string">sales_order.base_currency_code</item>
+                <item name="order_currency_code" xsi:type="string">sales_order.order_currency_code</item>
+                <item name="shipping_name" xsi:type="object">ShippingNameAggregator</item>
+                <item name="billing_name" xsi:type="object">BillingNameAggregator</item>
+                <item name="created_at" xsi:type="string">sales_order.created_at</item>
+                <item name="updated_at" xsi:type="string">sales_order.updated_at</item>
+                <item name="billing_address" xsi:type="object">BillingAddressAggregator</item>
+                <item name="shipping_address" xsi:type="object">ShippingAddressAggregator</item>
+                <item name="shipping_information" xsi:type="string">sales_order.shipping_description</item>
+                <item name="customer_email" xsi:type="string">sales_order.customer_email</item>
+                <item name="customer_group" xsi:type="string">sales_order.customer_group_id</item>
+                <item name="subtotal" xsi:type="string">sales_order.base_subtotal</item>
+                <item name="shipping_and_handling" xsi:type="string">sales_order.base_shipping_amount</item>
+                <item name="customer_name" xsi:type="object">CustomerNameAggregator</item>
+                <item name="payment_method" xsi:type="string">sales_order_payment.method</item>
+                <item name="total_refunded" xsi:type="string">sales_order.total_refunded</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <preference for="Magento\ProductAlert\Model\Observer" type="Aitoc\PreOrders\Model\ProductAlert\Observer" />
+    <preference for="Magento\ProductAlert\Model\Email" type="Aitoc\PreOrders\Model\Email" />
+    <preference for="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" type="Aitoc\PreOrders\Ui\DataProvider\DataProvider" />
+    <type name="Aitoc\PreOrders\Ui\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Aitoc\PreOrders\Ui\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Magento\Sales\Model\Order\Email\Container\OrderIdentity" type="Aitoc\PreOrders\Model\Order\Email\Container\OrderIdentity" />
+    <preference for="Magento\Sales\Model\Order\Email\Container\InvoiceIdentity" type="Aitoc\PreOrders\Model\Order\Email\Container\InvoiceIdentity" />
+</config>

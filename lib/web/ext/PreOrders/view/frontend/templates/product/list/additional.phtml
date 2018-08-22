@@ -1,0 +1,12 @@
+<script>
+    require(["jquery", "jquery/ui", "preorder"], function ($) {
+        $('.products.list.items.product-items').preorder({
+            jsonConfig: <?php /* @escapeNotVerified */ echo $block->getJsonConfigPreorder(); ?>,
+            classes: {
+                attributeInput: 'product'
+            },
+            change:1,
+            selectorTag: 'button'
+        });
+    });
+</script>

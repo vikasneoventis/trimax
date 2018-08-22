@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
+    <module name="Aitoc_PreOrders" setup_version="1.1.3">
+        <sequence>
+            <module name="Magento_Bundle"/>
+            <module name="Magento_Catalog"/>
+            <module name="Magento_CatalogInventory"/>
+            <module name="Magento_ConfigurableProduct"/>
+            <module name="Magento_Email"/>
+            <module name="Magento_ProductAlert"/>
+            <module name="Magento_Sales"/>
+            <module name="Magento_Swatches"/>
+        </sequence>
+    </module>
+</config>

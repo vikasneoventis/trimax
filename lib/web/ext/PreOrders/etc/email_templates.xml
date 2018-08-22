@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="preorder_preorder_alert_email_preorder_template" label="Pre-Order Alert" file="preorder_alert.html" type="html" module="Aitoc_PreOrders" area="frontend"/>
+    <template id="preorder_preorder_order_email_preorder_order_template" label="New Order with Pre-Order" file="order_new.html" type="html" module="Aitoc_PreOrders" area="frontend"/>
+    <template id="preorder_preorder_invoice_email_preorder_invoice_template" label="New Invoice with Pre-Order" file="invoice_new.html" type="html" module="Aitoc_PreOrders" area="frontend"/>
+</config>

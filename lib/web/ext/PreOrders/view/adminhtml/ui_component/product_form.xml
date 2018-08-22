@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <modal name="advanced_inventory_modal">
+        <fieldset name="stock_data">
+                  <field name="preorderdescript">
+                     <argument name="data" xsi:type="array">
+                         <item name="config" xsi:type="array">
+                             <item name="label" xsi:type="string" translate="true">Pre-Order Note</item>
+                             <item name="formElement" xsi:type="string">input</item>
+                             <item name="dataScope" xsi:type="string">preorderdescript</item>
+                             <item name="scopeLabel" xsi:type="string">[GLOBAL]</item>
+                             <item name="value" xsi:type="object">Aitoc\PreOrders\Model\Config\Source\Descript</item>
+                         </item>
+                     </argument>
+                 </field>
+             <field name="backstock_preorders">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="label" xsi:type="string" translate="true">Allow Out-Of-Stock product for Pre-Order</item>
+                            <item name="formElement" xsi:type="string">select</item>
+                            <item name="dataScope" xsi:type="string">backstock_preorders</item>
+                            <item name="value" xsi:type="object">Aitoc\PreOrders\Model\Config\Source\Backstok</item>
+                            <item name="scopeLabel" xsi:type="string">[GLOBAL]</item>
+                        </item>
+                        <item name="options" xsi:type="object">Aitoc\PreOrders\Model\Config\Source\YesNo</item>
+                    </argument>
+                </field>
+        </fieldset>
+    </modal>
+</form>

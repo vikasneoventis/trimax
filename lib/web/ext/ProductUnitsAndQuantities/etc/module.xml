@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Framework:etc/module.xsd">
+    <module name="Aitoc_ProductUnitsAndQuantities" setup_version="1.1.0"></module>
+</config>

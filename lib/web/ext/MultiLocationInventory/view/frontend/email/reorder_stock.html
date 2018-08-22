@@ -1,0 +1,11 @@
+<!--@subject Order from {{var store.getFrontendName()}}? @-->
+<!--@vars {
+"var name":"Supplier/Warehouse Name",
+"var order_table":"Table with order items",
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<p class="greeting">{{trans "%name," name=$name}}</p>
+<p>{{var order_items|nl2rb}}</p>
+{{template config_path="design/email/footer_template"}}

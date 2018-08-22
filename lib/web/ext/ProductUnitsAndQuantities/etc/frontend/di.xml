@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <type name="Magento\Framework\Pricing\Render\PriceBox">
+        <plugin name="AitocRenderPlugin" type="Aitoc\ProductUnitsAndQuantities\Plugin\Block\RenderPlugin" sortOrder="5"/>
+    </type>
+    <type name="Magento\Checkout\Block\Cart\Item\Renderer">
+        <plugin name="AitocRenderCartPlugin" type="Aitoc\ProductUnitsAndQuantities\Plugin\Block\RenderCartPlugin" sortOrder="5"/>
+    </type>
+    <type name="Magento\Weee\Block\Item\Price\Renderer">
+        <plugin name="RenderOrderItemPricePlugin" type="Aitoc\ProductUnitsAndQuantities\Plugin\Block\RenderOrderItemPricePlugin" sortOrder="5"/>
+    </type>
+    <type name="Magento\Wishlist\Block\Customer\Wishlist\Item\Column\Cart">
+        <plugin name="RenderWishListPlugin" type="Aitoc\ProductUnitsAndQuantities\Plugin\Block\RenderWishListPlugin" sortOrder="5"/>
+    </type>
+</config>

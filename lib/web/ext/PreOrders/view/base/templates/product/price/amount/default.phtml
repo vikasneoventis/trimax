@@ -1,0 +1,86 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php /** @var \Magento\Framework\Pricing\Render\Amount $block */ ?>
+<span class="price-container <?php /* @escapeNotVerified */
+echo $block->getAdjustmentCssClasses() ?>"
+    <?php echo $block->getSchema() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '' ?>>
+    <?php if ($block->getDisplayLabel()): ?>
+        <span class="price-label"><?php /* @escapeNotVerified */
+            echo $block->getDisplayLabel(); ?></span>
+    <?php endif; ?>
+    <span <?php if ($block->getPriceId()): ?> id="<?php /* @escapeNotVerified */
+        echo $block->getPriceId() ?>"<?php endif; ?>
+        <?php echo ($block->getPriceDisplayLabel()) ? 'data-label="' . $block->getPriceDisplayLabel() . $block->getPriceDisplayInclExclTaxes() . '"' : '' ?>
+        data-price-amount="<?php /* @escapeNotVerified */
+        echo $block->getDisplayValue(); ?>"
+        data-price-type="<?php /* @escapeNotVerified */
+        echo $block->getPriceType(); ?>"
+        class="price-wrapper <?php /* @escapeNotVerified */
+        echo $block->getPriceWrapperCss(); ?>"
+        <?php echo $block->getSchema() ? ' itemprop="price"' : '' ?>>
+        <?php /* @escapeNotVerified */
+        echo $block->formatCurrency($block->getDisplayValue(), (bool)$block->getIncludeContainer()) ?>
+ </span>
+    <?php if ($block->hasAdjustmentsHtml()): ?>
+        <?php echo $block->getAdjustmentsHtml() ?>
+    <?php endif; ?>
+    <?php if ($block->getSchema()): ?>
+        <meta itemprop="priceCurrency" content="<?php /* @escapeNotVerified */
+        echo $block->getDisplayCurrencyCode() ?>"/>
+    <?php endif; ?>
+</span>
+<?php
+$product = \Magento\Framework\App\ObjectManager::getInstance()->get('Aitoc\PreOrders\Model\Product')->load($block->getSaleableItem()->getId());
+$helper = \Magento\Framework\App\ObjectManager::getInstance()->get('Aitoc\PreOrders\Helper\Data');
+$stockLoader = \Magento\Framework\App\ObjectManager::getInstance()->get('Aitoc\PreOrders\Model\StockLoader');
+$stockLoader->applyStockToProduct($product);
+$preOrderFlag = false;
+$inStock = false;
+if ($product->getTypeId() == \Aitoc\PreOrders\Model\Product\Type::TYPE_CONFIGURABLE) {
+
+    $configurable = $product->getTypeInstance();
+    $associatedProducts = $configurable->getUsedProductCollection($product)->addAttributeToSelect('*')
+        ->addAttributeToSelect('media_gallery')
+        ->addFilterByRequiredOptions()
+        ->setStoreId($product->getStoreId());
+    $stockLoader->applyStockToProductCollection($associatedProducts);
+
+    foreach ($associatedProducts as $associatedProduct) {
+        if ($associatedProduct->getPreorder()) {
+            if ($helper->isBackstockPreorderAllowed($product)) {
+                $preOrderFlag = true;
+            }
+        } else {
+            if ($associatedProduct->getData('is_in_stock')) {
+                $inStock = true;
+            }
+        }
+    }
+}
+
+if ($inStock) {
+    $preOrderFlag = false;
+}
+$preorder = 0;
+if ($product->getListPreorder()) {
+    if(!$helper->getStockItem($product)) {
+        if ($helper->isBackstockPreorderAllowed($product)) {
+            $preorder = 1;
+        }
+    } else {
+        $preorder = 1;
+    }
+}
+?>
+<?php if ($preorder || $preOrderFlag)  : ?>
+    <span class="regular-price price pre-order"><?php echo __('Pre-Order'); ?> </span>
+
+<?php endif ?>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Aitoc_AbandoneCartAlertsPro::aitocabandonedcart_index_index" toolTip="Aitoc Extension" title="Abandoned Cart Alerts Pro" module="Aitoc_AbandonedCartAlertsPro" parent="Magento_Integration::system_extensions" action="aitocabandonedcart/index/index" resource="Aitoc_AbandonedCartAlertsPro::aitocabandonedcart_index_index"/>
+    </menu>
+</config>

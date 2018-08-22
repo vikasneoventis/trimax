@@ -1,0 +1,46 @@
+<?php
+$warehouseList = $this->getWarehouseList();
+$currentWarehouse = $this->getWarehouse();
+$orderItemId = $block->getItem()->getItemId();
+$warehouseChangeUrl = $this->getWarehouseChangeUrl();
+?>
+<script>
+    var changedWarehouse = [];
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function () {
+            $('#aitoc_warehouse_<?php echo $orderItemId; ?>').change(function () {
+                $(this).next('button').show();
+            });
+
+            $('#aitoc_warehouse_set_button_<?php echo $orderItemId; ?>').click(function () {
+                warehouse_id = $('#aitoc_warehouse_<?php echo $orderItemId; ?>').val();
+                $.ajax({
+                    showLoader: true,
+                    url: "<?php echo $warehouseChangeUrl; ?>",
+                    data: {warehouse_id: warehouse_id, order_item_id: <?php echo $orderItemId; ?>},
+                    type: "POST",
+                    dataType: 'json'
+                }).done(function (data) {
+                    if (data.errors) {
+                        alert(data.message);
+                    } else {
+                        $('#aitoc_warehouse_set_button_<?php echo $orderItemId; ?>').hide();
+                        $('#aitoc_warehouse_<?php echo $orderItemId; ?>').empty();
+                        $('#aitoc_warehouse_<?php echo $orderItemId; ?>').append(data.options);
+                    }
+                });
+            })
+        });
+    });
+</script>
+<select name="history[status]" id="aitoc_warehouse_<?php echo $orderItemId; ?>" class="admin__control-select">
+    <?php foreach ($warehouseList as $warehouseItem): ?>
+        <option value="<?php echo $warehouseItem->getWarehouseId(); ?>" <?php if ($warehouseItem->getWarehouseId() == $currentWarehouse->getWarehouseId()): ?>selected="selected"<?php endif; ?>><?php echo $warehouseItem->getWarehouseName() . ' (Qty: ' . $warehouseItem->getQty() . ')'; ?></option>
+    <?php endforeach; ?>
+</select>
+<button title="Save" type="button" class="action-default scalable action-save action-secondary" id="aitoc_warehouse_set_button_<?php echo $orderItemId; ?>" style="display: none;">
+    <span>Save</span>
+</button>
+
