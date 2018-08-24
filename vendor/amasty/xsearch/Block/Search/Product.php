@@ -16,6 +16,7 @@ use Magento\Framework\App\Response\RedirectInterface;
 use Amasty\Xsearch\Controller\RegistryConstants;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\Search\Adapter\Mysql\TemporaryStorage;
+use Zend_Db_Expr;
 
 class Product extends ListProduct
 {
@@ -89,11 +90,11 @@ class Product extends ListProduct
 
             $this->_productCollection->clear();
 
-            $this->_productCollection->setPageSize($this->getLimit());
-
             $this->_productCollection->getSelect()
                 ->reset(Select::ORDER)
+                ->order(new Zend_Db_Expr("FIELD(type_id, 'simple','grouped')"))
                 ->order('search_result.'. TemporaryStorage::FIELD_SCORE . ' ' . Select::SQL_DESC);
+            $this->_productCollection->setPageSize($this->getLimit());
 
             $this->_eventManager->dispatch(
                 'catalog_block_product_list_collection',
