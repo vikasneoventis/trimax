@@ -71,8 +71,8 @@
 /*header-End*/
 
 /*menu-css*/
-.navigation .level1.ui-menu-item{position: relative;}
-.navigation .level1.parent.ui-menu-item:before,.navigation .level2.parent.ui-menu-item:before,.navigation .level3.parent.ui-menu-item:before{cursor: pointer;background-image: url('../images/icon_sprite.png');background-position: -7px -174px;
+.navigation .ui-menu-item{position: relative;}
+.navigation .parent.ui-menu-item:before{cursor: pointer;background-image: url('../images/icon_sprite.png');background-position: -7px -174px;
     display: block;
     background-repeat: no-repeat;
     height: 15px;
@@ -81,9 +81,7 @@
     top: 10px;
     position: absolute;
     content: '';}
-.navigation .level2.ui-menu-item{position: relative;}
-.navigation .level3.ui-menu-item{position: relative;}
-.navigation .level1.parent.ui-menu-item:hover:before,.navigation .level2.parent.ui-menu-item:hover:before,.navigation .level3.parent.ui-menu-item:hover:before{cursor: pointer;background-image: url('../images/icon_sprite.png');background-position: -21px -174px;
+.navigation .parent.ui-menu-item:hover:before{cursor: pointer;background-image: url('../images/icon_sprite.png');background-position: -21px -174px;
     display: block;
     background-repeat: no-repeat;
     height: 15px;
@@ -93,6 +91,7 @@
     position: absolute;
     content: '';}
  .navigation .level0 .submenu .submenu{right: auto!important;left: 100%!important;}
+ nav.navigation ul#ui-id-2 > li.level0:before{display: none;}
 /*.navigation .level1 .ui-corner-all{position: absolute;top: 0;left: 0;}*/
 /*menu-css*/
 
