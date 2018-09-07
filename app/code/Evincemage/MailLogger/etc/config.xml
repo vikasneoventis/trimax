@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+ /**
+  * @author Evince Team
+  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
+  */
+ -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <evincemage_maillogger>
+            <maillogger>
+                <logging>1</logging>
+            </maillogger>
+        </evincemage_maillogger>
+    </default>
+</config>

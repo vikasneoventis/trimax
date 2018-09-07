@@ -11,7 +11,7 @@
 .navigation{max-width: 100%;padding: 0px 50px;background: transparent;}
 .logo{float: left;margin: 0;}
 .button.register { background: #474747;color: #fff;padding: 10px 30px;font-weight: 600;transition: all .5s ease-in-out;}
-.button.login {background: #d21f2c;padding: 10px 30px;color: #fff;display: inline-block;margin: 0px 10px;font-weight: 600;transition: all .5s ease-in-out;}
+.button.login {background: #d82332;padding: 10px 30px;color: #fff;display: inline-block;margin: 0px 10px;font-weight: 600;transition: all .5s ease-in-out;}
 .button.login:hover{background:#474747;cursor: pointer;}
 .button.register:hover{background: #d21f2c;cursor: pointer;}
 .account-cart-wrapper {float: right;}
@@ -22,10 +22,10 @@
 .cms-index-index .account-mini-wrapper{width: 25%;}
 .account-mini-wrapper{width: 25%;}
 .customer-account-login .account-mini-wrapper {width: 25%;}
-.account-mini-wrapper p{color: #d31f2c;font-size: 16px;margin-bottom: 20px;display: block;text-align: right;}
+.account-mini-wrapper p{color: #d82332;font-size: 16px;margin-bottom: 20px;display: block;text-align: right;}
 .account-mini-wrapper p strong{display: block;}
 .minicart-wrapper .action.showcart::before{font-size: 24px;line-height: 26px;transition: all .5s ease-in-out;color: #474747;}
-.minicart-wrapper .action.showcart:hover::before{color:#d21f2c;cursor: pointer; }
+.minicart-wrapper .action.showcart:hover::before{color:#d82332;cursor: pointer; }
 .minicart-wrapper .action.showcart{padding: 0px 10px;}
 .button:hover{text-decoration: none;}
 .navigation .level0 > .level-top{font-size: 16px;text-transform: uppercase;padding: 0px 10px;}
@@ -36,7 +36,7 @@
 .customer-welcome .customer-name > span::after { display: block; content: ""; clear: both;}
 .customer-welcome .customer-name:hover{background-position: -48px -40px;}
 .block.block-search{width: 25%;padding-left: 0;right:inherit;display: block;z-index: 6;clear: right;margin-bottom: -30px;}
-.container.header.welcome-msg{min-height: 38px;margin: 0;color: #d31f2c;font-size: 16px;float: right;display: block;}
+.container.header.welcome-msg{min-height: 38px;margin: 0;color: #d82332;font-size: 16px;float: right;display: block;}
 .block-search .block-content {margin-bottom: 0;width: 450px;float: right;}
 .block-search input {margin: 0; padding-right: 35px; position: static;height: 40px;border-radius: 30px;padding-left: 20px;font-size: 15px;}
 .block-search .action.search[disabled]{opacity: 1;}
@@ -66,8 +66,8 @@
 .customer-welcome .customer-name{background-position: 2px -46px;}
 .customer-welcome .customer-name:hover{background-position: -48px -46px;}
 .columns .column.main{padding-bottom: 40px;}
-.action.primary{background: #d31f2c;border: 1px solid #d31f2c;}
-.action.primary:hover {background: #d31f2c;border: 1px solid #d31f2c;color: #ffffff;cursor: pointer;}
+.action.primary{background: #d82332;border: 1px solid #d82332;}
+.action.primary:hover {background: #d82332;border: 1px solid #d82332;color: #ffffff;cursor: pointer;}
 /*header-End*/
 
 /*menu-css*/
@@ -105,11 +105,11 @@
 .page-wrapper > .breadcrumbs{max-width: 100%;padding: 0px 50px;}
 .cms-index-index  .minicart-wrapper .action.showcart::before {font-size: 30px;line-height: 36px;}
 .breadcrumbs .items{padding: 10px 0px;}
-.breadcrumbs a{font-size: 15px;color: #d31f2c;}
+.breadcrumbs a{font-size: 15px;color: #d82332;}
 .breadcrumbs strong {font-weight: 400;font-size: 15px;line-height: 24px;}
 .breadcrumbs a:hover{text-decoration: underline;}
-.breadcrumbs a:active{color: #d31f2c;}
-.breadcrumbs .item:not(:last-child)::after{font-size: 15px;line-height: 24px;margin:0;color: #d31f2c;}
+.breadcrumbs a:active{color: #d82332;}
+.breadcrumbs .item:not(:last-child)::after{font-size: 15px;line-height: 24px;margin:0;color: #d82332;}
 .cms-index-index  .header.content{padding: 50px 50px 0px;}
 .navigation .level0 > .level-top{font-size: 15px;}
 .cms-index-index .home-first-block {background-image: url('../images/_header-background.jpg');padding: 50px 100px 100px 50px;overflow: hidden;background-size: cover;position: relative;z-index: 1;}
@@ -155,13 +155,13 @@ input:not([disabled]):focus{box-shadow: none;}
 .cms-index-index .our-parts .col-main a.button.grey:hover{background: #d21f2c;cursor: pointer;}
 
 .cms-index-index .my-trimax.col1-layout {background-image: url('../images/grass-background.gif');padding: 50px;overflow: hidden;background-position: center bottom;margin: 25px 0px;background-repeat: no-repeat;background-size: cover;}
-.cms-index-index .my-trimax.col1-layout .my-trimax-header {background-color: #d21f2c;padding: 30px;border-radius: 5px;text-align: center;}
+.cms-index-index .my-trimax.col1-layout .my-trimax-header {background-color: #d82332;padding: 30px;border-radius: 5px;text-align: center;}
 .cms-index-index .my-trimax.col1-layout .my-trimax-header .my-trimax-icon{position: relative;background-image: url('../images/my-trimax-icon.png');display: inline-block;margin-right: 10px;width: 40px;height: 40px;vertical-align: middle;background-repeat: no-repeat;top: -6px;background-size: 40px;}
 .cms-index-index .my-trimax.col1-layout .my-trimax-header h2{font-size: 28px;font-weight: bold;display: inline-block;margin-bottom: 20px;margin: 0;color: #fff;}
 .cms-index-index .my-trimax.col1-layout .my-trimax-header p{color: #fff;font-size: 16px;margin-top: 10px;}
 .cms-index-index .my-trimax.col1-layout .my-trimax-header p a{color: #fff;text-decoration: underline;cursor: pointer;}
 .cms-index-index .my-trimax.col1-layout .my-trimax-header p a:hover{color: #fff;}
-.cms-index-index .my-trimax.col1-layout .arrow-down {width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;color: #ec414d;margin: auto;border-top: 10px solid #d21f2c;}
+.cms-index-index .my-trimax.col1-layout .arrow-down {width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;color: #ec414d;margin: auto;border-top: 10px solid #d82332;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul {margin: 0;padding: 0;width: 100%;list-style: none;text-align: center;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li {display: inline-block;background-color: #4a4a4a;border-radius: 5px;margin: 0px 10px;width: 31.7%;position: relative;}
 .cms-index-index .my-trimax.col1-layout .trimax-items ul li:first-child{margin-left: 0;}
@@ -190,7 +190,7 @@ input:not([disabled]):focus{box-shadow: none;}
 .cms-index-index .merchandise .col-1.first {float: left;width: 35%;margin: 30px 0px 20px 120px;}
 .cms-index-index .merchandise .col-1.first h2{color: #fff;font-weight: bold;font-size: 30px;margin-top: 0;margin-bottom: 20px;}
 .cms-index-index .merchandise .col-1.first p{font-size: 15px;color: #fff;margin-bottom: 30px;}
-.cms-index-index .merchandise .col-1.first a.button {background: #d21f2c;padding: 10px 30px;color: #fff;font-weight: 600;font-size: 14px;transition: all .5s ease-in-out;display: inline-block;}
+.cms-index-index .merchandise .col-1.first a.button {background: #d82332;padding: 10px 30px;color: #fff;font-weight: 600;font-size: 14px;transition: all .5s ease-in-out;display: inline-block;}
 .cms-index-index .merchandise .col-1.first a.button:hover{background:#474747;cursor: pointer;}
 
 .searchsuite-autocomplete{left: 15px;width: 400px;top: 38px;border-radius: 5px;}
@@ -216,15 +216,15 @@ input:not([disabled]):focus{box-shadow: none;}
 .footer.content .links li{margin:0;}
 .footer.content .links a{padding: 0;}
 .footer.content .copyright {background-color: transparent;color: #ffffff;display: block;padding: 0;text-align: center;}
-.footer.content ul.links li a:hover{color:#d31f2c;text-decoration: underline;cursor: pointer; }
+.footer.content ul.links li a:hover{color:#d82332;text-decoration: underline;cursor: pointer; }
 .footer.content .links a:visited{color: #a6a6a6;}
 .footer.content .links strong{padding: 0px 15px;}
 /*footer-End*/
 
 /*Aboutus-Start*/
-.about-us h1 {font-size: 28px;color: #d31f2c;font-weight: 600;text-transform: uppercase;margin-bottom: 20px;}
+.about-us h1 {font-size: 28px;color: #d82332;font-weight: 600;text-transform: uppercase;margin-bottom: 20px;}
 .about-us p{font-size: 16px; font-style: italic;}
-.about-us h2 {font-size: 22px;text-transform: uppercase;color: #d31f2c;}
+.about-us h2 {font-size: 22px;text-transform: uppercase;color: #d82332;}
 /*Aboutus-End*/
 
 /*sub-category-page-Start*/
@@ -233,14 +233,14 @@ input:not([disabled]):focus{box-shadow: none;}
 .widget.block .subcategories-listing .product-item-info a.product-info-image{min-height: 280px;overflow: hidden;width: 100%;text-align: center;max-height: 280px;vertical-align: middle;}
 .widget.block .subcategories-listing .product-item-info a.product-info-image img{max-width: 100%;height: auto;webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;transition: all .2s ease-in-out;transition: all .2s ease-in-out;vertical-align: middle;}
 .widget.block .subcategories-listing .product.details.product-item-details{margin-top: 30px;}
-.widget.block .subcategories-listing .product-item-details .product.name a{font-size: 20px;color: #d21f2c;font-weight: bold;}
+.widget.block .subcategories-listing .product-item-details .product.name a{font-size: 20px;color: #d82332;font-weight: bold;}
 .page-layout-1column .block.widget .products-grid .product-item:nth-child(5n+1){margin-left: 30px;}
 .page-layout-1column .block.widget .products-grid .product-item:nth-child(4n+1){margin-left: 30px;}
-.widget.block .subcategories-listing .product-item-details .product-item-name{border-bottom: 2px solid #d21f2c;padding-bottom: 10px;}
+.widget.block .subcategories-listing .product-item-details .product-item-name{border-bottom: 2px solid #d82332;padding-bottom: 10px;}
 .widget.block .products-grid.subcategories-listing .product-item-info:hover{box-shadow: none;border:0;margin:0;padding:0;background:transparent;cursor: pointer;}
 .widget.block .products-grid.subcategories-listing .product-item-info:hover img{transform: scale(1.1);}
 .widget.block .subcategories-listing .category-description{margin-top: 10px;}
-.widget.block .subcategories-listing .category-description p{color: #474747;font-size: 15px;font-weight: 500;}
+.widget.block .subcategories-listing .category-description p{color: #474747;font-size: 13px;font-weight: 500;}
 
 /*sub-category-page-End*/
 
@@ -274,3 +274,6 @@ span.billing-label {
     line-height: 32px;
 }
 /*BILLING ADDRESS SECTION CSS END*/
+
+.navigation .level0.active > .level-top, .navigation .level0.has-active > .level-top,
+.navigation .level0 .submenu .active > a{border-color: #d82332;}

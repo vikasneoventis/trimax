@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+ /**
+  * @author Evince Team
+  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
+  */
+ -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\Mail\TransportInterface">
+        <plugin name="evincemage_maillogger" type="Evincemage\MailLogger\Plugin\Mail\Transport\OnSendMessage" sortOrder="1" disabled="false"/>
+    </type>
+</config>

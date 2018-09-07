@@ -279,4 +279,17 @@ class TransportBuilder
 
         return $this;
     }
+
+    /**
+     * @param $from
+     * @param $store
+     * @return $this
+     * @throws \Magento\Framework\Exception\MailException
+     */
+    public function setFromByStore($from, $store)
+    {
+        $result = $this->_senderResolver->resolve($from, $store);
+        $this->message->setFrom($result['email'], $result['name']);
+        return $this;
+    }
 }
