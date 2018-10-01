@@ -188,18 +188,23 @@ class Mailchimp
     }
     public function call($url,$params,$method=Mailchimp::GET)
     {
-        if(count($params)&&$method!=Mailchimp::GET)
+        $hasParams = true;
+        if(is_array($params)&&count($params)==0||$params == null)
+        {
+            $hasParams = false;
+        }
+        if($hasParams&&$method!=Mailchimp::GET)
         {
             $params = json_encode($params);
         }
 
         $ch = $this->_ch;
-        if(count($params)&&$method!=Mailchimp::GET)
+        if($hasParams&&$method!=Mailchimp::GET)
         {
             curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
         }
         else {
-            if (count($params)) {
+            if ($hasParams) {
                 $_params = http_build_query($params);
                 $url .= '?' . $_params;
             }
@@ -214,17 +219,19 @@ class Mailchimp
 
         $info = curl_getinfo($ch);
         if(curl_error($ch)) {
-            throw new Mailchimp_HttpError("API call to $url failed: " . curl_error($ch));
+            throw new Mailchimp_HttpError($url, $method, $params, '', curl_error($ch));
         }
         $result = json_decode($response_body, true);
 
         if(floor($info['http_code'] / 100) >= 4) {
-            if(array_key_exists('detail',$result)) {
-                throw new Mailchimp_Error($result['title'] . ' : ' . $result['detail']);
+            if(is_array($result)) {
+                $detail = array_key_exists('detail', $result) ? $result['detail'] : '';
+                $errors = array_key_exists('errors', $result) ? $result['errors'] : null;
+                $title = array_key_exists('title', $result) ? $result['title'] : '';
+                throw new Mailchimp_Error($this->_root . $url, $method, $params, $title, $detail, $errors);
             } else {
-                throw new Mailchimp_Error($result['title']);
-            }
-        }
+                throw new Mailchimp_Error($this->_root . $url, $method, $params,$result);
+            }        }
 
         return $result;
     }

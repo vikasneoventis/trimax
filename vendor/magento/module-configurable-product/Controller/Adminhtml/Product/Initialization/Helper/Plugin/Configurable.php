@@ -128,7 +128,6 @@ class Configurable
     private function setLinkedProducts(ProductInterface $product, ProductExtensionInterface $extensionAttributes)
     {
         $associatedProductIds = $this->request->getPost('associated_product_ids_serialized', '[]');
-
         if ($associatedProductIds != null && !empty($associatedProductIds)) {
             $associatedProductIds = json_decode($associatedProductIds, true);
         }
@@ -143,11 +142,6 @@ class Configurable
             $generatedProductIds = $this->variationHandler->generateSimpleProducts($product, $variationsMatrix);
             $associatedProductIds = array_merge($associatedProductIds, $generatedProductIds);
         }
-
-        if(!is_array($associatedProductIds)){
-            return;
-        }
-
         $extensionAttributes->setConfigurableProductLinks(array_filter($associatedProductIds));
     }
 

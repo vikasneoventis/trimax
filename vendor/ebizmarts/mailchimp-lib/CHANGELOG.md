@@ -1,5 +1,63 @@
 # Change Log
 
+## [3.0.28](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.28) (2018-08-29)
+
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.27...3.0.28)
+
+**Fixed bugs:**
+
+- Critical vendor/ebizmarts/mailchimp-lib/src/Mailchimp.php:222 [\#20](https://github.com/ebizmarts/mailchimp-lib/issues/20)
+
+## [3.0.27](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.27) (2018-08-08)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.26...3.0.27)
+
+**Fixed bugs:**
+
+- In some circumstances $result is not an array [\#16](https://github.com/ebizmarts/mailchimp-lib/issues/16)
+
+## [3.0.26](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.26) (2018-08-02)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.25...3.0.26)
+
+## [3.0.25](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.25) (2018-08-02)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.24...3.0.25)
+
+**Implemented enhancements:**
+
+- Export array 'errors' on call ended with errors [\#12](https://github.com/ebizmarts/mailchimp-lib/issues/12)
+
+**Fixed bugs:**
+
+- Warning: Missing argument 2 for Mailchimp\_Error::\_\_construct\(\) [\#15](https://github.com/ebizmarts/mailchimp-lib/issues/15)
+
+## [3.0.24](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.24) (2018-08-01)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.23...3.0.24)
+
+## [3.0.23](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.23) (2018-07-23)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.22...3.0.23)
+
+**Fixed bugs:**
+
+- Php 7.2 icompatiblity with count [\#9](https://github.com/ebizmarts/mailchimp-lib/issues/9)
+
+## [3.0.22](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.22) (2018-07-11)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.21...3.0.22)
+
+**Fixed bugs:**
+
+- Notice: Undefined index: detail in Mailchimp.php on line  222 [\#8](https://github.com/ebizmarts/mailchimp-lib/issues/8)
+
+## [3.0.21](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.21) (2018-05-14)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.20...3.0.21)
+
+## [3.0.20](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.20) (2018-05-11)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.19...3.0.20)
+
+## [3.0.19](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.19) (2018-05-08)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.18...3.0.19)
+
+## [3.0.18](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.18) (2018-03-14)
+[Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.17...3.0.18)
+
 ## [3.0.17](https://github.com/ebizmarts/mailchimp-lib/tree/3.0.17) (2018-02-28)
 [Full Changelog](https://github.com/ebizmarts/mailchimp-lib/compare/3.0.16...3.0.17)
 

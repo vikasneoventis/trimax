@@ -62,28 +62,32 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         'bb6621289f135d14ac7bffe9e45ad6ef' => __DIR__ . '/..' . '/magento/module-catalog-import-export/registration.php',
         'ff4a42fb48f753f6d1e6177223059e3d' => __DIR__ . '/..' . '/magento/module-msrp/registration.php',
         '3ce6447b6ef8a0e6e2a3cec20fba30e3' => __DIR__ . '/..' . '/magento/module-instant-purchase/registration.php',
+        '4a78493fd48e24e9ec5cd7b77605aa2f' => __DIR__ . '/..' . '/magento/module-developer/registration.php',
+        '069005ffe7b4e7c23b0b9b5c1807ec74' => __DIR__ . '/..' . '/magento/module-paypal/registration.php',
         '19b03cc33c349b5e5fbc6577c2f9dc87' => __DIR__ . '/..' . '/magento/module-catalog-url-rewrite/registration.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        '069005ffe7b4e7c23b0b9b5c1807ec74' => __DIR__ . '/..' . '/magento/module-paypal/registration.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'beef4a50b960435d4b145e8d222f5f10' => __DIR__ . '/..' . '/magento/module-configurable-product/registration.php',
         '41e3c70b13a38be15b2f71a5ab57282e' => __DIR__ . '/..' . '/magento/module-cron/registration.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '6ff2dbcf71beba80c7e8b1b9bd4f500b' => __DIR__ . '/..' . '/amzn/amazon-pay-and-login-with-amazon-core-module/registration.php',
         'c9fb735ab634382388c979a129298db3' => __DIR__ . '/..' . '/klarna/module-core/registration.php',
-        '4a78493fd48e24e9ec5cd7b77605aa2f' => __DIR__ . '/..' . '/magento/module-developer/registration.php',
         '157e241791c95df2d41c00e4314f115e' => __DIR__ . '/..' . '/magento/module-search/registration.php',
         '2d0debaab8ec34dfba214036a43af24e' => __DIR__ . '/..' . '/magento/module-url-rewrite/registration.php',
+        '9d3c0cffdf7ae2ab7dc3179a4aeef794' => __DIR__ . '/..' . '/magento/module-checkout-agreements/registration.php',
         'b2a251005c112dee4a8e7f7580a475f5' => __DIR__ . '/..' . '/magento/module-cookie/registration.php',
         '108fd301b720a30c9ec42a785ee00656' => __DIR__ . '/..' . '/magento/module-gift-message/registration.php',
         'cf44f9b1253939f955772534aabbf624' => __DIR__ . '/..' . '/magento/module-grouped-product/registration.php',
         '814a46999bb03138827ea41c6c97733f' => __DIR__ . '/..' . '/magento/module-product-alert/registration.php',
         '34901568a1e26d13dd475cb2c85e0284' => __DIR__ . '/..' . '/zendframework/zend-form/autoload/formElementManagerPolyfill.php',
+        'a1f5b6a8ff5d430c2944fcabffb41b9e' => __DIR__ . '/..' . '/amzn/login-with-amazon-module/registration.php',
         '8f9987d497a96705daba7e84677815c2' => __DIR__ . '/..' . '/klarna/module-ordermanagement/registration.php',
         'f0a367f3327072458afd08ec8891b227' => __DIR__ . '/..' . '/magento/module-google-analytics/registration.php',
         '7262a266e3433bc7d1f53ddcb1dab374' => __DIR__ . '/..' . '/magento/module-multishipping/registration.php',
         '61d0a92e63ed94984ecdc51c7a060d96' => __DIR__ . '/..' . '/magento/module-offline-shipping/registration.php',
         'e42c867a02490ee966c620d4af2bd81f' => __DIR__ . '/..' . '/magento/module-robots/registration.php',
         '22aefa74994c2bb709889bd54ea6acda' => __DIR__ . '/..' . '/magento/module-send-friend/registration.php',
+        'b3919c575ff86727487c449672b56167' => __DIR__ . '/..' . '/magento/module-swagger/registration.php',
         '266075d7d4c1215b5af2b6f860324839' => __DIR__ . '/..' . '/magento/module-usps/registration.php',
         '73a8e4290482dda77755fd5545cb64f4' => __DIR__ . '/..' . '/magento/module-webapi/registration.php',
         '056cd8d2398ceabe9e3cff88f4cf877b' => __DIR__ . '/..' . '/magento/theme-frontend-blank/registration.php',
@@ -103,9 +107,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         '1ca3bc274755662169f9629d5412a1da' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_uploaded_files.php',
         '40360c0b9b437e69bcbb7f1349ce029e' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/parse_cookie_header.php',
         'd80eeac38b1531dc0a5e7b858d9df0a8' => __DIR__ . '/..' . '/amasty/base/registration.php',
-        '242abb918ed82767e0a69978d0b3963c' => __DIR__ . '/..' . '/amzn/amazon-pay-and-login-magento-2-module/src/Core/registration.php',
-        '69fa7be57f4dae016bc4017c8f363c1b' => __DIR__ . '/..' . '/amzn/amazon-pay-and-login-magento-2-module/src/Login/registration.php',
-        '193234d75c36bd838271e2a5cafcc402' => __DIR__ . '/..' . '/amzn/amazon-pay-and-login-magento-2-module/src/Payment/registration.php',
+        'f3cd155021d4ab171214e8fdcd3c1eb7' => __DIR__ . '/..' . '/amzn/amazon-pay-module/registration.php',
         'c50de754cae7b09410961baeb67416a8' => __DIR__ . '/..' . '/dotmailer/dotmailer-magento2-extension/registration.php',
         '8aca0117faafc71d886b81082decf918' => __DIR__ . '/..' . '/klarna/module-kp/registration.php',
         '4444551b69a588f0c3ae204e139ba1a0' => __DIR__ . '/..' . '/magento/language-de_de/registration.php',
@@ -126,7 +128,6 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         'fbde087476e8a7fd20ef89a7f2886cd9' => __DIR__ . '/..' . '/magento/module-catalog-analytics/registration.php',
         'f4f69bd33414e7f1f59bdac584820374' => __DIR__ . '/..' . '/magento/module-catalog-rule-configurable/registration.php',
         '49be64f161d7f7e3617b7936edeeb6d3' => __DIR__ . '/..' . '/magento/module-catalog-widget/registration.php',
-        '9d3c0cffdf7ae2ab7dc3179a4aeef794' => __DIR__ . '/..' . '/magento/module-checkout-agreements/registration.php',
         'fa488247ab9e0887c6f8ecae02575598' => __DIR__ . '/..' . '/magento/module-configurable-import-export/registration.php',
         '10f4736294c73baae681bdeaa5b8f0cb' => __DIR__ . '/..' . '/magento/module-configurable-product-sales/registration.php',
         '829ba7fc4432a3474ce52dbd8ed65ea7' => __DIR__ . '/..' . '/magento/module-currency-symbol/registration.php',
@@ -154,7 +155,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         'ff1738b7e3c49d87ace9a04942b53067' => __DIR__ . '/..' . '/magento/module-sample-data/registration.php',
         '5c56014faaf551d56563b371f9b661cd' => __DIR__ . '/..' . '/magento/module-signifyd/registration.php',
         'f65dbc279d2480d1300b3e598971c91d' => __DIR__ . '/..' . '/magento/module-sitemap/registration.php',
-        'b3919c575ff86727487c449672b56167' => __DIR__ . '/..' . '/magento/module-swagger/registration.php',
+        'cd8f969aac218e13e0408ae0286c5abd' => __DIR__ . '/..' . '/magento/module-swagger-webapi/registration.php',
         '940bf170cf88b648b1e7cf4ec3411196' => __DIR__ . '/..' . '/magento/module-swatches/registration.php',
         'd40aeb9f658a2e1565f2a327074f72b0' => __DIR__ . '/..' . '/magento/module-swatches-layered-navigation/registration.php',
         '8cf0ba2b45b40a2c6d65d58a9608fa86' => __DIR__ . '/..' . '/magento/module-tax-import-export/registration.php',
@@ -168,7 +169,6 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         '7c02e6b3063c2cc6cd79a1d9b9b5094c' => __DIR__ . '/..' . '/mageworx/module-downloads/registration.php',
         '93c4c99a884771971b865b2740fbb829' => __DIR__ . '/..' . '/mageworx/module-searchsuiteautocomplete/registration.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        '29f715065466e6522a9d936928be4ed5' => __DIR__ . '/..' . '/shopialfb/facebook-module/registration.php',
         '153a7817726e1caca4e6c3b7bc76f329' => __DIR__ . '/..' . '/temando/module-shipping-m2/registration.php',
         '1a1fad76fd106d3fa4f1bece70880e7e' => __DIR__ . '/..' . '/vertex/module-tax/registration.php',
         'eaa5b06da4db22197ac8dd6a9e41aa82' => __DIR__ . '/..' . '/amasty/xsearch/registration.php',
@@ -259,7 +259,6 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
-            'Shopial\\Facebook\\' => 17,
             'Seld\\PharUtils\\' => 15,
             'Seld\\JsonLint\\' => 14,
             'Seld\\CliPrompt\\' => 15,
@@ -306,6 +305,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
             'Magento\\Swatches\\' => 17,
             'Magento\\SwatchesLayeredNavigation\\' => 34,
             'Magento\\Swagger\\' => 16,
+            'Magento\\SwaggerWebapi\\' => 22,
             'Magento\\Store\\' => 14,
             'Magento\\Sniffs\\' => 15,
             'Magento\\Sitemap\\' => 16,
@@ -693,10 +693,6 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
         ),
-        'Shopial\\Facebook\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/shopialfb/facebook-module',
-        ),
         'Seld\\PharUtils\\' => 
         array (
             0 => __DIR__ . '/..' . '/seld/phar-utils/src',
@@ -844,6 +840,10 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         'Magento\\Swagger\\' => 
         array (
             0 => __DIR__ . '/..' . '/magento/module-swagger',
+        ),
+        'Magento\\SwaggerWebapi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/magento/module-swagger-webapi',
         ),
         'Magento\\Store\\' => 
         array (
@@ -1344,15 +1344,15 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         ),
         'Amazon\\Payment\\' => 
         array (
-            0 => __DIR__ . '/..' . '/amzn/amazon-pay-and-login-magento-2-module/src/Payment',
+            0 => __DIR__ . '/..' . '/amzn/amazon-pay-module',
         ),
         'Amazon\\Login\\' => 
         array (
-            0 => __DIR__ . '/..' . '/amzn/amazon-pay-and-login-magento-2-module/src/Login',
+            0 => __DIR__ . '/..' . '/amzn/login-with-amazon-module',
         ),
         'Amazon\\Core\\' => 
         array (
-            0 => __DIR__ . '/..' . '/amzn/amazon-pay-and-login-magento-2-module/src/Core',
+            0 => __DIR__ . '/..' . '/amzn/amazon-pay-and-login-with-amazon-core-module',
         ),
         'AmazonPay\\' => 
         array (
