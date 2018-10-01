@@ -10,12 +10,12 @@
 /** @var $helper \Magento\Search\Helper\Data */
 $helper = $this->helper(\Magento\Search\Helper\Data::class);
 ?>
-<div class="block block-search">
+<div class="block block-search banner-search">
     <div class="block block-title"><strong><?= /* @escapeNotVerified */ __('Search') ?></strong></div>
     <div class="block block-content">
         <form class="form minisearch" id="search_mini_form" action="<?= /* @escapeNotVerified */ $helper->getResultUrl() ?>" method="get">
             <div class="field search">
-                <span><?= /* @escapeNotVerified */ __('Search below to get started.') ?></span>
+                <span class="search-title"><?= /* @escapeNotVerified */ __('Search below to get started.') ?></span>
                 <div class="control">
                     <input id="search"
                            data-mage-init='{"quickSearch":{
@@ -33,17 +33,18 @@ $helper = $this->helper(\Magento\Search\Helper\Data::class);
                            aria-haspopup="false"
                            aria-autocomplete="both"
                            autocomplete="off"/>
-                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                               <div class="actions">
+                                  <button type="submit"
+                                          title="<?= $block->escapeHtml(__('Search')) ?>"
+                                          class="action search">
+                                      <span><?= /* @escapeNotVerified */ __('Search') ?></span>
+                                  </button>
+                              </div>
+                                  <div id="search_autocomplete" class="search-autocomplete"></div>
                     <?= $block->getChildHtml() ?>
                 </div>
             </div>
-            <div class="actions">
-                <button type="submit"
-                        title="<?= $block->escapeHtml(__('Search')) ?>"
-                        class="action search">
-                    <span><?= /* @escapeNotVerified */ __('Search') ?></span>
-                </button>
-            </div>
+            
         </form>
     </div>
 </div>

@@ -1,105 +1,25 @@
+<?php
+/**
+ * @author Evince Team
+ * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
+ */
+?>
+
 <div class="my-trimax col1-layout">
     <div class="main">
-        <div class="my-trimax-header"><span class="my-trimax-icon"></span>
-            <h2 class="white"><?=__('MY TRIMAX')?></h2>
-            <p class="white">
-                <?php if (!$block->isLoggedIn()): ?>
-                    <a class="white underline" href="<?php echo $block->getLoginUrl() ?>"><?=__('Login')?></a>
-                        <?=__('or')?>
-                    <a class="white underline" href="<?php echo $block->getRegisterUrl() ?>">
-                        <?=__('Register')?>
-                    </a>
-                    <?=_('to gain access to some of our great resources below') ?>
-                <?php else: ?>
-                   <?php
-                        echo $block->getLayout()
-                        ->createBlock('Magento\Cms\Block\Block')
-                        ->setBlockId('home-service-message')
-                        ->toHtml();
-                       ?>
-                <?php endif; ?>
-            </p>
-        </div>
-        <div class="arrow-down"></div>
         <div class="trimax-items">
             <ul>
-               <!-- <li>
-                    <a class="service-bulletin white service" href="<?php /*echo $this->getUrl('service-bulletin');*/?>"><?/*= __('SERVICE BULLETIN') */?></a>
-                    <?php /*if (!$block->isLoggedIn()): */?>
-                        <div class="login_cta">
-                            <div class="login-text">
-                                <a class="login" href="<?php /*echo $block->getLoginUrl() */?>"><?/*= __('Login') */?></a>
-                                <?/*= __('or') */?>
-                                <a class="register" href="<?php /*echo $block->getRegisterUrl() */?>"><?/*= __('Register') */?></a>
-                                <?/*= __('to gain access to service bulletin') */?>
-                            </div>
-                        </div>
-                    <?php /*endif; */?>
-                </li>
                 <li>
-                    <a class="spares white service" href="<?php /*echo $this->getUrl('spares-instructions');*/?>"><?/*= __('SPARES INSTRUCTIONS') */?></a>
-                    <?php /*if (!$block->isLoggedIn()): */?>
-                        <div class="login_cta">
-                            <div class="login-text">
-                                <a class="login" href="<?php /*echo $block->getLoginUrl() */?>"><?/*= __('Login') */?></a>
-                                <?/*= __('or') */?>
-                                <a class="register" href="<?php /*echo $block->getRegisterUrl() */?>"><?/*= __('Register') */?></a>
-                                <?/*= __('to gain access to spares instructions') */?>
-                            </div>
-                        </div>
-                    <?php /*endif; */?>
-                </li>-->
-                <li>
-                    <a class="operators white service" href="<?php echo $this->getUrl('operators-manual');?>"><?= __('OPERATORS MANUAL') ?></a>
-                    <?php if (!$block->isLoggedIn()): ?>
-                        <div class="login_cta">
-                            <div class="login-text">
-                                <a class="login" href="<?php echo $block->getLoginUrl() ?>"><?= __('Login') ?></a>
-                                <?= __('or') ?>
-                                <a class="register" href="<?php echo $block->getRegisterUrl() ?>"><?= __('Register') ?></a>
-                                <?= __('to gain access to operators manual') ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
+                    <a class="warranty white service" href="<?php echo $this->getUrl('warranty');?>"><?= __('WARRANTY REGISTRATION') ?></a>
                 </li>
                 <li>
                     <a class="parts-manual white service" href="<?php echo $this->getUrl('parts-manuals');?>"><?= __('PARTS MANUALS') ?></a>
-                    <?php if (!$block->isLoggedIn()): ?>
-                        <div class="login_cta">
-                            <div class="login-text">
-                                <a class="login" href="<?php echo $block->getLoginUrl() ?>"><?= __('Login') ?></a>
-                                <?= __('or') ?>
-                                <a class="register" href="<?php echo $block->getRegisterUrl() ?>"><?= __('Register') ?></a>
-                                <?= __('to gain access to parts manuals') ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
                 </li>
-                <!--<li>
-                    <a class="videos white service" href="<?php /*echo $this->getUrl('videos');*/?>"><?/*= __('VIDEOS') */?></a>
-                    <?php /*if (!$block->isLoggedIn()): */?>
-                        <div class="login_cta">
-                            <div class="login-text">
-                                <a class="login" href="<?php /*echo $block->getLoginUrl() */?>"><?/*= __('Login') */?></a>
-                                <?/*= __('or') */?>
-                                <a class="register" href="<?php /*echo $block->getRegisterUrl() */?>"><?/*= __('Register') */?></a>
-                                <?/*= __('to gain access to videos') */?>
-                            </div>
-                        </div>
-                    <?php /*endif; */?>
-                </li>-->
                 <li>
-                    <a class="warranty white service" href="<?php echo $this->getUrl('warranty');?>"><?= __('WARRANTY') ?></a>
-                    <?php if (!$block->isLoggedIn()): ?>
-                        <div class="login_cta">
-                            <div class="login-text">
-                                <a class="login" href="<?php echo $block->getLoginUrl() ?>"><?= __('Login') ?></a>
-                                <?= __('or') ?>
-                                <a class="register" href="<?php echo $block->getRegisterUrl() ?>"><?= __('Register') ?></a>
-                                <?= __('to gain access to warranty') ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
+                    <a class="operators white service" href="<?php echo $this->getUrl('operators-manual');?>"><?= __('OPERATORS MANUAL') ?></a>
+                </li>
+                <li>
+                    <a class="service-bulletin white service" href="<?php echo $this->getUrl('service-bulletin');?>"><?= __('SERVICE BULLETIN') ?></a>
                 </li>
             </ul>
         </div>
