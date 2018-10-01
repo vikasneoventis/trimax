@@ -7,13 +7,11 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-
         <referenceContainer name="content">
             <container name="home-first-block" htmlTag="div" htmlClass="home-first-block" before="-">
                 <container name="search-col" htmlTag="div" htmlClass="col-1 first" before="-">
                     <block class="Evincemage\Homepage\Block\Home\Banner" name="banner_text" template="Evincemage_Homepage::home/bannertext.phtml" />
                 </container>
-                <block class="Evincemage\Homepage\Block\Customer\Form" name="login_custom" template="Evincemage_Homepage::home/login.phtml" />
             </container>
         </referenceContainer>
     </body>

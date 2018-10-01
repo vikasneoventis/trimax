@@ -23,7 +23,13 @@
                 </arguments>
             </block>
         </referenceContainer>
+        <referenceBlock name="top.search">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Evincemage_Homepage::search/form.mini.phtml</argument>
+            </action>
+        </referenceBlock>
         <move element="minicart" destination="header.right" />
         <move element="customer" destination="header.right" after="minicart"/>
+        <move element="top.search" destination="search-col" after="banner_text"/>
     </body>
 </page>
