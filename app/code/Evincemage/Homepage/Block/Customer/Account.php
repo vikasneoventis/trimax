@@ -139,4 +139,9 @@ class Account extends \Magento\Framework\View\Element\Html\Link
         return false;
     }
 
+    public function getMyOrderUrl()
+    {
+        return $this->getUrl('sales/order/history/');
+    }
+
 }

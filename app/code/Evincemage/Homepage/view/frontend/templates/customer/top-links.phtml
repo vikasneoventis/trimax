@@ -7,11 +7,11 @@
 
 <ul class="top-link">
     <?php  if ($block->isLoggedIn()): ?>
-        <li><a href="<?php echo $this->getUrl('customer/account', ['_current' => true]) ?>"> <?= __('My Account') ?> </a></li>
+        <li><a href="<?php echo $this->getUrl('customer/account') ?>"> <?= __('My Account') ?> </a></li>
         <li><a href="<?php echo $this->getLogoutUrl() ?>" <?= /* @noEscape */ $this->getPostParams() ?>> <?= __('Sign Out') ?> </a></li>
     <?php endif; ?>
-        <li><a href="<?php echo $this->getUrl('checkout/cart', ['_current' => true]) ?>"> <?= __('My Cart') ?> </a></li>
-        <li><a href="<?php echo $this->getUrl('checkout',['_current' => true]) ?>"><?= __('Checkout') ?></a></li>
+        <li><a href="<?php echo $this->getUrl('checkout/cart') ?>"> <?= __('My Cart') ?> </a></li>
+        <li><a href="<?php echo $this->getUrl('checkout') ?>"><?= __('Checkout') ?></a></li>
 </ul>
 <?php if (!$block->isLoggedIn()): ?>
     <div class="account-cart-wrapper">
