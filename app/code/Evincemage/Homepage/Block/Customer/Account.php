@@ -19,7 +19,7 @@ class Account extends \Magento\Framework\View\Element\Html\Link
 
     protected $customerRepository;
 
-    protected $_helperView;
+    protected $_postDataHelper;
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
@@ -28,6 +28,7 @@ class Account extends \Magento\Framework\View\Element\Html\Link
         \Magento\Customer\Model\SessionFactory $customerSession,
         CustomerRepositoryInterface $customerRepository,
         \Magento\Customer\Helper\View $helperView,
+        \Magento\Framework\Data\Helper\PostHelper $postDataHelper,
         array $data = []
     ) {
         parent::__construct($context, $data);
@@ -35,7 +36,7 @@ class Account extends \Magento\Framework\View\Element\Html\Link
         $this->_customerUrl = $customerUrl;
         $this->customerSession = $customerSession;
         $this->customerRepository = $customerRepository;
-        $this->_helperView = $helperView;
+        $this->_postDataHelper = $postDataHelper;
     }
 
     public function isLoggedIn()
@@ -58,13 +59,20 @@ class Account extends \Magento\Framework\View\Element\Html\Link
         return $this->_customerUrl->getDashboardUrl();
     }
 
-    public function getCustomerName()
+    public function getLogoutUrl()
     {
-        $customerId = $this->customerSession->create()->getCustomerId();
-        if($customerId){
-            $customer = $this->customerRepository->getById($customerId);
-            return $this->_helperView->getCustomerName($customer);
+        return $this->_customerUrl->getLogoutUrl();
+    }
+
+    public function getPostParams()
+    {
+        $params = $this->_postDataHelper->getPostData($this->getLogoutUrl());
+
+        if($params){
+            return sprintf(" data-post='%s'", $params);
         }
+
+        return false;
     }
 
 }

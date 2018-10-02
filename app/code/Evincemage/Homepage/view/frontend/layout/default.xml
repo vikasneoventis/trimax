@@ -7,21 +7,13 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="header.panel.wrapper" remove="true"/>
         <referenceContainer name="header-wrapper">
             <container name="header.panel.note" label="Page Header Note Container" htmlTag="div" htmlClass="container header welcome-msg" before="header.right">
                 <block class="Evincemage\Homepage\Block\Customer\Account" name="welcome.msg" as="welcomemsg" template="Evincemage_Homepage::customer/welcome-message.phtml" />
             </container>
             <container name="header.right" htmlTag="div" htmlClass="account-mini-wrapper" after="logo">
-                <block class="Evincemage\Homepage\Block\Customer\Account" name="customer.login" as="customerLinks" after="minicart" template="Evincemage_Homepage::customer/login-signup.phtml" />
+                <block class="Evincemage\Homepage\Block\Customer\Account" name="customer.login" as="customerLinks" after="minicart" template="Evincemage_Homepage::customer/top-links.phtml" />
             </container>
-        </referenceContainer>
-        <referenceContainer name="footer">
-            <block class="Magento\Cms\Block\Block" name="footer-logo" before="footer_links">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">footer-logo</argument>
-                </arguments>
-            </block>
         </referenceContainer>
         <referenceBlock name="top.search">
             <action method="setTemplate">

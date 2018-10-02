@@ -7,6 +7,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceContainer name="header.panel.wrapper" remove="true"/>
         <referenceBlock name="form.subscribe" remove="true" />
         <referenceBlock name="catalog.compare.link" remove="true" />
         <referenceBlock name="search-term-popular-link" remove="true" />
@@ -46,9 +47,18 @@
                 </arguments>
             </block>
         </referenceBlock>
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer-logo" before="footer_links">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-logo</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
         <move element="copyright" destination="footer" after="footer_links"/>
         <referenceBlock name="reviews.tab" remove="true" />
         <referenceBlock name="product.review.form" remove="true" />
         <referenceBlock name="product.info.review" remove="true" />
+        <referenceBlock name="customer" remove="true" />
+        <referenceBlock name="minicart" remove="true" />
     </body>
 </page>
