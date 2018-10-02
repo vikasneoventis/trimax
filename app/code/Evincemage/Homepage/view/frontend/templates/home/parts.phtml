@@ -4,13 +4,13 @@
  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
  */
 ?>
-<div class="my-trimax col1-layout">
+<div class="matrix-parts-grid my-trimax col1-layout ">
     <div class="main">
         <div class="trimax-items">
             <ul>
                 <li>
-                    <a class="title" href="#"><?= __('OUR PARTS') ?></a>
                     <div class="details">
+                    <a class="title" href="#"><?= __('OUR PARTS') ?></a>
                         <div class="description">
                             <?= __('Our Genuine parts are proven to enable customers to finish the jobs they started under pressure.') ?>
                         </div>
@@ -21,10 +21,11 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="odd-item">
+                     <div class="details">
                     <a class="title" href="#"><?= __('MY TRIMAX') ?></a>
                     <?php if (!$block->isLoggedIn()): ?>
-                        <div class="details">
+                       
                             <div class="description">
                                 <?= __('To gain access to resources and view your orders history,') ?>
                                 <a class="signup" href="<?php echo $block->getLoginUrl() ?>"><?= __('sign up') ?></a>
@@ -45,8 +46,9 @@
                     <?php endif; ?>
                 </li>
                 <li>
-                    <a class="title" href="#"><?= __('IDENTIFY YOURS MOWER') ?></a>
                     <div class="details">
+                    <a class="title" href="#"><?= __('IDENTIFY YOURS MOWER') ?></a>
+                    
                         <div class="description">
                             <?= __('Not sure which model of mower you own? We`ve put togther a table to help you identify your make and model.') ?>
                         </div>
