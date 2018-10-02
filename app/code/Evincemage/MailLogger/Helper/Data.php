@@ -11,6 +11,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
     const XML_PATH_LOGGING = 'evincemage_maillogger/maillogger/logging';
 
+    /**
+     * @return mixed
+     */
     public function isEnabled()
     {
         return $this->scopeConfig->getValue(

@@ -8,10 +8,21 @@ namespace Evincemage\Topmenu\Plugin;
 
 class Topmenu
 {
+    /**
+     * @var \Evincemage\Topmenu\Helper\Data
+     */
     protected $helper;
 
+    /**
+     * @var \Magento\Framework\Data\Tree\NodeFactory
+     */
     protected $nodeFactory;
 
+    /**
+     * Topmenu constructor.
+     * @param \Evincemage\Topmenu\Helper\Data $helper
+     * @param \Magento\Framework\Data\Tree\NodeFactory $nodeFactory
+     */
     public function __construct(
         \Evincemage\Topmenu\Helper\Data $helper,
         \Magento\Framework\Data\Tree\NodeFactory $nodeFactory
@@ -21,6 +32,12 @@ class Topmenu
         $this->nodeFactory = $nodeFactory;
     }
 
+    /**
+     * @param \Magento\Theme\Block\Html\Topmenu $topmenu
+     * @param $html
+     * @return string
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
     public function afterGetHtml(\Magento\Theme\Block\Html\Topmenu $topmenu, $html)
     {
         if($this->helper->showInTopmenu()) {
@@ -32,6 +49,12 @@ class Topmenu
         return $html;
     }
 
+    /**
+     * @param \Magento\Theme\Block\Html\Topmenu $subject
+     * @param string $outermostClass
+     * @param string $childrenWrapClass
+     * @param int $limit
+     */
     public function beforeGetHtml(
         \Magento\Theme\Block\Html\Topmenu $subject,
         $outermostClass = '',
@@ -49,6 +72,9 @@ class Topmenu
         $subject->getMenu()->addChild($node);
     }
 
+    /**
+     * @return array
+     */
     protected function getNodeAsArray()
     {
         return [

@@ -106,6 +106,9 @@ class Form extends \Magento\Framework\View\Element\Template
         );
     }
 
+    /**
+     * @return mixed|null
+     */
     public function isLoggedIn()
     {
         return $this->httpContext->getValue(Context::CONTEXT_AUTH);

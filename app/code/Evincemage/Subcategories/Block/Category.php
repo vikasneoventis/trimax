@@ -10,8 +10,16 @@ use Magento\Framework\View\Element\Template;
 
 class Category extends \Magento\Catalog\Block\Category\View
 {
-    protected $_coreRegistry = null;
-
+    /**
+     * Category constructor.
+     * @param Template\Context $context
+     * @param \Magento\Catalog\Model\Layer\Resolver $layerResolver
+     * @param \Magento\Framework\Registry $registry
+     * @param \Magento\Catalog\Helper\Image $image
+     * @param \Magento\Catalog\Helper\Category $categoryHelper
+     * @param \Magento\Catalog\Model\CategoryFactory $categoryFactory
+     * @param array $data
+     */
     public function __construct(
         Template\Context $context,
         \Magento\Catalog\Model\Layer\Resolver $layerResolver,
@@ -25,6 +33,10 @@ class Category extends \Magento\Catalog\Block\Category\View
         $this->_categoryFactory = $categoryFactory;
         $this->image = $image;
     }
+
+    /**
+     * @return mixed
+     */
     public function getCategoryList()
     {
         $_category  = $this->getCurrentCategory();
@@ -37,6 +49,12 @@ class Category extends \Magento\Catalog\Block\Category\View
         return $collection;
 
     }
+
+    /**
+     * @param $imageName
+     * @return string
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     */
     public function getCategoryThumbImage($imageName) {
         $mediaDirectory = $this->_storeManager->getStore()->getBaseUrl(
             \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
@@ -46,6 +64,9 @@ class Category extends \Magento\Catalog\Block\Category\View
 
     }
 
+    /**
+     * @return string
+     */
     public function getPlaceholderImage(){
         return $this->image->getPlaceholder('image');
     }

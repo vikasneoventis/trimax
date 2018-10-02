@@ -8,33 +8,43 @@ namespace Evincemage\Homepage\Block\Home;
 
 use \Magento\Framework\View\Element\Template;
 
-class Banner extends Template {
+class Banner extends Template
+{
+    /**
+     * @var \Evincemage\Homepage\Helper\Data
+     */
+    protected $_dataHelper;
 
     /**
-     * Retrieve form action url and set "secure" param to avoid confirm
-     * message when we submit form from secure page to unsecure
-     *
-     * @return string
+     * Banner constructor.
+     * @param Template\Context $context
+     * @param \Evincemage\Homepage\Helper\Data $dataHelper
+     * @param array $data
      */
-    protected $_product;
-    protected $_dataHelper;
-    protected $_storeManager;
-
     public function __construct(
-    \Magento\Framework\View\Element\Template\Context $context, \Magento\Framework\Registry $registry, \Magento\Store\Model\StoreManagerInterface $storeManager, \Evincemage\Homepage\Helper\Data $dataHelper, array $data = []
-    ) {
-        $this->_coreRegistry = $registry;
-        $this->_storeManager = $storeManager;
+        \Magento\Framework\View\Element\Template\Context $context,
+        \Evincemage\Homepage\Helper\Data $dataHelper,
+        array $data = []
+    )
+    {
         $this->_dataHelper = $dataHelper;
         parent::__construct($context, $data);
     }
 
-    public function _prepareLayout() {
+    /**
+     * @return $this
+     */
+    public function _prepareLayout()
+    {
         return parent::_prepareLayout();
     }
 
-    public function getBannerCaption() {
+    /**
+     * @return \Evincemage\Homepage\Helper\module
+     */
+    public function getBannerCaption()
+    {
         return $this->_dataHelper->getBannerCaption();
     }
-    
+
 }

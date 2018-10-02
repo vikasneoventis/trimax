@@ -5,22 +5,12 @@
  */
 ?>
 <?php ?>
-<?php //if($block->isLoggedIn()): ?>
+
 <li class="level0 nav-8 last level-top last level-top ui-menu-item  " id="trimax-menu" role="presentation" style="display:none;">
     <a href="javascript:void(0);" class="level-top ui-corner-all" id="ui-id-8" tabindex="-1" role="menuitem">
         <span><?= __('My Trimax') ?></span>
     </a>
     <ul class="level0 submenu ui-menu ui-widget ui-widget-content ui-corner-all" role="menu" aria-expanded="false" style="display: none;" aria-hidden="true">
-        <!--<li class="level1 nav-8-1 first ui-menu-item" role="presentation">
-            <a href="<?php /*echo $this->getUrl('service-bulletin');*/?>" class="ui-corner-all" tabindex="-1" role="menuitem">
-                <span><?/*= __('Service Bulletin') */?></span>
-            </a>
-        </li>
-        <li class="level1 nav-8-2 ui-menu-item" role="presentation">
-            <a href="<?php /*echo $this->getUrl('spares-instructions');*/?>" class="ui-corner-all" tabindex="-1" role="menuitem">
-                <span><?/*= __('Spares Instructions') */?></span>
-            </a>
-        </li>-->
         <li class="level1 nav-8-3 ui-menu-item" role="presentation">
             <a href="<?php echo $this->getUrl('operators-manual');?>" class="ui-corner-all" tabindex="-1" role="menuitem">
                 <span><?= __('Operators Manual') ?></span>
@@ -31,11 +21,6 @@
                 <span><?= __('Parts Manuals') ?></span>
             </a>
         </li>
-        <!--<li class="level1 nav-8-5 ui-menu-item" role="presentation">
-            <a href="<?php /*echo $this->getUrl('videos');*/?>" class="ui-corner-all" tabindex="-1" role="menuitem">
-                <span><?/*= __('Videos') */?></span>
-            </a>
-        </li>-->
         <li class="level1 nav-8-6 last ui-menu-item" role="presentation">
             <a href="<?php echo $this->getUrl('Warranty');?>" class="ui-corner-all" tabindex="-1" role="menuitem">
                 <span><?= __('Warranty') ?></span>
@@ -43,7 +28,6 @@
         </li>
     </ul>
 </li>
-<?php //endif; ?>
 
 <script>
     require([
