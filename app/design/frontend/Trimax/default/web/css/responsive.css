@@ -4,6 +4,16 @@
  */
  @media only screen and (min-width : 1400px) and (max-width : 1600px){
  .cms-index-index .my-trimax.col1-layout .trimax-items ul li a.service{height: 120px;padding-top: 100px;}
+/*New home page*/
+.cms-index-index .home-first-block .col-1.first h1{width: 90%;font-size: 26px;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .details{    padding: 54px 6% 0 6%;}
+.trimax-services-section ul li a.service{margin-top: 30px;font-size: 26px;line-height: 32px;}
+.merchandise-section-wrap .left-section{    background-size: 45%;}
+.merchandise-section-wrap .right-section .social-feed-inner .social-feed-inner-wrap{    padding: 84px 5% 10% 50px;}
+
+
+
+
 
  }
 
@@ -38,7 +48,7 @@
 .navigation .level0{margin: 0;}
 .block-search .block-content{width: 400px;}
 .searchsuite-autocomplete{width: 375px;}
-.block.block-search .search-autocomplete{width: 368px !important;}
+/*.block.block-search .search-autocomplete{width: 368px !important;}*/
 .block.block-search .actions.product-item-actions{width: 80%;}
 .cms-index-index .account-mini-wrapper{width:30%;}
 .customer-account-login .account-mini-wrapper {width: 35%;}
@@ -57,6 +67,30 @@
 .page-layout-1column .block.widget .products-grid .product-item:nth-child(5n+1){margin-left: 20px;}
 .widget.block .subcategories-listing .product.product-item{width: 21.1%;margin: 0px 20px 30px;}
 /*sub-category-page-End*/
+/*New home page*/
+
+.cms-index-index .home-first-block{    padding: 50px 50px 210px 50px;}
+.cms-index-index .home-first-block .col-1.first h1{margin-top:30px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items ul li{width: 31.9%!important}
+.matrix-parts-grid.my-trimax .trimax-items ul li .details{padding: 54px 6% 0 6%;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .title{font-size: 24px;}
+.trimax-services-section ul li span{    width: 102px; height: auto;}
+.trimax-services-section ul li a.service{    font-size: 22px;    line-height: 25px;    margin-top: 22px;}
+.merchandise-section-wrap .left-section{height:325px;background-size: 47%;}
+.merchandise-section-wrap .right-section .social-feed-inner .social-feed-inner-wrap {padding: 54px 3% 9% 30px;}
+.merchandise-section-wrap .right-section .social-feed-inner .social-feed-inner-wrap h3{font-size: 26px;}
+.merchandise-section-wrap .right-section .social-feed-inner .social-feed-inner-wrap p br{display:none;}
+.merchandise-section-wrap .right-section .social-feed-inner{height:325px;}
+.merchandise-section-wrap .right-section .juicer-feed.slider li.feed-item a.j-image img{height:325px!important;}
+.merchandise-section-wrap .right-section .juicer-feed.slider li.feed-item a.j-image{height:325px;}
+.merchandise-section-wrap .right-section .juicer-feed .slick-slide{height:325px;}
+.merchandise-section-wrap .right-section .juicer-feed .slick-track{height:325px;}
+.merchandise-section-wrap .right-section .juicer-feed{height:325px;}
+.merchandise-left-section-inner {padding: 48px 16% 40px 13%;}
+.cms-index-index .account-mini-wrapper{margin-bottom: 0px;}
+.merchandise-section-wrap .right-section .juicer-feed .slick-track{height: 325px!important;}
+.cms-index-index .account-mini-wrapper {width: 70%;}
+
  }
 
 
@@ -107,6 +141,23 @@
 .widget.block .subcategories-listing .product-item-details .product.name a{font-size: 18px;}
 .widget.block .subcategories-listing .category-description p{font-size: 14px;}
 /*sub-category-page-End*/
+/*New home page*/
+.page-header .account-mini-wrapper{width: 60%;}
+.cms-index-index .home-first-block .col-1.first h1{width: 100%;}
+.block-search.banner-search .block-content{width: 100%;}
+.matrix-parts-grid.my-trimax .trimax-items ul li{width: 31.9%!important;height: 262px;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .details{padding:44px 4% 0 4%;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .title{    font-size: 20px;}
+.trimax-services-section ul li span{    width: 87px; height: auto;}
+.trimax-services-section ul li a.service{line-height: 26px;margin-top: 18px ;   font-size: 22px;}
+.merchandise-section-wrap .left-section{width: 100%; margin-right: 0px;padding:0px;  margin-bottom:20px;}
+.merchandise-section-wrap .right-section{width: 100%; }
+.cms-index-index .home-first-block {padding: 50px 50px 140px 50px;}
+.block.block-search .search-autocomplete {left:18px;width:calc(100% - 152px)!important;}
+
+}
+@media only screen and (min-width:768px){
+.navigation .level0.parent > .level-top > .ui-menu-icon:after{display: none!important;}
 
 }
 
@@ -120,7 +171,7 @@ body{overflow-x: hidden;}
 .block-search .block-content{width: 380px;}
 .nav-sections{margin-top: 0;}
 .searchsuite-autocomplete{width: 350px;}
-.block.block-search .search-autocomplete{width: 330px!important;}
+/*.block.block-search .search-autocomplete{width: 330px!important;}*/
 .container.header.welcome-msg{font-size: 14px;width: 50%;text-align: right}
 .minicart-wrapper .action.showcart {padding: 0px 10px 0px 6px;}
 .minicart-wrapper .action.showcart .counter.qty{height: 20px;line-height: 20px;font-size: 12px;min-width: 15px;}
@@ -177,6 +228,27 @@ body{overflow-x: hidden;}
 .navigation .level0 .submenu{min-width: 150px;left: -40%!important;}
 .navigation ul > li > a{font-size: 12px;}
 /*sub-category-page-End*/
+/*New home page*/
+.cms-index-index .header.content{padding: 25px 20px 10px;}
+.navigation .level0 > .level-top{padding: 0px 9px!important;}
+.block-search .control{text-align:left;}
+.block.block-search.banner-search{    margin-top: 10px;}
+.page-header .logo{max-width:175px;}
+.container.header.welcome-msg{width: 74%;}
+.cms-index-index .home-first-block {padding: 60px 50px 60px 50px;}
+.cms-index-index .home-first-block{position:relative;}
+.cms-index-index .home-first-block:before{background:rgba(0,0,0,0.2); position: absolute; top: 0; right: 0;width: 100%; height: 100%; content: "";}
+.cms-index-index .home-first-block .col-1.first{position: relative; z-index: 2;}
+.cms-index-index .my-trimax.col1-layout{padding: 0px;}
+.matrix-parts-grid.my-trimax .trimax-items ul li{width: 31.8%!important;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .details {padding: 34px 4% 0 4%;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .title{font-size: 20px;    min-height: 55px;    margin-bottom: 19px;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .details .description{    min-height: 80px;}
+.trimax-services-section ul li span{width: 87px; height:auto;}
+.trimax-services-section ul li a.service{ font-size: 20px;margin-top: 10px;line-height: 25px;}
+.merchandise-section-wrap .left-section{width: 100%; padding: 0px; margin-bottom: 20px;}
+.merchandise-section-wrap .right-section{width: 100%;}
+
 }
 
 @media only screen and (max-width : 767px){
@@ -494,7 +566,64 @@ li.customer-welcome.active .customer-menu {
 .nav-sections-item-title .nav-sections-item-switch:hover{color: #d31f2c;}
 .navigation .level0.active > a:not(.ui-state-active), .navigation .level0.has-active > a:not(.ui-state-active){border-width: 0 0 0 4px;}
 /*mobile-menu-css*/
+/*New Home page*/
+.nav-toggle {top: 22px;}
+.cms-index-index .account-mini-wrapper{text-align: center;}
+.logo{max-width: 190px!important;}
+.container.header.welcome-msg{    margin-top: 24px;}
+.cms-index-index .home-first-block .col-1.first h1{    font-size: 20px;}
+.matrix-parts-grid.my-trimax .trimax-items ul li{width: 100%!important; margin-right:0%!important; height: auto;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .details {padding: 44px 16% 44px 16%;}
+.cms-index-index .my-trimax.col1-layout{padding: 30px 0px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items{margin:0px 0px 40px;}
+.cms-index-index .home-first-block{position:relative;}
+.cms-index-index .home-first-block:before{background:rgba(0,0,0,0.2); position: absolute; top: 0; right: 0;width: 100%; height: 100%; content: "";}
+.cms-index-index .home-first-block .col-1.first{position: relative; z-index: 2;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .details .description{min-height: auto;}
+.trimax-services-section ul li span{width:70px; height: auto;}
+.trimax-services-section ul li a.service{line-height: 22px;    font-size: 20px;    margin-top: 10px;}
+.cms-index-index .my-trimax.col1-layout .trimax-items{    margin: 0px 0px 0px;}
+.cms-index-index .merchandise{padding: 0px;width: 100%;}
+.merchandise-section-wrap .right-section{width: 100%; margin-right: 0px;}
+.merchandise-left-section-inner {padding: 40px 37% 40px 8%;}
+.merchandise-section-wrap .left-section{    height: 297px;margin-bottom: 15px;}
+.merchandise-section-wrap .right-section .social-feed-inner{    height: 297px;}
+.merchandise-section-wrap .right-section .juicer-feed .slick-slide{    height: 297px;}
+.merchandise-section-wrap .right-section .juicer-feed.slider li.feed-item a.j-image{    height: 297px!important;}
+.merchandise-section-wrap .right-section .juicer-feed{    height: 297px;}
+.merchandise-section-wrap .right-section .juicer-feed .slick-track{    height: 297px!important;}
+.merchandise-section-wrap .right-section .social-feed-inner .social-feed-inner-wrap {padding: 54px 5% 10% 54px;}
+.block-search.banner-search .block-content{width: 100%;}
+.block-search .control{text-align: left;}
+.matrix-parts-grid.my-trimax .trimax-items ul li .title{font-size: 22px;}
+.merchandise-section-wrap .right-section .juicer-feed.slider li.feed-item a.j-image img{height: 297px!important;}
+.trimax-services-section ul li a.service{font-size: 18px;}
+.block-search .control{margin: 0px;padding:0px;}
+.cms-index-index .my-trimax.col1-layout{padding-bottom: 0px;}
+.merchandise-section-wrap .right-section .social-feed-inner .social-feed-inner-wrap h3{font-size: 24px;}
+.merchandise-section-wrap .left-section{    background-size: 46%;}
+.page-header .account-mini-wrapper{width: 100%;text-align: center;}
+.header.content {padding: 20px 15px 5px;}
+.cms-index-index .home-first-block{overflow: visible!important;z-index: 9;}
+
 }
+
+@media only screen and (max-width :620px){
+.trimax-services-section ul li a.service{font-size:16px;}
+.trimax-services-section ul li{width: 50%;}
+.trimax-services-section ul li{margin-bottom: 20px;}
+}
+
+@media only screen and (max-width :580px){
+.merchandise-section-wrap .left-section{height:auto;}
+.merchandise-section-wrap .right-section .social-feed-inner{width: 100%;}
+.merchandise-section-wrap .right-section .juicer-feed{width:100%;}
+.merchandise-section-wrap .right-section .social-feed-inner{height: auto;}
+.merchandise-section-wrap .right-section .social-feed-inner .social-feed-inner-wrap{    padding: 30px;}
+}
+
+
+
 
 @media only screen and (min-width : 479px) and (max-width : 767px){
 /*.cms-index-index .block.block-search .actions button{padding: 7px 12px;}

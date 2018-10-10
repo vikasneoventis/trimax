@@ -10,12 +10,12 @@
             <ul>
                 <li>
                     <div class="details">
-                    <a class="title" href="#"><?= __('OUR PARTS') ?></a>
+                    <a class="title" href="http://staging.com/trimax/default/catalog/category/view/s/common-parts/id/5/"><?= __('OUR PARTS') ?></a>
                         <div class="description">
                             <?= __('Our Genuine parts are proven to enable customers to finish the jobs they started under pressure.') ?>
                         </div>
                         <div class="button">
-                            <a class="actions" href="#">
+                            <a class="actions" href="http://staging.com/trimax/default/catalog/category/view/s/rotary-mowers/id/7/">
                                 <?= __('BROWSE BY MODEL') ?>
                             </a>
                         </div>
@@ -23,11 +23,11 @@
                 </li>
                 <li class="odd-item">
                      <div class="details">
-                    <a class="title" href="#"><?= __('MY TRIMAX') ?></a>
+
                     <?php if (!$block->isLoggedIn()): ?>
-                       
+                         <a class="title" href="<?php echo $block->getLoginUrl() ?>"><?= __('MY TRIMAX') ?></a>
                             <div class="description">
-                                <?= __('To gain access to resources and view your orders history,') ?>
+                                <?= __('To gain access to resources and view your order history,') ?>
                                 <a class="signup" href="<?php echo $block->getLoginUrl() ?>"><?= __('sign up') ?></a>
                                 <?= __('or') ?>
                                 <a class="login" href="<?php echo $block->getRegisterUrl() ?>"><?= __('login') ?></a>
@@ -40,8 +40,9 @@
                             </div>
                         </div>
                     <?php else: ?>
+                        <a class="title my-trimax-section" href="#"><?= __('MY TRIMAX') ?></a>
                         <div class="description">
-                            <?= __('Check our resources and your orders history.') ?>
+                            <?= __('Check our resources and your order history.') ?>
                         </div>
                         <div class="button">
                             <a class="actions" href="<?php echo $block->getMyOrderUrl() ?>">
@@ -52,10 +53,10 @@
                 </li>
                 <li>
                     <div class="details">
-                    <a class="title" href="#"><?= __('IDENTIFY YOURS MOWER') ?></a>
+                    <a class="title" href="#"><?= __('IDENTIFY YOUR MOWER') ?></a>
                     
                         <div class="description">
-                            <?= __('Not sure which model of mower you own? We`ve put togther a table to help you identify your make and model.') ?>
+                            <?= __('Not sure which model of mower you own? We\'ve put togther a table to help you identify your make and model.') ?>
                         </div>
                         <div class="button">
                             <a class="actions" href="#">
@@ -68,3 +69,14 @@
         </div>
     </div>
 </div>
+<script>
+    require([
+        'jquery',
+    ], function ($) {
+        $(".my-trimax-section").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#trimax-menu").offset().top},
+                'slow');
+        });
+    });
+</script>
