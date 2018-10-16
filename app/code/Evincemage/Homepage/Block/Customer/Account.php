@@ -42,6 +42,11 @@ class Account extends \Magento\Framework\View\Element\Html\Link
     protected $_postDataHelper;
 
     /**
+     * @var \Magento\Catalog\Model\CategoryFactory
+     */
+    protected $categoryFactory;
+
+    /**
      * Account constructor.
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magento\Framework\App\Http\Context $httpContext
@@ -50,6 +55,7 @@ class Account extends \Magento\Framework\View\Element\Html\Link
      * @param CustomerRepositoryInterface $customerRepository
      * @param \Magento\Customer\Helper\View $helperView
      * @param \Magento\Framework\Data\Helper\PostHelper $postDataHelper
+     * @param \Magento\Catalog\Model\CategoryFactory $categoryFactory
      * @param array $data
      */
     public function __construct(
@@ -60,6 +66,7 @@ class Account extends \Magento\Framework\View\Element\Html\Link
         CustomerRepositoryInterface $customerRepository,
         \Magento\Customer\Helper\View $helperView,
         \Magento\Framework\Data\Helper\PostHelper $postDataHelper,
+        \Magento\Catalog\Model\CategoryFactory $categoryFactory,
         array $data = []
     ) {
         parent::__construct($context, $data);
@@ -69,6 +76,7 @@ class Account extends \Magento\Framework\View\Element\Html\Link
         $this->customerRepository = $customerRepository;
         $this->_helperView = $helperView;
         $this->_postDataHelper = $postDataHelper;
+        $this->categoryFactory = $categoryFactory;
     }
 
     /**
@@ -142,6 +150,17 @@ class Account extends \Magento\Framework\View\Element\Html\Link
     public function getMyOrderUrl()
     {
         return $this->getUrl('sales/order/history/');
+    }
+
+    public function getCategory($categoryId)
+    {
+        $category = $this->categoryFactory->create();
+        $storeId = $this->_storeManager->getStore()->getId();
+        if (null !== $storeId) {
+            $category->setStoreId($storeId);
+        }
+
+        return $category->load($categoryId);
     }
 
 }

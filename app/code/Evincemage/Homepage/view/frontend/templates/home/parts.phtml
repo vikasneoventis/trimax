@@ -4,18 +4,35 @@
  * @copyright Copyright (c) 2018 Evince (http://evincemage.com/)
  */
 ?>
+
+<?php
+$ourPartCategory = $this->getCategory(5);
+$ourPartCategoryUrl = '#';
+if($ourPartCategory->getId()) {
+    $ourPartCategoryUrl = $ourPartCategory->getUrl();
+}
+
+$modelCategory = $this->getCategory(7);
+$modelCategoryUrl = '#';
+if($modelCategory->getId()) {
+    $modelCategoryUrl = $modelCategory->getUrl();
+}
+
+
+
+?>
 <div class="matrix-parts-grid my-trimax col1-layout ">
     <div class="main">
         <div class="trimax-items">
             <ul>
                 <li>
                     <div class="details">
-                    <a class="title" href="#"><?= __('OUR PARTS') ?></a>
+                    <a class="title" href="<?php echo $ourPartCategoryUrl ?>"><?= __('OUR PARTS') ?></a>
                         <div class="description">
                             <?= __('Our Genuine parts are proven to enable customers to finish the jobs they started under pressure.') ?>
                         </div>
                         <div class="button">
-                            <a class="actions" href="#">
+                            <a class="actions" href="<?php echo $modelCategoryUrl ?>">
                                 <?= __('BROWSE BY MODEL') ?>
                             </a>
                         </div>
