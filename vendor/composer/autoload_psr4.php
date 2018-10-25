@@ -230,5 +230,4 @@ return array(
     'AmazonPay\\' => array($vendorDir . '/amzn/amazon-pay-sdk-php/AmazonPay'),
     'Amasty\\Xsearch\\' => array($vendorDir . '/amasty/xsearch'),
     'Amasty\\Base\\' => array($vendorDir . '/amasty/base'),
-    'Aitoc\\AdvancedPermissions\\' => array($vendorDir . '/aitoc/advanced-permissions'),
 );
