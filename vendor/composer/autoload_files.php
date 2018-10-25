@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     '5255c38a0faeba867671b61dfda6d864' => $vendorDir . '/paragonie/random_compat/lib/random.php',
     'e40631d46120a9c38ea139981f8dab26' => $vendorDir . '/ircmaxell/password-compat/lib/password.php',
     '3e2471375464aac821502deb0ac64275' => $vendorDir . '/symfony/polyfill-php54/bootstrap.php',
@@ -178,5 +178,6 @@ return array(
     '62008ed0ff26c9aa9e7ca9697420b61d' => $vendorDir . '/mailchimp/mc-magento2/registration.php',
     '3f34f6fa540f1f944e5fac387304528e' => $vendorDir . '/pektsekye/module-product-exploded/registration.php',
     '5b29f2c69f54a19d37a4958cb6a83038' => $vendorDir . '/webshopapps/module-matrixrate/src/registration.php',
+    '5d7a513b34f38268544f02321c80778a' => $vendorDir . '/aitoc/advanced-permissions/registration.php',
     'b4cf39431a4b949eea8aa69ebb3d39da' => $baseDir . '/app/etc/NonComposerComponentRegistration.php',
 );

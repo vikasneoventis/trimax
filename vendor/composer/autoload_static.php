@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
 {
     public static $files = array (
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
         '3e2471375464aac821502deb0ac64275' => __DIR__ . '/..' . '/symfony/polyfill-php54/bootstrap.php',
@@ -179,6 +179,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         '62008ed0ff26c9aa9e7ca9697420b61d' => __DIR__ . '/..' . '/mailchimp/mc-magento2/registration.php',
         '3f34f6fa540f1f944e5fac387304528e' => __DIR__ . '/..' . '/pektsekye/module-product-exploded/registration.php',
         '5b29f2c69f54a19d37a4958cb6a83038' => __DIR__ . '/..' . '/webshopapps/module-matrixrate/src/registration.php',
+        '5d7a513b34f38268544f02321c80778a' => __DIR__ . '/..' . '/aitoc/advanced-permissions/registration.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -463,6 +464,7 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
             'AmazonPay\\' => 10,
             'Amasty\\Xsearch\\' => 15,
             'Amasty\\Base\\' => 12,
+            'Aitoc\\AdvancedPermissions\\' => 26,
         ),
     );
 
@@ -1365,6 +1367,10 @@ class ComposerStaticInit9b6fc3d821a4214f4eb6c6288331e61d
         'Amasty\\Base\\' => 
         array (
             0 => __DIR__ . '/..' . '/amasty/base',
+        ),
+        'Aitoc\\AdvancedPermissions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aitoc/advanced-permissions',
         ),
     );
 
