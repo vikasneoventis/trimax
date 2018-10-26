@@ -52,6 +52,20 @@ class CoreCollection implements ObserverInterface
             if (!$showAll) {
                 $collection->getSelect()
                     ->joinLeft(['ce_t' => 'customer_entity'], "ce_t.entity_id = main_table.entity_id", ["store_id" => "ce_t.store_id"]);
+
+                $select = $collection->getSelect();
+
+                if ($where = $select->getPart('where')) {
+                    foreach ($where as $key=> $condition) {
+
+                        $field =  $this->getStringBetween($condition,'`','`');
+                        if ($field && strpos($condition, $field) && !strpos($condition,'main_table') && !strpos($condition,'store_id')) {
+                            $new_condition = str_replace($field, "main_table.".$field, $condition);
+                            $where[$key] = $new_condition;
+                        }
+                    }
+                    $select->setPart('where', $where);
+                }
             }
         }
         if ($this->salesHelper->isSalesResource($collection->getResource())
@@ -59,5 +73,13 @@ class CoreCollection implements ObserverInterface
         ) {
             $this->salesHelper->addAllowedProductFilter($collection);
         }
+    }
+
+    public function getStringBetween($str,$from,$to)
+    {
+        $sub = substr($str, strpos($str,$from)+strlen($from),strlen($str));
+
+        return $from . substr($sub,0, strrpos($sub,$to)) . $to;
+
     }
 }

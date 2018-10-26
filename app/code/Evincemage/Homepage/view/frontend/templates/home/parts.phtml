@@ -69,13 +69,13 @@
                 </li>
                 <li>
                     <div class="details">
-                    <a class="title" href="#"><?= __('IDENTIFY YOUR MOWER') ?></a>
+                    <a class="title" href="<?php echo $block->getUrl('identify-your-mower') ?>"><?= __('IDENTIFY YOUR MOWER') ?></a>
 
                         <div class="description">
                             <?= __('Not sure which model of mower you own? We\'ve put togther a table to help you identify your make and model.') ?>
                         </div>
                         <div class="button">
-                            <a class="actions" href="#">
+                            <a class="actions" href="<?php echo $block->getUrl('identify-your-mower') ?>">
                                 <?= __('VIEW TABLES') ?>
                             </a>
                         </div>
